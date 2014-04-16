@@ -2,6 +2,7 @@
 {PackageJson}     = require './package'
 {Summarizer}      = require './summarizer'
 constants         = require './constants'
+fs                = require 'fs'
 
 class Main
 
@@ -11,6 +12,12 @@ class Main
     @pkjson = new PackageJson()
     @args   = null
     @init_parser()
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  exit_err: (e) ->
+    console.log "Error: #{e.toString()}"
+    process.exit 1
 
   # -------------------------------------------------------------------------------------------------------------------
 
@@ -38,7 +45,9 @@ class Main
   sign: ->
     output = @args.output or constants.defaults.filename
     await Summarizer.from_dir @args.dir, {exclude: [output]}, defer err, summ
-    console.log summ.to_str()
+    if err? then exit_err err
+    await fs.writeFile output, summ.to_str() + "\n", {encoding: 'utf8'}, defer err
+    if err? then exit_err err
 
   # -------------------------------------------------------------------------------------------------------------------
 

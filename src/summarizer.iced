@@ -70,7 +70,7 @@ class SummarizedItem
     label  = indent + path.normalize path.join @parent_path, @fname
     switch @item_type
       when item_types.FILE
-        return "\n#{label}      #{@hash}"
+        return "\n#{label}      #{@hash} #{@fstats.mode} #{@fstats.size}"
       when item_types.SYMLINK
         return "\n#{label}   -> #{@link}"
       when item_types.DIR
