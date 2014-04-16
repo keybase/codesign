@@ -1,6 +1,22 @@
-{Summarizer} = require './dirsummary.iced'
+{ArgumentParser} = require 'argparse'
+{PackageJson}    = require './package'
+
+class Main
+  constructor: ->
+    @pkjson = new PackageJson()
+    @init_parser()
+
+  init_parser: ->
+    @ap     = new ArgumentParser {
+      addHelp:      true
+      version:      @pkjson.version()
+      description:  'keybase.io directory summarizer'
+      prog:         @pkjson.bin()     
+    }
+
+  run: ->
+    console.log "It's really running."
 
 
-
-await Summarizer.from_dir '.', defer err, s
-console.log s.to_str()
+exports.run = ->
+  (new Main()).run()
