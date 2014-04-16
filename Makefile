@@ -14,6 +14,7 @@ lib/%.js: src/%.iced
 $(BUILD_STAMP): \
 	lib/constants.js \
 	lib/main.js \
+	lib/markdown.js \
 	lib/package.js \
 	lib/summarizer.js \
 	lib/top.js

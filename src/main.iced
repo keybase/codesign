@@ -1,8 +1,9 @@
+fs                = require 'fs'
 {ArgumentParser}  = require 'argparse'
 {PackageJson}     = require './package'
 {Summarizer}      = require './summarizer'
 constants         = require './constants'
-fs                = require 'fs'
+{to_md, from_md}  = require './markdown'
 
 class Main
 
@@ -46,7 +47,8 @@ class Main
     output = @args.output or constants.defaults.filename
     await Summarizer.from_dir @args.dir, {exclude: [output]}, defer err, summ
     if err? then exit_err err
-    await fs.writeFile output, summ.to_str() + "\n", {encoding: 'utf8'}, defer err
+    o = summ.to_json_obj()
+    await fs.writeFile output, to_md(o) + "\n", {encoding: 'utf8'}, defer err
     if err? then exit_err err
 
   # -------------------------------------------------------------------------------------------------------------------
@@ -56,6 +58,15 @@ class Main
     switch @args.subcommand_name
       when 'sign'   then @sign()
       when 'verify' then @verify()
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  verify: ->
+    input = @args.input or constants.defaults.filename
+    await fs.readFile input, 'utf8', defer err, body
+    if err? then exit_err err
+    console.log "#{body}======"
+    from_md body
 
   # -------------------------------------------------------------------------------------------------------------------
 
