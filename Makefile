@@ -17,7 +17,8 @@ $(BUILD_STAMP): \
 	lib/markdown.js \
 	lib/package.js \
 	lib/summarizer.js \
-	lib/top.js
+	lib/top.js \
+	lib/utils.js
 	date > $@
 
 clean:

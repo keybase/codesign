@@ -1,0 +1,14 @@
+module.exports =
+  escape: (s) ->
+    ###
+    we don't want to use either escape (deprecated) or encodeURIComponent (too ugly) and overescapes    
+    ###
+    res = ''
+    for c, i in s
+      if c.match /^[a-z0-9\/\._\-\~\#]$/i 
+        res += c
+      else
+        res += encodeURIComponent c
+    return res
+
+  unescape: (s) -> decodeURIComponent s

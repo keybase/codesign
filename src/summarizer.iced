@@ -4,6 +4,7 @@ path          = require 'path'
 fs            = require 'fs'
 {make_esc}    = require 'iced-error'
 {PackageJson} = require './package'
+{item_types}  = require 'constants'
 
 # =====================================================================================================================
 
