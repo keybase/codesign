@@ -4,14 +4,7 @@ path          = require 'path'
 fs            = require 'fs'
 {make_esc}    = require 'iced-error'
 {PackageJson} = require './package'
-{item_types}  = require 'constants'
-
-# =====================================================================================================================
-
-item_types =
-  FILE: 0
-  DIR:  1
-  SYMLINK: 2
+{item_types}  = require './constants'
 
 # =====================================================================================================================
 
@@ -50,7 +43,7 @@ class SummarizedItem
         si = @subitem f
         await si.load_traverse esc defer()
         @contents.push si
-        @contents.sort (a,b) -> a.fname.localeCompare b.fname
+      @contents.sort (a,b) -> a.fname.localeCompare b.fname
     cb()
 
   # -------------------------------------------------------------------------------------------------------------------
