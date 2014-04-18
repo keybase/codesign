@@ -43,7 +43,7 @@ class SummarizedItem
         si = @subitem f
         await si.load_traverse esc defer()
         @contents.push si
-      @contents.sort (a,b) -> a.fname.localeCompare b.fname
+      @contents.sort (a,b) -> a.fname.localeCompare(b.fname, 'us')
     cb()
 
   # -------------------------------------------------------------------------------------------------------------------
@@ -60,11 +60,12 @@ class SummarizedItem
 
   signable_info: ->
     info =
-      depth:        @depth
-      parent_path:  @parent_path
-      item_type:    @item_type
-      fname:        @fname
-      mode:         @stats.mode
+      depth:         @depth
+      parent_path:   @parent_path
+      item_type:     @item_type
+      fname:         @fname
+      path:          "#{@parent_path}/#{@fname}"
+      mode:          @stats.mode
 
     switch @item_type
       when item_types.FILE
@@ -109,9 +110,9 @@ class Summarizer
   constructor: (opts) ->
     @root_item     =    null
     @opts          =    opts or {}
-    @opts.exclude  or=  []
+    @opts.ignore  or=  []
     @opts.root_dir or=  '.'
-    @opts.exclude.sort()
+    @opts.ignore.sort()
 
   # -------------------------------------------------------------------------------------------------------------------
 
@@ -145,7 +146,7 @@ class Summarizer
 
   # -------------------------------------------------------------------------------------------------------------------
 
-  compare_to_json_obj: (o) ->
+  compare_to_json_obj: (obj) ->
     ###
     returns null if they are different; otherwise returns
     {
@@ -158,8 +159,48 @@ class Summarizer
       missing: []
       wrong:   []
       orphans: []
-
-    return null
+    i1   = 0
+    i2   = 0
+    f1   = @to_json_obj().found
+    f2   = obj.found
+    while (i1 < f1.length) or (i2 < f2.length)
+      if (i1 >= f1.length)
+        console.log "A"
+        err.orphans.push f2[i2]
+        i2++
+      else if (i2 > f2.length)
+        console.log "B"
+        err.missing.push f1[i1]
+        i1++
+      else
+        o1 = f1[i1]
+        o2 = f2[i2]
+        name_cmp = o1.path.localeCompare(o2.path, 'us')
+        console.log "C. Comparing expected #{i1}=#{o1.path}  and  #{i2}=#{o2.path} #{name_cmp}"
+        if name_cmp < 0
+          err.missing.push o1
+          i1++
+        else if name_cmp > 0
+          err.orphans.push o2
+          i2++
+        else
+          ok = true
+          for k in ['item_type', 'hash', 'link', 'mode', 'size']
+            if o1[k] isnt o2[k]
+              ok = false
+              console.log k
+              break
+          if not ok
+            err.wrong.push {got: o2, expected: o1}
+          else
+            console.log "Match found!"
+          i1++
+          i2++
+ 
+    if err.missing.length or err.wrong.length or err.orphans.length
+      return err
+    else
+      return null
 
   # -------------------------------------------------------------------------------------------------------------------
 
@@ -170,8 +211,8 @@ class Summarizer
     return {
       meta:
         version: new PackageJson().version()
-      exclude: @opts.exclude
-      found:   @root_item.walk_to_array()
+      ignore: @opts.ignore
+      found:  @root_item.walk_to_array()
     }
 
 # =====================================================================================================================

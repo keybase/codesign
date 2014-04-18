@@ -45,7 +45,7 @@ class Main
 
   sign: ->
     output = @args.output or constants.defaults.filename
-    await Summarizer.from_dir @args.dir, {exclude: [output]}, defer err, summ
+    await Summarizer.from_dir @args.dir, {ignore: [output]}, defer err, summ
     if err? then exit_err err
     o = summ.to_json_obj()
     await fs.writeFile output, to_md(o) + "\n", {encoding: 'utf8'}, defer err
@@ -71,14 +71,15 @@ class Main
 
     # do our own analysis
     console.log json_obj
-    console.log "Analyzing, with exclude list: #{json_obj.exclude}"
-    await Summarizer.from_dir @args.dir, {exclude: json_obj.exclude}, defer err, summ
+    console.log "Analyzing, with ignore list: #{json_obj.ignore}"
+    await Summarizer.from_dir @args.dir, {ignore: json_obj.ignore}, defer err, summ
     if err? then exit_err err
 
     # see if they match
     err = summ.compare_to_json_obj json_obj
     if err
-      console.log "DOES NOT MATCH", err
+      console.log "DOES NOT MATCH"
+      console.log JSON.stringify err, null, 2
     else
       console.log "They match!"
 
