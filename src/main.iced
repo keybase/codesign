@@ -5,7 +5,7 @@ fs                = require 'fs'
 constants         = require './constants'
 {to_md, from_md}  = require './markdown'
 {item_type_names} = require './constants'
-
+tablify           = require 'tablify'
 class Main
 
   # -------------------------------------------------------------------------------------------------------------------
@@ -78,19 +78,20 @@ class Main
     # see if they match
     err = summ.compare_to_json_obj json_obj
     if err
-      console.log "ERRORS FOUND:"
+      table = []
       for f in err.missing
-        console.log "MISSING: #{f.path}"
+        table.push [f.path, "Missing"]
       for f in err.orphans
-        console.log "UNKNOWN FILE FOUND: #{f.path}"
+        table.push [f.path, "Unknown file"]
       for {got, expected} in err.wrong
-        if got.item_type isnt expected.item_type then console.log "ERROR ON #{got.path}: Expected a #{item_type_names[expected.item_type]} and got a #{item_type_names[got.item_type]}"
-        if got.size      isnt expected.size      then console.log "ERROR ON #{got.path}: Expected size #{expected.size} and got #{got.size}"
-        if got.hash      isnt expected.hash      then console.log "ERROR ON #{got.path}: Expected hash #{expected.hash[0...16]}... and got #{got.hash[0...16]}..."
-        if got.link      isnt expected.link      then console.log "ERROR ON #{got.path}: Expected link to '#{expected.link}' and got link to '#{got.link}'"
-        if got.exec   and not expected.exec      then console.log "ERROR ON #{got.path}: Expected NO user exec privileges, but got them"  
-        if not got.exec and   expected.exec      then console.log "ERROR ON #{got.path}: Expected user exec privileges but didn't get them"
-      console.log "-------------\nTOTAL ERRORS: #{err.missing.length + err.orphans.length + err.wrong.length}"
+        if got.item_type isnt expected.item_type then table.push [got.path, "Expected a #{item_type_names[expected.item_type]} and got a #{item_type_names[got.item_type]}"]
+        else if got.size      isnt expected.size      then table.push [got.path, "Expected size #{expected.size} and got #{got.size}"]
+        else if got.hash      isnt expected.hash      then table.push [got.path, "Bad contents (expected sha256 hash #{expected.hash[0...8]}...; got #{got.hash[0...8]}...)"]
+        else if got.link      isnt expected.link      then table.push [got.path, "Expected link to '#{expected.link}' and got link to '#{got.link}'"]
+        else if got.exec   and not expected.exec      then table.push [got.path, "Got unexpected user exec privileges"]  
+        else if not got.exec and   expected.exec      then table.push [got.path, "Expected user exec privileges"]
+      console.log tablify table
+      console.log "BAD FILES: #{err.missing.length + err.orphans.length + err.wrong.length}"
       process.exit 1
     else
       console.log "Success!"

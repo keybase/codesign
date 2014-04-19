@@ -176,7 +176,7 @@ class Summarizer
       if not (v2 = o1_by_path[k])?
         err.missing.push v
       else if not are_same v, v2
-        err.wrong.push {got: v, expected: v2}
+        err.wrong.push {expected: v, got: v2}
     
     err.orphans.push v for k,v of o1_by_path when not o2_by_path[k]?
  
