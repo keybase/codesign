@@ -46,10 +46,11 @@ class Main
   sign: ->
     output = @args.output or constants.defaults.filename
     await Summarizer.from_dir @args.dir, {ignore: [output]}, defer err, summ
-    if err? then exit_err err
+    if err? then @exit_err err
     o = summ.to_json_obj()
-    await fs.writeFile output, to_md(o) + "\n", {encoding: 'utf8'}, defer err
-    if err? then exit_err err
+    await fs.writeFile output, to_md(o) + "\n", {encoding: 'utf8'}, defer err    
+    if err? then @exit_err err
+    console.log "Success! Created #{output}"
 
   # -------------------------------------------------------------------------------------------------------------------
 
@@ -66,13 +67,12 @@ class Main
 
     # load the file
     await fs.readFile input, 'utf8', defer err, body
-    if err? then exit_err err
+    if err? then @exit_err "Couldn't open #{input}; if using another filename pass with -i <filename>"
     json_obj = from_md body
 
     # do our own analysis
-    console.log "Analyzing, with ignore list: #{json_obj.ignore}"
     await Summarizer.from_dir @args.dir, {ignore: json_obj.ignore}, defer err, summ
-    if err? then exit_err err
+    if err? then @exit_err err
 
     # see if they match
     err = summ.compare_to_json_obj json_obj

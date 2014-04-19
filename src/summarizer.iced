@@ -160,41 +160,25 @@ class Summarizer
       missing: []
       wrong:   []
       orphans: []
-    i1   = 0
-    i2   = 0
-    f1   = @to_json_obj().found
-    f2   = obj.found
-    while (i1 < f1.length) or (i2 < f2.length)
-      if (i1 >= f1.length)
-        console.log "A"
-        err.missing.push o2
-        i2++
-      else if (i2 >= f2.length)
-        console.log "B"
-        err.orphans.push o1
-        i1++
-      else
-        o1 = f1[i1]
-        o2 = f2[i2]
-        name_cmp = o1.path.localeCompare(o2.path, 'us')
-        console.log "C. Comparing expected #{i1}='#{o1.path}'  and  #{i2}='#{o2.path}' #{name_cmp}"
-        if name_cmp < 0
-          err.orphans.push o1
-          i1++
-        else if name_cmp > 0
-          err.missing.push o2
-          i2++
-        else
-          ok = true
-          for k in ['item_type', 'hash', 'link', 'exec', 'size']
-            if o1[k] isnt o2[k]
-              ok = false
-              console.log k
-              break
-          if not ok
-            err.wrong.push {got: o2, expected: o1}
-          i1++
-          i2++
+
+    o1_by_path = {}
+    o2_by_path = {}
+
+    are_same = (f1, f2) ->
+      for k in ['item_type', 'hash', 'link', 'exec', 'size']
+        if f1[k] isnt f2[k] then return false
+      true
+
+    o1_by_path[f.path] = f for f in @to_json_obj().found
+    o2_by_path[f.path] = f for f in obj.found
+
+    for k,v of o2_by_path
+      if not (v2 = o1_by_path[k])?
+        err.missing.push v
+      else if not are_same v, v2
+        err.wrong.push {got: v, expected: v2}
+    
+    err.orphans.push v for k,v of o1_by_path when not o2_by_path[k]?
  
     if err.missing.length or err.wrong.length or err.orphans.length
       return err
