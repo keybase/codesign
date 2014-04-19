@@ -4,6 +4,7 @@ fs                = require 'fs'
 {Summarizer}      = require './summarizer'
 constants         = require './constants'
 {to_md, from_md}  = require './markdown'
+{item_type_names} = require './constants'
 
 class Main
 
@@ -50,7 +51,7 @@ class Main
     o = summ.to_json_obj()
     await fs.writeFile output, to_md(o) + "\n", {encoding: 'utf8'}, defer err    
     if err? then @exit_err err
-    console.log "Success! Created #{output}"
+    console.log "Success! Output: #{output}"
 
   # -------------------------------------------------------------------------------------------------------------------
 
@@ -77,10 +78,22 @@ class Main
     # see if they match
     err = summ.compare_to_json_obj json_obj
     if err
-      console.log "DOES NOT MATCH"
-      console.log JSON.stringify err, null, 2
+      console.log "ERRORS FOUND:"
+      for f in err.missing
+        console.log "MISSING: #{f.path}"
+      for f in err.orphans
+        console.log "UNKNOWN FILE FOUND: #{f.path}"
+      for {got, expected} in err.wrong
+        if got.item_type isnt expected.item_type then console.log "ERROR ON #{got.path}: Expected a #{item_type_names[expected.item_type]} and got a #{item_type_names[got.item_type]}"
+        if got.size      isnt expected.size      then console.log "ERROR ON #{got.path}: Expected size #{expected.size} and got #{got.size}"
+        if got.hash      isnt expected.hash      then console.log "ERROR ON #{got.path}: Expected hash #{expected.hash[0...16]}... and got #{got.hash[0...16]}..."
+        if got.link      isnt expected.link      then console.log "ERROR ON #{got.path}: Expected link to '#{expected.link}' and got link to '#{got.link}'"
+        if got.exec   and not expected.exec      then console.log "ERROR ON #{got.path}: Expected NO user exec privileges, but got them"  
+        if not got.exec and   expected.exec      then console.log "ERROR ON #{got.path}: Expected user exec privileges but didn't get them"
+      console.log "-------------\nTOTAL ERRORS: #{err.missing.length + err.orphans.length + err.wrong.length}"
+      process.exit 1
     else
-      console.log "They match!"
+      console.log "Success!"
 
   # -------------------------------------------------------------------------------------------------------------------
 
