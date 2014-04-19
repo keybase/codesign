@@ -5,6 +5,7 @@ fs            = require 'fs'
 {make_esc}    = require 'iced-error'
 {PackageJson} = require './package'
 {item_types}  = require './constants'
+utils         = require './utils'
 
 # =====================================================================================================================
 
@@ -39,7 +40,7 @@ class SummarizedItem
       @contents  = []
       @item_type = item_types.DIR
       await fs.readdir @realpath, esc defer fnames
-      for f in fnames
+      for f in fnames when f isnt '.'
         si = @subitem f
         await si.load_traverse esc defer()
         @contents.push si
@@ -51,7 +52,7 @@ class SummarizedItem
   subitem: (f) ->
     new SummarizedItem {
       fname:        f, 
-      parent_path:  path.join @parent_path, @fname
+      parent_path:  if @parent_path.length then "#{@parent_path}/#{@fname}" else @fname 
       summarizer:   @summarizer
       depth:        @depth + 1
     }
@@ -64,8 +65,8 @@ class SummarizedItem
       parent_path:   @parent_path
       item_type:     @item_type
       fname:         @fname
-      path:          "#{@parent_path}/#{@fname}"
-      mode:          @stats.mode
+      path:          if @parent_path.length then "#{@parent_path}/#{@fname}" else @fname
+      exec:          utils.is_user_executable @stats.mode
 
     switch @item_type
       when item_types.FILE
@@ -166,11 +167,11 @@ class Summarizer
     while (i1 < f1.length) or (i2 < f2.length)
       if (i1 >= f1.length)
         console.log "A"
-        err.orphans.push f2[i2]
+        err.missing.push o2
         i2++
-      else if (i2 > f2.length)
+      else if (i2 >= f2.length)
         console.log "B"
-        err.missing.push f1[i1]
+        err.orphans.push o1
         i1++
       else
         o1 = f1[i1]
@@ -178,22 +179,20 @@ class Summarizer
         name_cmp = o1.path.localeCompare(o2.path, 'us')
         console.log "C. Comparing expected #{i1}='#{o1.path}'  and  #{i2}='#{o2.path}' #{name_cmp}"
         if name_cmp < 0
-          err.missing.push o1
+          err.orphans.push o1
           i1++
         else if name_cmp > 0
-          err.orphans.push o2
+          err.missing.push o2
           i2++
         else
           ok = true
-          for k in ['item_type', 'hash', 'link', 'mode', 'size']
+          for k in ['item_type', 'hash', 'link', 'exec', 'size']
             if o1[k] isnt o2[k]
               ok = false
               console.log k
               break
           if not ok
             err.wrong.push {got: o2, expected: o1}
-          else
-            console.log "Match found!"
           i1++
           i2++
  

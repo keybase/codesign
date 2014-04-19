@@ -12,3 +12,5 @@ module.exports =
     return res
 
   unescape: (s) -> decodeURIComponent s
+
+  is_user_executable: (mode) -> !!(parseInt(100,8) & mode)

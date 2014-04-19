@@ -17,15 +17,15 @@ max_depth = (found_files) ->
   max_depth
 
 pretty_format_files = (found_files) ->
-  rows = [['file', 'contents', 'size', 'mode']]
+  rows = [['file', 'contents', 'size', 'exec']]
   for f in found_files
-    col1 = ("  " for i in [0...f.depth]).join('') + utils.escape(path.join(f.parent_path, f.fname))
+    col1 = ("  " for i in [0...f.depth]).join('') + utils.escape "#{f.path}"
     col2 = switch f.item_type
       when item_types.SYMLINK then "-> #{utils.escape(f.link)}"
       when item_types.DIR     then ""
       when item_types.FILE    then f.hash
     col3 = if (f.item_type is item_types.FILE) then f.size else ''
-    col4 = f.mode
+    col4 = if f.exec then 'x' else '-'
     rows.push [ col1, col2, col3, col4 ]
   return tablify rows, {
     show_index:     false
@@ -48,16 +48,16 @@ files_from_pretty_format = (str_arr) ->
       path:          fpath
     if cols.length is 2
       info.item_type = item_types.DIR
-      info.mode      = parseInt cols[1]
+      info.exec      = cols[1] is 'x'
     else if cols[1] is '->'
       info.item_type = item_types.SYMLINK
       info.link      = cols[2]
-      info.mode      = parseInt cols[3]
+      info.exec      = cols[3] is 'x'
     else
       info.item_type = item_types.FILE
       info.hash      = cols[1]
       info.size      = parseInt cols[2]
-      info.mode      = parseInt cols[3]
+      info.exec      = cols[3] is 'x'
     res.push info
   res
 

@@ -70,7 +70,6 @@ class Main
     json_obj = from_md body
 
     # do our own analysis
-    console.log json_obj
     console.log "Analyzing, with ignore list: #{json_obj.ignore}"
     await Summarizer.from_dir @args.dir, {ignore: json_obj.ignore}, defer err, summ
     if err? then exit_err err
