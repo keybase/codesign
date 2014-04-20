@@ -111,7 +111,7 @@ class Summarizer
   constructor: (opts) ->
     @root_item     =    null
     @opts          =    opts or {}
-    @opts.ignore  or=  []
+    @opts.ignore   or=  []
     @opts.root_dir or=  '.'
     @opts.ignore.sort()
 
