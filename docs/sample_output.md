@@ -5,15 +5,15 @@
 
 ```
 ./
-  1/                                                                                     rw-
-  1/bar.txt                                                                              rw-
-  1/d1/                                                                                  rw-
-    1/d1/apple.txt    303980bcb9e9e6cdec515230791af8b0ab1aaa244b58a8d99152673aa22197d0   rw- 6
-    1/d1/car.txt      f35ab270f45957f6c65656aefcbc37e799ad19eb454218e2f2e6bf4cd88638e5   rwx 4
-    1/d1/foobar.txt   -> ../foo.txt                                                      rw-
-    1/d1/loop         -> ../                                                             rw-
-  1/d2                -> d1                                                              rw-
-  1/foo.txt           b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c   rw- 4
+  1/                                                                                     x
+  1/bar.txt                                                                              -  6000
+  1/d1/                                                                                  x
+    1/d1/apple.txt    303980bcb9e9e6cdec515230791af8b0ab1aaa244b58a8d99152673aa22197d0   -  633
+    1/d1/car.txt      f35ab270f45957f6c65656aefcbc37e799ad19eb454218e2f2e6bf4cd88638e5   -  412
+    1/d1/foobar.txt   -> ../foo.txt                                                      x
+    1/d1/loop         -> ../                                                             x
+  1/d2                -> d1                                                              x
+  1/foo.txt           b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c   -  40043
 ```
 
 #### Ignore
@@ -24,6 +24,7 @@
 ~*
 lib/*
 ```
+
 <!-- END SIGNED PORTION -->
 
 <!-- BEGIN SIGNATURE PORTION -->
