@@ -67,12 +67,20 @@ exports.to_md = (o) ->
 
   ignore_list = (utils.escape s for s in o.ignore).join '\n'
   file_list   = pretty_format_files o.found
+  preset_list = ("#{p}  ##{constants.presets[p].toLowerCase()}" for p in o.presets).join '\n'
+
   res = 
   """
 #### Verify
 
 ```
 #{file_list}
+```
+
+#### Presets
+
+```
+#{preset_list}
 ```
 
 #### Ignore
@@ -95,6 +103,9 @@ exports.from_md = (str) ->
   \s*
   ```([^`]*)```
   \s*
+  \#\#\#\# \s Presets
+  \s*
+  ```([^`]*)```  
   \#\#\#\# \s Ignore
   \s*
   ```([^`]*)```  
@@ -106,11 +117,13 @@ exports.from_md = (str) ->
   match  = rxx.exec str
   if match?
     file_rows   = match[1].split('\n')[2...-1] # formatting correction
+    preset_rows = match[2].split('\n')[1...-1] # formatting correction
     ignore_rows = match[2].split('\n')[1...-1] # formatting correction
-    version     = match[3]
+    version     = match[4]
     return {
-      found:  files_from_pretty_format file_rows
-      ignore: (f for f in ignore_rows)
+      found:   files_from_pretty_format file_rows
+      ignore:  (f for f in ignore_rows)
+      presets: (f.replace /\#.*$/g for f in preset_rows)
       meta:
         version: version
     }

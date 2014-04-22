@@ -1,11 +1,13 @@
-crypto        = require 'crypto'
-tablify       = require 'tablify'
-path          = require 'path'
-fs            = require 'fs'
-{make_esc}    = require 'iced-error'
-{PackageJson} = require './package'
-{item_types}  = require './constants'
-utils         = require './utils'
+crypto         = require 'crypto'
+tablify        = require 'tablify'
+path           = require 'path'
+fs             = require 'fs'
+{make_esc}     = require 'iced-error'
+{PackageJson}  = require './package'
+{item_types}   = require './constants'
+utils          = require './utils'
+GitPreset      = require './preset/git'
+
 
 # =====================================================================================================================
 
@@ -110,10 +112,32 @@ class Summarizer
 
   constructor: (opts) ->
     @root_item     =    null
+    @presets       =    [] # not the preset names, but the actual instances
     @opts          =    opts or {}
-    @opts.ignore   or=  []
+    @opts.ignore   or=  [] # specific files to ignore (such as '/SIGNED.md')
+    @opts.presets  or=  [] # the preset names
     @opts.root_dir or=  '.'
-    @opts.ignore.sort()
+    @_create_presets()
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  should_ignore: (path_to_file, cb) ->
+    console.log "In should_ignore '#{path_to_file}'"
+    res = false
+    if path_to_file in @opts.ignore
+      res = true
+    else
+      for p in @presets
+        await p.handle @opts.root_dir, path_to_file, cb r
+        switch r
+          when constants.ignore_res.NONE then continue
+          when constants.ignore_res.IGNORE
+            res = true
+            break
+          when constants.ignore_res.DONT_IGNORE
+            res = false
+            break
+    cb res
 
   # -------------------------------------------------------------------------------------------------------------------
 
@@ -151,8 +175,8 @@ class Summarizer
     ###
     returns null if they are different; otherwise returns
     {
-      missing: [array of missing files]
-      wrong:   [files with incorrect hashes]
+      wrong:   [files with incorrect hashes, size, or privs]
+      missing: [files that should've been found but weren't]
       orphans: [files of unknown origin]
     }
     ###
@@ -194,9 +218,19 @@ class Summarizer
     return {
       meta:
         version: new PackageJson().version()
-      ignore: @opts.ignore
-      found:  @root_item.walk_to_array()
+      ignore:  @opts.ignore
+      presets: @opts.presets
+      found:   @root_item.walk_to_array()
     }
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  _create_presets: ->
+    for p in @opts.presets
+      switch p
+        when 'git'  then @presets.push new GitPreset()
+        when 'none' then continue
+        else throw new Error 'Unknown preset: #{p}'
 
 # =====================================================================================================================
 

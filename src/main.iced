@@ -6,6 +6,8 @@ constants         = require './constants'
 {to_md, from_md}  = require './markdown'
 {item_type_names} = require './constants'
 tablify           = require 'tablify'
+path              = require 'path'
+
 class Main
 
   # -------------------------------------------------------------------------------------------------------------------
@@ -34,19 +36,48 @@ class Main
       title:  'subcommands'
       dest:   'subcommand_name'
     }
-    sign   = subparsers.addParser 'sign',   {addHelp:true}
-    verify = subparsers.addParser 'verify', {addHelp:true}
-    sign.addArgument   ['-o', '--output'], {action: 'store', type:'string', help: 'output to a specific file'}
-    sign.addArgument   ['-p', '--preset'], {action: 'store', type:'string', help: 'use an ignore preset'}
-    sign.addArgument   ['-d', '--dir'],    {action: 'store', type:'string', help: 'the directory to sign', defaultValue: '.'}
-    verify.addArgument ['-i', '--input'],  {action: 'store', type:'string', help: 'load a specific signature file'}
-    verify.addArgument ['-d', '--dir'],    {action: 'store', type:'string', help: 'the directory to verify', defaultValue: '.'}
+    sign           = subparsers.addParser 'sign',   {addHelp:true}
+    verify         = subparsers.addParser 'verify', {addHelp:true}
+    preset_choices = (k.toLoweCase() for k of constants.preset_aliases)
+    sign.addArgument   ['-o', '--output'],  {action: 'store', type:'string', help: 'output to a specific file'}    
+    sign.addArgument   ['-p', '--presets'], {action: 'store', type:'string', help: 'specify ignore presets, comma-separated',  defaultValue: 'git,dropbox,kb'}
+    sign.addArgument   ['-d', '--dir'],     {action: 'store', type:'string', help: 'the directory to sign', defaultValue: '.'}
+    verify.addArgument ['-i', '--input'],   {action: 'store', type:'string', help: 'load a specific signature file'}
+    verify.addArgument ['-d', '--dir'],     {action: 'store', type:'string', help: 'the directory to verify', defaultValue: '.'}
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  valid_presets: -> (k.toLowerCase() for k of constants.presets)
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  get_preset_list: ->
+    if not @args.preset?
+      exit_err "Expected comma-separated list of presets (valid values=#{@valid_resets().join ','})"
+    else
+      presets = @args.preset.split ','
+      for k in presets
+        if not (k in @valid_presets())
+          exit_err "Unknown preset #{k} (valid values=#{@valid_resets().join ','})"
+      return presets
+
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  get_ignore_list: (output, cb) ->
+    # if the output file is inside the analyzed directory, add
+    # it to the ignore array. Otherwise don't worry about it.
+    rel_ignore = path.relative(@args.dir, output).split(path.sep).join('/')
+    ignore = if rel_ignore[...2] isnt '..' then ["/#{rel_ignore}"] else []
+    cb ignore
 
   # -------------------------------------------------------------------------------------------------------------------
 
   sign: ->
-    output = @args.output or constants.defaults.filename
-    await Summarizer.from_dir @args.dir, {ignore: [output]}, defer err, summ
+    output  = @args.output or constants.defaults.filename
+    await @get_ignore_list output, defer ignore
+    console.log "Ignoring...#{ignore}"
+    await Summarizer.from_dir @args.dir, {ignore, presets: @get_preset_list()}, defer err, summ
     if err? then @exit_err err
     o = summ.to_json_obj()
     await fs.writeFile output, to_md(o) + "\n", {encoding: 'utf8'}, defer err    

@@ -16,13 +16,17 @@
   1/foo.txt           b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c   -  40043
 ```
 
+#### Ignore Presets
+
+```bash
+git     # ignore anything as described by .gitignore files
+kb      # ignore anything as described by .kbignore  files
+```
+
 #### Ignore
 
 ```
-.git
-.gitignore
-~*
-lib/*
+/SIGNED.md
 ```
 
 <!-- END SIGNED PORTION -->

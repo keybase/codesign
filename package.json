@@ -17,7 +17,8 @@
   "dependencies": {
     "argparse": "0.1.15",
     "iced-error": "~0.0.8",
-    "tablify": ">=0.1.5"
+    "tablify": ">=0.1.5",
+    "glob-to-regexp": ">=0.0.1"
   },
   "devDependencies": {
     "iced-logger": "~0.0.1",
