@@ -101,8 +101,11 @@ class Main
     if err? then @exit_err "Couldn't open #{input}; if using another filename pass with -i <filename>"
     json_obj = from_md body
 
+    if not json_obj?
+      @exit_err "Failed to parse/load #{input}"
+
     # do our own analysis
-    await Summarizer.from_dir @args.dir, {ignore: json_obj.ignore}, defer err, summ
+    await Summarizer.from_dir @args.dir, {ignore: json_obj.ignore, presets: json_obj.presets}, defer err, summ
     if err? then @exit_err err
 
     # see if they match
