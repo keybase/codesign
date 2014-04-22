@@ -1,7 +1,7 @@
 glob_to_regexp = require 'glob-to-regexp'
 fs             = require 'fs'
 path           = require 'path'
-constants      = require './constants'
+constants      = require '../constants'
 PresetBase     = require './preset_base'
 
 # =======================================================================================
@@ -19,25 +19,33 @@ class GlobberPreset extends PresetBase
   handle: (root_dir, path_to_file, cb) ->
     res      = constants.ignore_res.NONE 
     rel_path = path.relative @working_path, path.join(root_dir, path_to_file)
-    console.log "Globber handling #{rel_path} in context #{@working_path}"
+    if @glob_list.length
+      console.log "[#{path.relative root_dir, @working_path}] globber handling #{path.relative root_dir, path_to_file}"
     for g in @glob_list
       if g[0].match(/^[\s\#]/)
-        console.log "Skipping globber row #{g}"
+        console.log "   Skipping globber row #{g}"
       else if glob_to_regexp(g).test rel_path
-        console.log "Globber matched #{g} to #{rel_path} in context #{@working_path}"
+        console.log "   Globber matched #{g}, ignoring!"
         res = constants.ignore_res.IGNORE
         break
+      else
+        console.log "   Globber didn't match #{g}..."
     cb res
 
   # -------------------------------------------------------------------------------------
 
-  @from_file: (f) ->
+  
+
+  # -------------------------------------------------------------------------------------
+
+  @from_file: (f, cb) ->
     full_path       = path.resolve f
     working_path    = path.dirname full_path
     await PresetBase.file_to_array f, defer glob_list
     gp = new GlobberPreset working_path, glob_list
     console.log "Generated globber from #{full_path}; glob_list = [#{glob_list.join ', '}]"
-    return gp
+
+    cb gp
 
   # -------------------------------------------------------------------------------------
 

@@ -1,5 +1,6 @@
 path         = require 'path'
 tablify      = require 'tablify'
+constants    = require './constants'
 {item_types} = require './constants'
 utils        = require './utils'
 
@@ -67,7 +68,7 @@ exports.to_md = (o) ->
 
   ignore_list = (utils.escape s for s in o.ignore).join '\n'
   file_list   = pretty_format_files o.found
-  preset_list = ("#{p}  ##{constants.presets[p].toLowerCase()}" for p in o.presets).join '\n'
+  preset_list = ("#{p}  # #{constants.presets[p.toUpperCase()]}" for p in o.presets).join '\n'
 
   res = 
   """

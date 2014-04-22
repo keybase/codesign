@@ -1,6 +1,6 @@
 fs             = require 'fs'
 path           = require 'path'
-constants      = require './constants'
+constants      = require '../constants'
 
 # =============================================================================
 #
@@ -39,11 +39,16 @@ PresetBase = class PresetBase
           '/foo/root/'
         ]
     ###
-    res = [root_dir]
-    parts = path_to_file.split path.sep
-    for i in [0...(parts.length-1)]
+    res               = []
+    full_path_to_file = path.resolve root_dir, path_to_file
+    rel_path_to_file  = path.relative root_dir, full_path_to_file
+
+    parts = rel_path_to_file.split path.sep
+
+    for i in [0...parts.length]
       res.push path.join root_dir, path.join.apply(this, parts[0...i])
-    return res.reverse()
+    res.reverse()
+    return res
 
 
   # ---------------------------------------------------------------------------

@@ -4,10 +4,11 @@ path           = require 'path'
 fs             = require 'fs'
 {make_esc}     = require 'iced-error'
 {PackageJson}  = require './package'
+constants      = require './constants'
 {item_types}   = require './constants'
 utils          = require './utils'
 GitPreset      = require './preset/git'
-
+DropboxPreset  = require './preset/dropbox'
 
 # =====================================================================================================================
 
@@ -43,9 +44,14 @@ class SummarizedItem
       @item_type = item_types.DIR
       await fs.readdir @realpath, esc defer fnames
       for f in fnames when f isnt '.'
-        si = @subitem f
-        await si.load_traverse esc defer()
-        @contents.push si
+        subpath = path.join @realpath, f
+        await @summarizer.should_ignore subpath, esc defer ignore
+        if not ignore
+          si = @subitem f
+          await si.load_traverse esc defer()
+          @contents.push si
+        else
+          console.log "Ignoring #{subpath}..."
       @contents.sort (a,b) -> a.fname.localeCompare(b.fname, 'us')
     cb()
 
@@ -116,28 +122,26 @@ class Summarizer
     @opts          =    opts or {}
     @opts.ignore   or=  [] # specific files to ignore (such as '/SIGNED.md')
     @opts.presets  or=  [] # the preset names
-    @opts.root_dir or=  '.'
+    @opts.root_dir = path.resolve (@opts.root_dir or '.')
     @_create_presets()
 
   # -------------------------------------------------------------------------------------------------------------------
 
   should_ignore: (path_to_file, cb) ->
-    console.log "In should_ignore '#{path_to_file}'"
+    console.log "------------\nIn should_ignore '#{path_to_file}'"
     res = false
     if path_to_file in @opts.ignore
       res = true
     else
       for p in @presets
-        await p.handle @opts.root_dir, path_to_file, cb r
-        switch r
-          when constants.ignore_res.NONE then continue
-          when constants.ignore_res.IGNORE
-            res = true
-            break
-          when constants.ignore_res.DONT_IGNORE
-            res = false
-            break
-    cb res
+        await p.handle @opts.root_dir, path_to_file, defer r
+        if r is constants.ignore_res.IGNORE
+          res = true
+          break
+        else if r is constants.ignore_res.DONT_IGNORE
+          res = false
+          break
+    cb null, res
 
   # -------------------------------------------------------------------------------------------------------------------
 
@@ -228,9 +232,10 @@ class Summarizer
   _create_presets: ->
     for p in @opts.presets
       switch p
-        when 'git'  then @presets.push new GitPreset()
-        when 'none' then continue
-        else throw new Error 'Unknown preset: #{p}'
+        when 'git'      then @presets.push new GitPreset()
+        when 'dropbox'  then @presets.push new DropboxPreset()
+        when 'none'     then continue
+        else throw new Error "Unknown preset: #{p}"
 
 # =====================================================================================================================
 

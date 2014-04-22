@@ -19,6 +19,7 @@ $(BUILD_STAMP): \
 	lib/main.js \
 	lib/markdown.js \
 	lib/package.js \
+	lib/preset/dropbox.js \
 	lib/preset/git.js \
 	lib/preset/globber.js \
 	lib/preset/preset_base.js \
