@@ -14,13 +14,20 @@ class GitPreset extends PresetBase
   # -------------------------------------------------------------------------------------
 
   handle: (root_dir, path_to_file, cb) ->
-    paths = PresetBase.parent_paths root_dir, path_to_file
-    res   = constants.ignore_res.NONE
-    for p in paths
-      await @get_globber p, defer globber
-      await globber.handle root_dir, path_to_file, defer res
-      if res isnt constants.ignore_res.NONE
-        break
+    paths     = PresetBase.parent_paths root_dir, path_to_file
+    res       = constants.ignore_res.NONE
+
+    # ignore .git folders no matter what
+    if path.basename(path_to_file) is '.git'
+      res = constants.ignore_res.IGNORE
+
+    # otherwise glob it upward to the root_dir
+    else
+      for p in paths
+        await @get_globber p, defer globber
+        await globber.handle root_dir, path_to_file, defer res
+        if res isnt constants.ignore_res.NONE
+          break
     cb res
 
   # -------------------------------------------------------------------------------------

@@ -89,7 +89,7 @@ class GlobberPreset extends PresetBase
 
   handle: (root_dir, path_to_file, cb) ->
     res      = constants.ignore_res.NONE 
-    abs_path = path.join root_dir, path_to_file
+    abs_path = path.resolve root_dir, path_to_file
     rel_path = path.relative @working_path, abs_path
     await @is_a_dir abs_path, defer is_a_dir
     for gi in @glob_items
@@ -106,7 +106,11 @@ class GlobberPreset extends PresetBase
 
   is_a_dir: (p, cb) ->
     await fs.stat p, defer err, stat
-    cb stat?.isDirectory()
+    if err
+      console.log err
+    res = stat?.isDirectory()
+    console.log "#{p} is a directory: #{res}"
+    cb res
 
   # -------------------------------------------------------------------------------------
 
