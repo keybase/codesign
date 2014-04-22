@@ -46,6 +46,9 @@ class GlobItem
           esc_state = 1
         else
           esc_state = 0
+      # we can now remove leading slashes, since we've tagged it as a path
+      if s[0] is '/'
+        s = s[1...]
 
       console.log "Generated regexp out of '#{escape(s)}', out of '#{escape(@s)}'"
       @rxx = glob_to_regexp s

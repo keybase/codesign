@@ -9,6 +9,7 @@ constants      = require './constants'
 utils          = require './utils'
 GitPreset      = require './preset/git'
 DropboxPreset  = require './preset/dropbox'
+GlobberPreset  = require './preset/globber'
 
 # =====================================================================================================================
 
@@ -230,12 +231,18 @@ class Summarizer
   # -------------------------------------------------------------------------------------------------------------------
 
   _create_presets: ->
+    # let's make an actual preset for each one requested in the opts
     for p in @opts.presets
       switch p
         when 'git'      then @presets.push new GitPreset()
         when 'dropbox'  then @presets.push new DropboxPreset()
         when 'none'     then continue
         else throw new Error "Unknown preset: #{p}"
+
+    # and a special Globber one for the ignore list
+    if @opts.ignore.length
+      console.log "Creating custom Globber from ignore list"
+      @presets.push new GlobberPreset @opts.root_dir, @opts.ignore
 
 # =====================================================================================================================
 
