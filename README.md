@@ -10,3 +10,4 @@ directory contents summarizer - will be used for code signing feature
   - performance consideration: pipelining summarizer so multiple files at once
   - pretty output on file not found errors, read-permission problems
   - handle poorly-parsing SIGNED.md file
+  - tilde and pound signs in names
