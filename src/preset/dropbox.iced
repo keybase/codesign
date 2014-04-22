@@ -38,7 +38,6 @@ class DropboxPreset extends PresetBase
       $
     ///gi then res = constants.ignore_res.IGNORE
 
-    console.log "DROPBOX #{basename}: #{res}"
     cb res
 
   # -------------------------------------------------------------------------------------
