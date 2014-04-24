@@ -50,7 +50,6 @@ class GlobItem
       if s[0] is '/'
         s = s[1...]
 
-      console.log "Generated regexp out of '#{escape(s)}', out of '#{escape(@s)}'"
       @rxx = glob_to_regexp s
 
   # --------------------------------------------------------------------------------------
@@ -58,7 +57,6 @@ class GlobItem
   does_match: (rel_path, is_a_dir) ->
     # rel_path is relative to some context
     # for the glob
-    console.log "Checking #{rel_path} against #{@rxx.toString()}"
     if @empty
       return false
     else if @dirs_only and not is_a_dir
@@ -85,8 +83,6 @@ class GlobberPreset extends PresetBase
       gi = new GlobItem g
       if not gi.empty
         @glob_items.push gi
-      else
-        console.log "Skipping glob item '#{g}' "
 
   # -------------------------------------------------------------------------------------
 
@@ -98,10 +94,10 @@ class GlobberPreset extends PresetBase
     for gi in @glob_items
       if gi.does_match rel_path, is_a_dir
         if gi.negation
-          console.log "#{path.relative root_dir, path_to_file} NOT TO BE IGNORED (says #{path.relative root_dir, @working_path})"
+          #console.log "#{path.relative root_dir, path_to_file} NOT TO BE IGNORED (says #{path.relative root_dir, @working_path})"
           res = constants.ignore_res.DONT_IGNORE
         else
-          console.log "#{path.relative root_dir, path_to_file} TO BE IGNORED (says #{path.relative root_dir, @working_path})"
+          #console.log "#{path.relative root_dir, path_to_file} TO BE IGNORED (says #{path.relative root_dir, @working_path})"
           res = constants.ignore_res.IGNORE
     cb res
 
@@ -112,7 +108,6 @@ class GlobberPreset extends PresetBase
     if err
       console.log err
     res = stat?.isDirectory()
-    console.log "#{p} is a directory: #{res}"
     cb res
 
   # -------------------------------------------------------------------------------------
@@ -124,7 +119,6 @@ class GlobberPreset extends PresetBase
     working_path    = path.dirname full_path
     await PresetBase.file_to_array f, defer glob_list
     gp = new GlobberPreset working_path, glob_list
-    console.log "Generated globber from #{full_path}; glob_list = [#{glob_list.join ', '}]"
 
     cb gp
 

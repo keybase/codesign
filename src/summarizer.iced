@@ -1,4 +1,3 @@
-crypto         = require 'crypto'
 tablify        = require 'tablify'
 path           = require 'path'
 fs             = require 'fs'
@@ -10,6 +9,7 @@ utils          = require './utils'
 GitPreset      = require './preset/git'
 DropboxPreset  = require './preset/dropbox'
 GlobberPreset  = require './preset/globber'
+XPlatformHash  = require './x_platform_hash'
 
 # =====================================================================================================================
 
@@ -75,7 +75,7 @@ class SummarizedItem
       item_type:     @item_type
       fname:         @fname
       path:          if @parent_path.length then "#{@parent_path}/#{@fname}" else @fname
-      exec:          utils.is_user_executable @stats.mode
+      exec:          utils.is_user_executable @stats
 
     switch @item_type
       when item_types.FILE
@@ -103,15 +103,10 @@ class SummarizedItem
   # -------------------------------------------------------------------------------------------------------------------
 
   hash_contents: (cb) ->
+    h    = new XPlatformHash {alg: 'sha256', encoding: 'hex'}
     fd   = fs.createReadStream @realpath
-    hash = crypto.createHash 'sha256'
-    hash.setEncoding 'hex'
-    fd.on 'end', ->
-      hash.end()
-      cb null, hash.read()
-    fd.on 'error', (e) -> 
-      cb e
-    fd.pipe hash
+    await h.hash fd, defer err, hash_res
+    cb err, hash_res
 
 # =====================================================================================================================
 
@@ -129,7 +124,6 @@ class Summarizer
   # -------------------------------------------------------------------------------------------------------------------
 
   should_ignore: (path_to_file, cb) ->
-    console.log "------------\nIn should_ignore '#{path_to_file}'"
     res = false
     if path_to_file in @opts.ignore
       res = true
@@ -176,27 +170,32 @@ class Summarizer
 
   # -------------------------------------------------------------------------------------------------------------------
 
+  hash_match: (h1, h2) -> (not (h1? or h2?)) or (h1.hash is h2.hash)
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  hash_alt_match: (h1, h2) -> (not (h1? or h2?)) or (h1.hash is h2.hash) or (h1.alt_hash is h2.hash) or (h1.hash is h2.alt_hash)
+
+  # -------------------------------------------------------------------------------------------------------------------
+
   compare_to_json_obj: (obj) ->
     ###
     returns null if they are different; otherwise returns
     {
-      wrong:   [files with incorrect hashes, size, or privs]
-      missing: [files that should've been found but weren't]
-      orphans: [files of unknown origin]
+      wrong:      [files with incorrect hashes, size, or privs]
+      missing:    [files that should've been found but weren't]
+      orphans:    [files of unknown origin]
+      hash_warns: [files that match if line breaks modified]
     }
     ###
     err = 
-      missing: []
-      wrong:   []
-      orphans: []
+      missing:    []
+      wrong:      []
+      orphans:    []
+      hash_warns: []
 
     o1_by_path = {}
     o2_by_path = {}
-
-    are_same = (f1, f2) ->
-      for k in ['item_type', 'hash', 'link', 'exec', 'size']
-        if f1[k] isnt f2[k] then return false
-      true
 
     o1_by_path[f.path] = f for f in @to_json_obj().found
     o2_by_path[f.path] = f for f in obj.found
@@ -204,12 +203,19 @@ class Summarizer
     for k,v of o2_by_path
       if not (v2 = o1_by_path[k])?
         err.missing.push v
-      else if not are_same v, v2
-        err.wrong.push {expected: v, got: v2}
+      else
+        ok = true
+        for k in ['item_type', 'link', 'exec']
+          if (v[k] isnt v2[k]) or not @hash_alt_match(v.hash, v2.hash)
+            ok = false
+            err.wrong.push {expected: v, got: v2}
+        if ok
+          if not @hash_match v.hash, v2.hash
+            err.hash_warns.push {expected: v, got: v2}
     
     err.orphans.push v for k,v of o1_by_path when not o2_by_path[k]?
  
-    if err.missing.length or err.wrong.length or err.orphans.length
+    if err.missing.length or err.wrong.length or err.orphans.length or err.hash_warns.length
       return err
     else
       return null
@@ -241,7 +247,6 @@ class Summarizer
 
     # and a special Globber one for the ignore list
     if @opts.ignore.length
-      console.log "Creating custom Globber from ignore list"
       @presets.push new GlobberPreset @opts.root_dir, @opts.ignore
 
 # =====================================================================================================================

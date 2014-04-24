@@ -25,7 +25,8 @@ $(BUILD_STAMP): \
 	lib/preset/preset_base.js \
 	lib/summarizer.js \
 	lib/top.js \
-	lib/utils.js
+	lib/utils.js \
+	lib/x_platform_hash.js
 	date > $@
 
 clean:

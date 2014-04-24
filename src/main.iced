@@ -113,13 +113,15 @@ class Main
     if err
       table = []
       for f in err.missing
-        table.push [f.path, "Missing"]
+        table.push ["'#{f.path}'", "Missing"]
       for f in err.orphans
-        table.push [f.path, "Unknown file"]
+        table.push ["'#{f.path}'", "Unknown file"]
+      for {got, expected} in err.hash_warns
+        table.push [got.path, "Warn: Hash only matches when stripping Windows linebreaks"]
       for {got, expected} in err.wrong
         if got.item_type isnt expected.item_type then table.push [got.path, "Expected a #{item_type_names[expected.item_type]} and got a #{item_type_names[got.item_type]}"]
         else if got.size      isnt expected.size      then table.push [got.path, "Expected size #{expected.size} and got #{got.size}"]
-        else if got.hash      isnt expected.hash      then table.push [got.path, "Bad contents (expected sha256 hash #{expected.hash[0...8]}...; got #{got.hash[0...8]}...)"]
+        else if got.hash      isnt expected.hash      then table.push [got.path, "Bad contents (expected sha256 hash #{expected.hash.hash[0...8]}...; got #{got.hash.hash[0...8]}...)"]
         else if got.link      isnt expected.link      then table.push [got.path, "Expected link to '#{expected.link}' and got link to '#{got.link}'"]
         else if got.exec   and not expected.exec      then table.push [got.path, "Got unexpected user exec privileges"]  
         else if not got.exec and   expected.exec      then table.push [got.path, "Expected user exec privileges"]
