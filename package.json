@@ -16,6 +16,7 @@
   "engineStrict": true,
   "dependencies": {
     "argparse": "0.1.15",
+    "iced-coffee-script": "~1.7.1-a",
     "iced-error": "~0.0.8",
     "tablify": ">=0.1.5",
     "glob-to-regexp": ">=0.0.1"
@@ -23,8 +24,7 @@
   "devDependencies": {
     "iced-logger": "~0.0.1",
     "iced-spawn": ">=0.0.3",
-    "iced-utils": "~0.1.9",
-    "iced-coffee-script": "~1.7.1-a"
+    "iced-utils": "~0.1.9"
   },
   "author": "Chris Coyne <ccoyne77@gmail.com>",
   "license": "BSD-3-Clause"
