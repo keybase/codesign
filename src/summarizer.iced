@@ -170,11 +170,11 @@ class Summarizer
 
   # -------------------------------------------------------------------------------------------------------------------
 
-  hash_match: (h1, h2) -> (not (h1? or h2?)) or (h1.hash is h2.hash)
+  hash_match: (h1, h2) -> (not (h1? or h2?)) or (h1?.hash is h2?.hash)
 
   # -------------------------------------------------------------------------------------------------------------------
 
-  hash_alt_match: (h1, h2) -> (not (h1? or h2?)) or (h1.hash is h2.hash) or (h1.alt_hash is h2.hash) or (h1.hash is h2.alt_hash)
+  hash_alt_match: (h1, h2) -> (not (h1? or h2?)) or (h1?.hash is h2?.hash) or (h1?.alt_hash is h2?.hash) or (h1?.hash is h2?.alt_hash)
 
   # -------------------------------------------------------------------------------------------------------------------
 
