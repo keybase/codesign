@@ -36,17 +36,14 @@ class SummarizedItem
     @realpath   = path.resolve p
     await  finfo_cache @realpath, esc defer @finfo
 
-    if @finfo.lstat.isSymbolicLink()
-      @item_type = item_types.SYMLINK
-      await @finfo.readlink esc defer @link
-    else if @finfo.stat.isFile()
-      @item_type = item_types.FILE
-      await 
-        @finfo.hash 'sha256', 'hex', esc defer @hash
-        @finfo.is_binary esc defer @binary
-    else
+    @item_type = @finfo.item_type
+    @link      = @finfo.link
+    @binary    = @finfo.is_binary()
+
+    if @item_type is item_types.FILE
+      await @finfo.hash 'sha256', 'hex', esc defer @hash
+    else if @item_type is item_types.DIR
       @contents  = []
-      @item_type = item_types.DIR
       await @finfo.dir_contents esc defer fnames
       for f in fnames
         subpath = path.join @realpath, f
@@ -86,7 +83,7 @@ class SummarizedItem
       when item_types.FILE
         info.hash = @hash
         info.size = @finfo.stat.size
-      when item_types.SYMLINK
+      when item_types.SYMLINK, item_types.WIN_SYMLINK
         info.link = @link
     return info
 
