@@ -1,8 +1,8 @@
-glob_to_regexp = require 'glob-to-regexp'
-fs             = require 'fs'
-path           = require 'path'
-constants      = require '../constants'
-PresetBase     = require './preset_base'
+glob_to_regexp  = require 'glob-to-regexp'
+path            = require 'path'
+constants       = require '../constants'
+PresetBase      = require './preset_base'
+finfo_cache     = require '../file_info_cache'
 
 # =======================================================================================
 
@@ -90,24 +90,19 @@ class GlobberPreset extends PresetBase
     res      = constants.ignore_res.NONE 
     abs_path = path.resolve root_dir, path_to_file
     rel_path = path.relative @working_path, abs_path
-    await @is_a_dir abs_path, defer is_a_dir
-    for gi in @glob_items
-      if gi.does_match rel_path, is_a_dir
-        if gi.negation
-          #console.log "#{path.relative root_dir, path_to_file} NOT TO BE IGNORED (says #{path.relative root_dir, @working_path})"
-          res = constants.ignore_res.DONT_IGNORE
-        else
-          #console.log "#{path.relative root_dir, path_to_file} TO BE IGNORED (says #{path.relative root_dir, @working_path})"
-          res = constants.ignore_res.IGNORE
-    cb res
-
-  # -------------------------------------------------------------------------------------
-
-  is_a_dir: (p, cb) ->
-    await fs.stat p, defer err, stat
+    await finfo_cache abs_path, defer err, finfo
     if err
       console.log err
-    res = stat?.isDirectory()
+    else
+      is_a_dir = finfo.stat.isDirectory()
+      for gi in @glob_items
+        if gi.does_match rel_path, is_a_dir
+          if gi.negation
+            #console.log "#{path.relative root_dir, path_to_file} NOT TO BE IGNORED (says #{path.relative root_dir, @working_path})"
+            res = constants.ignore_res.DONT_IGNORE
+          else
+            #console.log "#{path.relative root_dir, path_to_file} TO BE IGNORED (says #{path.relative root_dir, @working_path})"
+            res = constants.ignore_res.IGNORE
     cb res
 
   # -------------------------------------------------------------------------------------

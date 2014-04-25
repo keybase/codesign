@@ -109,15 +109,14 @@ class Main
     if err? then @exit_err err
 
     # see if they match
-    err = summ.compare_to_json_obj json_obj
-    if err
+    {err, warn} = summ.compare_to_json_obj json_obj
+    if err?
+      console.log "ERRORS\n---------------"
       table = []
       for f in err.missing
         table.push ["'#{f.path}'", "Missing"]
       for f in err.orphans
         table.push ["'#{f.path}'", "Unknown file"]
-      for {got, expected} in err.hash_warns
-        table.push [got.path, "Warn: Hash only matches when stripping Windows linebreaks"]
       for {got, expected} in err.wrong
         if got.item_type isnt expected.item_type then table.push [got.path, "Expected a #{item_type_names[expected.item_type]} and got a #{item_type_names[got.item_type]}"]
         else if got.size      isnt expected.size      then table.push [got.path, "Expected size #{expected.size} and got #{got.size}"]
@@ -128,8 +127,11 @@ class Main
       console.log tablify table
       console.log "BAD FILES: #{err.missing.length + err.orphans.length + err.wrong.length}"
       process.exit 1
-    else
-      console.log "Success!"
+    if warn?
+      console.log "WARNINGS\n-----------------"
+      console.log tablify warn
+    if not err?
+      console.log "Success! #{if warn? then ' (with warnings)' else ''}"
 
   # -------------------------------------------------------------------------------------------------------------------
 

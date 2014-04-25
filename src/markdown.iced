@@ -31,15 +31,19 @@ max_depth = (found_files) ->
 pretty_format_files = (found_files) ->
   rows = [HEADINGS]
   for f in found_files
-    col0 = if (f.item_type is item_types.FILE) then f.size else ''
-    col1 = if f.exec then 'x' else ''
-    col2 = ("  " for i in [0...f.depth]).join('') + utils.escape "#{f.path}"
-    col3 = switch f.item_type
+    c0 = if (f.item_type is item_types.FILE) then f.size else ''
+    c1 = if f.exec then 'x' else ''
+    c2 = ("  " for i in [0...f.depth]).join('') + utils.escape f.fname # "#{f.path}"
+    if f.item_type is item_types.DIR then c2 += "/"
+    c3 = switch f.item_type
       when item_types.SYMLINK then "-> #{utils.escape(f.link)}"
       when item_types.DIR     then ''
       when item_types.FILE
-        if f.hash.hash is f.hash.alt_hash then f.hash.hash else "#{f.hash.hash}|#{f.hash.alt_hash}"
-    rows.push [ col0, col1, col2, col3 ]
+        if (f.hash.hash is f.hash.alt_hash) or f.binary
+          f.hash.hash 
+        else
+          "#{f.hash.hash}|#{f.hash.alt_hash}"
+    rows.push [ c0, c1, c2, c3 ]
   return tablify rows, {
     show_index:     false
     row_start:      ''
@@ -49,8 +53,10 @@ pretty_format_files = (found_files) ->
   }
 
 files_from_pretty_format = (str_arr) ->
-  res = []
-  r0  = str_arr[0] 
+  res               = []
+  r0                = str_arr[0] 
+  dir_queue         = []
+  last_indent_level = 0
 
   [a0, b0] = [r0.indexOf(HEADINGS[0]), r0.indexOf(HEADINGS[1]) - SPACER.length]
   [a1, b1] = [r0.indexOf(HEADINGS[1]), r0.indexOf(HEADINGS[2]) - SPACER.length]
@@ -62,15 +68,21 @@ files_from_pretty_format = (str_arr) ->
     c1 = s[a1...b1].replace /(^\s+)|(\s+$)/g, ''
     c2 = s[a2...b2].replace /(^\s+)|(\s+$)/g, ''
     c3 = s[a3...b3].replace /(^\s+)|(\s+$)/g, ''
-    fpath  = utils.unescape c2.replace /(^\s+)|(\s+$)/g, ''
-    fparts = fpath.split '/'
+    indent_level      = s[a2...b2].match(/[^\s]/).index / SPACER.length
+    fname             = utils.unescape(c2).replace /\/?$/,''    
+    if (idiff = last_indent_level - indent_level) > 0
+      dir_queue.pop() for i in [0...idiff]
+    last_indent_level = indent_level
+    parent_path       = dir_queue.join '/'
     info =
-      fname:         fparts[-1...][0]
-      parent_path:   fparts[...-1].join '/'
-      path:          fpath
+      fname:         fname
+      parent_path:   parent_path
+      path:          if parent_path.length then "#{parent_path}/#{fname}" else fname
       exec:          false
     if c3 is ''
       info.item_type = item_types.DIR
+      dir_queue.push fname
+      last_indent_level += 1
     else if c3[0...2] is '->'
       info.item_type = item_types.SYMLINK
       info.link      = utils.unescape c3[3...]

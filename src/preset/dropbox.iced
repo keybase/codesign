@@ -1,4 +1,3 @@
-fs             = require 'fs'
 path           = require 'path'
 constants      = require '../constants'
 PresetBase     = require './preset_base'

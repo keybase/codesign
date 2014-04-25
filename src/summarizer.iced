@@ -1,6 +1,5 @@
 tablify        = require 'tablify'
 path           = require 'path'
-fs             = require 'fs'
 {make_esc}     = require 'iced-error'
 {PackageJson}  = require './package'
 constants      = require './constants'
@@ -10,6 +9,7 @@ GitPreset      = require './preset/git'
 DropboxPreset  = require './preset/dropbox'
 GlobberPreset  = require './preset/globber'
 XPlatformHash  = require './x_platform_hash'
+finfo_cache    = require './file_info_cache'
 
 # =====================================================================================================================
 
@@ -24,27 +24,31 @@ class SummarizedItem
     @realpath         = null
     @link             = null
     @contents         = null
+    @finfo            = null
     @hash             = null
-    @stats            = null # slightly different for symbolic links
+    @binary           = false
 
   # -------------------------------------------------------------------------------------------------------------------
 
   load_traverse: (cb) ->
-    esc = make_esc cb, "SummarizedItem::load"
-    p   = path.join @summarizer.root_dir(), @parent_path, @fname
-    await  fs.realpath p, esc defer @realpath
-    await  fs.lstat    p, esc defer @stats
-    if @stats?.isSymbolicLink()
+    esc         = make_esc cb, "SummarizedItem::load"
+    p           = path.join @summarizer.root_dir(), @parent_path, @fname
+    @realpath   = path.resolve p
+    await  finfo_cache @realpath, esc defer @finfo
+
+    if @finfo.lstat.isSymbolicLink()
       @item_type = item_types.SYMLINK
-      await fs.readlink p, esc defer @link
-    else if @stats.isFile()
+      await @finfo.readlink esc defer @link
+    else if @finfo.stat.isFile()
       @item_type = item_types.FILE
-      await @hash_contents esc defer @hash
+      await 
+        @finfo.hash 'sha256', 'base64', esc defer @hash
+        @finfo.is_binary esc defer @binary
     else
       @contents  = []
       @item_type = item_types.DIR
-      await fs.readdir @realpath, esc defer fnames
-      for f in fnames when f isnt '.'
+      await @finfo.dir_contents esc defer fnames
+      for f in fnames
         subpath = path.join @realpath, f
         await @summarizer.should_ignore subpath, esc defer ignore
         if not ignore
@@ -75,12 +79,13 @@ class SummarizedItem
       item_type:     @item_type
       fname:         @fname
       path:          if @parent_path.length then "#{@parent_path}/#{@fname}" else @fname
-      exec:          utils.is_user_executable @stats
+      exec:          @finfo.is_user_executable_file()
+      binary:        @binary
 
     switch @item_type
       when item_types.FILE
         info.hash = @hash
-        info.size = @stats.size
+        info.size = @finfo.stat.size
       when item_types.SYMLINK
         info.link = @link
     return info
@@ -99,14 +104,6 @@ class SummarizedItem
     else
       _res.push @signable_info()
     return _res
-
-  # -------------------------------------------------------------------------------------------------------------------
-
-  hash_contents: (cb) ->
-    h    = new XPlatformHash {alg: 'sha256', encoding: 'hex'}
-    fd   = fs.createReadStream @realpath
-    await h.hash fd, defer err, hash_res
-    cb err, hash_res
 
 # =====================================================================================================================
 
@@ -180,19 +177,25 @@ class Summarizer
 
   compare_to_json_obj: (obj) ->
     ###
-    returns null if they are different; otherwise returns
-    {
+    returns {err, warn}
+      err will be null if there are none
+      warn will be null if there are none
+
+    err:
       wrong:      [files with incorrect hashes, size, or privs]
       missing:    [files that should've been found but weren't]
       orphans:    [files of unknown origin]
-      hash_warns: [files that match if line breaks modified]
-    }
+    warn:
+      alt_hash_matches: [files that only match with line breaks modded]
+      dir_missing:      [missing directories]
     ###
     err = 
-      missing:    []
-      wrong:      []
-      orphans:    []
-      hash_warns: []
+      missing:          []
+      wrong:            []
+      orphans:          []
+    warn =
+      dirs_missing:     []
+      alt_hash_matches: []
 
     o1_by_path = {}
     o2_by_path = {}
@@ -206,19 +209,24 @@ class Summarizer
       else
         ok = true
         for k in ['item_type', 'link', 'exec']
-          if (v[k] isnt v2[k]) or not @hash_alt_match(v.hash, v2.hash)
-            ok = false
+          if (v[k] isnt v2[k])
+            ok = false            
             err.wrong.push {expected: v, got: v2}
-        if ok
+            break
+        if ok and not @hash_alt_match(v.hash, v2.hash)
+          err.wrong.push {expected: v, got: v2}
+          break          
+        else if ok
           if not @hash_match v.hash, v2.hash
-            err.hash_warns.push {expected: v, got: v2}
+            warn.alt_hash_matches.push {expected: v, got: v2}
     
     err.orphans.push v for k,v of o1_by_path when not o2_by_path[k]?
- 
-    if err.missing.length or err.wrong.length or err.orphans.length or err.hash_warns.length
-      return err
-    else
-      return null
+
+    if not (err.missing.length or err.wrong.length or err.orphans.length)
+      err = null
+    if not (warn.dirs_missing.length or warn.alt_hash_matches.length)
+      warn = null
+    return {err, warn}
 
   # -------------------------------------------------------------------------------------------------------------------
 

@@ -12,8 +12,3 @@ module.exports =
     return res
 
   unescape: (s) -> decodeURIComponent s.replace /\+/g, '%20'
-
-  is_user_executable: (fstat) -> 
-    # we only care about file executability because
-    # different platforms disagree about directories
-    fstat.isFile() and !!(parseInt(100,8) & fstat.mode)
