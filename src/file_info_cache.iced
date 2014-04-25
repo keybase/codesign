@@ -113,6 +113,7 @@ class FileInfo
       @item_type = item_types.DIR
 
     # let's discover if it's a windows style link
+    console.log @stat.mode
     if (@item_type is item_types.FILE) and (@stat.mode is parseInt(120000,8)) and (@stat.size < 1024) and (not @_is_binary)
       console.log "Possible win sym link: #{@full_path}"
       await fs.readFile @full_path, {encoding: 'utf8'}, defer @err, data
