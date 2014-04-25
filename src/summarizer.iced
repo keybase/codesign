@@ -42,7 +42,7 @@ class SummarizedItem
     else if @finfo.stat.isFile()
       @item_type = item_types.FILE
       await 
-        @finfo.hash 'sha256', 'base64', esc defer @hash
+        @finfo.hash 'sha256', 'hex', esc defer @hash
         @finfo.is_binary esc defer @binary
     else
       @contents  = []
@@ -194,7 +194,8 @@ class Summarizer
       wrong:            []
       orphans:          []
     warn =
-      dirs_missing:     []
+      missing_dirs:     []
+      orphan_dirs:      []
       alt_hash_matches: []
 
     o1_by_path = {}
@@ -205,12 +206,15 @@ class Summarizer
 
     for k,v of o2_by_path
       if not (v2 = o1_by_path[k])?
-        err.missing.push v
+        if v.item_type is item_types.DIR
+          warn.missing_dirs.push v
+        else
+          err.missing.push v
       else
         ok = true
         for k in ['item_type', 'link', 'exec']
           if (v[k] isnt v2[k])
-            ok = false            
+            ok = false
             err.wrong.push {expected: v, got: v2}
             break
         if ok and not @hash_alt_match(v.hash, v2.hash)
@@ -219,12 +223,16 @@ class Summarizer
         else if ok
           if not @hash_match v.hash, v2.hash
             warn.alt_hash_matches.push {expected: v, got: v2}
-    
-    err.orphans.push v for k,v of o1_by_path when not o2_by_path[k]?
+
+    for k,v of o1_by_path when not o2_by_path[k]?
+      if v.item_type is item_types.DIR
+        warn.orphan_dirs.push v
+      else
+        err.orphans.push v
 
     if not (err.missing.length or err.wrong.length or err.orphans.length)
       err = null
-    if not (warn.dirs_missing.length or warn.alt_hash_matches.length)
+    if not (warn.missing_dirs.length or warn.orphan_dirs.length or warn.alt_hash_matches.length)
       warn = null
     return {err, warn}
 
