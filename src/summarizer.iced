@@ -53,8 +53,8 @@ class SummarizedItem
           si = @subitem f
           await si.load_traverse esc defer()
           @contents.push si
-        else
-          console.log "Ignoring #{subpath}..."
+        #else
+        #  console.log "Ignoring #{subpath}..."
       @contents.sort (a,b) -> a.fname.localeCompare(b.fname, 'us')
     cb()
 

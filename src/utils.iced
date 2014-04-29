@@ -1,4 +1,5 @@
-consants = require './constants'
+constants = require './constants'
+tablify   = require 'tablify'
 
 module.exports =
   escape: (s) ->
@@ -21,3 +22,11 @@ module.exports =
       when constants.item_types.SYMLINK then 'symlink'
       when constants.item_types.DIR then 'directory'
       else throw new Error "Unknown type: #{it}"
+
+  plain_tablify: (d, spaces=2) ->
+    return tablify d, 
+      show_index:     true
+      row_start:      ''
+      row_end:        ''
+      spacer:         (' ' for i in [0...spaces]).join ''
+      row_sep_char:   ''
