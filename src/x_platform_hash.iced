@@ -34,7 +34,7 @@ class XPlatformHash
     read_stream.on 'error', (e) -> cb e, null
     read_stream.on 'data', (data) ->
       hash.update data
-      alt_hash.update new Buffer data.toString().replace('\r', ''), 'utf8'
+      alt_hash.update (new Buffer data.toString('utf8').replace(/\r/g, ''), 'utf8')
 
   # ------------------------------------------------------------------------------------------------------------------
 

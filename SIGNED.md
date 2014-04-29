@@ -25,7 +25,7 @@ size    exec  file                                        contents
 20676             summarizer.js                           950b674ad601afc48d982e7db0afbe1c17dcc5f21229957c1cdfddd92216f1a5                                                                 
 182               top.js                                  eec47b1319cd332aca5bb3f032ede7fbb6f7055e31a48b5b5b084e190b1cb5c9                                                                 
 1625              utils.js                                057c2a73b990b4e42772c16e9a128baf56010acc020cbffc26f0ee42226317b1                                                                 
-1635              x_platform_hash.js                      47474c2f94b800ece6a77986d008eef1c4b52193536e0917a3b4adc119896904                                                                 
+1642              x_platform_hash.js                      c3c19255024d6f1ca2b7e4551d44979546df4bf380a25112c19a146542ccab3b                                                                 
                 node_modules/                                                                                                                                                              
                   .bin/                                                                                                                                                                    
 195                 icake                                 2a40f756defb1686447f71492451d6efe0eca7e7f51c7877598260ec3f2cf1fd                                                                 
@@ -294,7 +294,7 @@ size    exec  file                                        contents
 1904                            nginx.js                  892e277fadaf7029a82ca04ac03ecb79fa47547695d95609843b310738fae083                                                                 
 3074                            objectivec.js             93fdce00d1dc49058fbefd9999822cd25873714d333bf07609d50713c5565982                                                                 
 1297                            ocaml.js                  a5ea5a71b4ae08851dfe782241ade3a40b38e113b2bfbc8504e8b1302d2ed95b                                                                 
-2654                            oxygene.js                be7aa982c6941cb55ba8ff41425f8fa398c1662f98f69640cf0e9bada8d35a1a|3d352db6612168f59a82d88a3632c4861c4c45c9fb1b5e8533f4c946df38c6c3
+2654                            oxygene.js                be7aa982c6941cb55ba8ff41425f8fa398c1662f98f69640cf0e9bada8d35a1a|e53922ad62d8552525e2676c6e5ba27da15262ba5dd58678c00e65291eee74b9
 935                             parser3.js                43ac9e195cba6ba16a355e8c23d519f6e58459de34b4bd046dfbea1c476de5f5                                                                 
 4830                            perl.js                   78440ae9362f31c2916ecbef4cdcd8d5695a0bc20fc5232a7aaa7ea22e22f277                                                                 
 3059                            php.js                    569491be3d5323749fb53761a1b4e7bab28ac3c764067d68963ecd0d3b62ea07                                                                 
@@ -572,7 +572,7 @@ size    exec  file                                        contents
 9471              summarizer.iced                         f2f59535b06cc69d1c8ab1ad292760910ecc005283b57d8ab43ec870eca4e81a                                                                 
 75                top.iced                                e675e53d96477ba48a7d7d7df37f94bed095882f5955bd82f1b71673a4085894                                                                 
 920               utils.iced                              729eec0fab11b2fccfa0d9fba3c651b7852f51b65073ecf61474a99c74cac3b0                                                                 
-1480              x_platform_hash.iced                    eb5131580920b39c8c7ef64d920d45dd1b6a5b36ed70ad8e16a812aac9a90472                                                                 
+1489              x_platform_hash.iced                    228e27fee04ce6ffe4215cad24068ebf982b952973aa076d0cbdc73eef550134                                                                 
                 tests/                                                                                                                                                                     
 18                .gitignore                              51e157e35910264bacdd03cfa1beb2e21638125f5667d5b2f3f88130441933d7                                                                 
                   1/                                                                                                                                                                       
