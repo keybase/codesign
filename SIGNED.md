@@ -25,7 +25,7 @@ size    exec  file                                        contents
 20676             summarizer.js                           950b674ad601afc48d982e7db0afbe1c17dcc5f21229957c1cdfddd92216f1a5|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 182               top.js                                  eec47b1319cd332aca5bb3f032ede7fbb6f7055e31a48b5b5b084e190b1cb5c9|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1625              utils.js                                057c2a73b990b4e42772c16e9a128baf56010acc020cbffc26f0ee42226317b1|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-1584              x_platform_hash.js                      55f3c51a48bdd538cf95d641e5356b0cb180f0b1bea0e3c7165a1823f43ac852|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+1604              x_platform_hash.js                      fb99e54d7a5e72ec08d55ced2121aa4550d91ed1abe741859603157feed4269b|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                 node_modules/                                                                                                                                                              
                   .bin/                                                                                                                                                                    
 195                 icake                                 2a40f756defb1686447f71492451d6efe0eca7e7f51c7877598260ec3f2cf1fd|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -33,7 +33,7 @@ size    exec  file                                        contents
                   argparse/                                                                                                                                                                
 2157                HISTORY.md                            70ceb72bd78b9801df9e5621544b1377b618937667088f4ee325dd8cda2ba934|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1079                LICENSE                               c8442419dc614089ea022b3da6bfc089b41a58fb7b9030d1e651f2f36189dce2|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-7682                README.md                             50138946a87ac3578da9d80e3e190567141eaaa19c36552f41f47c40cf12c298|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+7682                README.md                             27fd9cc384fa8152c402b96c871c795b5aa5f141ffe18a701ac2849b103ae316|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                     examples/                                                                                                                                                              
 721     x             arguments.js                        8cc3f51669819cf99d30755249235857058938187c87ac49e245bd99941e8085|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 449     x             choice.js                           b8cbbe547277e4fc37d0dae83f68c795905ab29befabdda157d5bce4ed234f39|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -57,7 +57,7 @@ size    exec  file                                        contents
 1323                      constant.js                     1643ef3e19b74c00d582b40614027e49ff1785d5305c399c11d071730b25da44|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 703                       false.js                        9f2c5bc6bd47e6db4e39e3f7fde784e50bbbc5c14ddd9987c2e0a13636b6b570|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 692                       true.js                         abb06ffb541eb31e40a5c83750cbdd0dea36ea13916151a1bf470990853d702f|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-1343                    store.js                          5a5028271b1185221f697842fc1ff8c241d62cecac485a785b72555ef2028a9f|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+1343                    store.js                          4e7f5cb51871268a1b5dc60e269db22f556baca4e974bd763e59267ae26ca2e2|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 3633                    subparsers.js                     f253eb1cd9a02115a9a65ff9e0e2779523f49f1ae288a6a1f9ebb1a10805452c|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1251                    version.js                        a4000c83b54d9703231977403e2fed1301a16612336241e23fa7499bbfa9658f|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 4579                  action.js                           3c847911d3e7052084e66e2c0625ba8b06bac915c1fc26a7cc12a5ac289521fa|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -65,8 +65,8 @@ size    exec  file                                        contents
 618                   argparse.js                         33c1269d0e69f0bb3f5cc54dded402d0e1abcd2b7ff39ef6956234bd29de0757|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                       argument/                                                                                                                                                            
 1183                    error.js                          2af0d562361cc46b5958d87edef28f23661903674e2484f7347057d3d45fa251|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-1589                    exclusive.js                      2ad3b2345a72a6c292e6df5808173120a7fccf09be8036a090cfa83b2badf757|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-2330                    group.js                          eb8ba873196a7573cacaf9194856bda447b1590d69e2416f129ba8c0fcc5f5b7|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+1589                    exclusive.js                      cd81ce86f7e98ad6699a4d3ee86abdbdd762db25b03c4a7ad8521a64bd5fc5b2|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2330                    group.js                          4cab0c3ee28ac94fe0a37c4cffb6cb27c675b8dd7f266268d5107083141425ec|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 34900                 argument_parser.js                  2f8b3fed2f6381d5dcc017f67d951a47ce64adcd85b6234d2ad6521668dc64b9|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 324                   const.js                            b3108c3aa27dd6acee966bbc450f6b5282a7626820a12bc6f20b812ec8c1fa19|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                       help/                                                                                                                                                                
@@ -81,8 +81,8 @@ size    exec  file                                        contents
 640                     CONTRIBUTING.md                   6324f7ba5af65e153023d3def7bf6a50e9d5e1bc8edf10bb151d3e99da2f1aca|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1079                    LICENSE                           634ea9be97b991832f84c1be3afac41508bf41c7111fd083d9e0c1090e3766f8|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1137                    README.md                         cf595a9587a8d4c8aef86f9f33e18b91ed0704e9f4893dfebf0a66f9279bfdae|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-1406                    favicon.ico                       3d6274ea07b6ed7695295e0553a63a7fc65a780b9f315912d0cba6d42466d10f                                                                 
-89997                   index.html                        6427354e8a0df7a74fbf817355e53a741778bc2dce057db11aa338374db064f0|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+1406                    favicon.ico                       17c59fc15faca1b89d5d8470c15930a9ef7774ed55f597ccf3cec85c1636fe2f                                                                 
+89997                   index.html                        d0030c4fdc70fd9ba374bd8dce79cc9ad0f5e220caf18c775ad77d9303009256|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 42                      index.js                          d22d92553b00117ffd10141771f593a7ae4cc02a28a8769d1b28ca375a47575a|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 2080                    package.json                      55e50deb00eb8923db174a96250006420dccc30d7e6f5d9048969f1d803cc618|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 13450                   underscore-min.js                 27829b1d29e3fb532d761987d4057275d1e9ecdd3eaf4b4c40a29382590b820e|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -91,19 +91,19 @@ size    exec  file                                        contents
 119                     .travis.yml                       6805ccf468112bc2ccfbb930104b615b99cc8b00f8daf041c4e528619dce59e8|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 57                      Gemfile                           b184e1f732bf3367a13994a645d5ad2cb8b828add6a75f031b80425490c77d5d|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 263                     Gemfile.lock                      70e8b850acc4426d8d328eef208f99a2157daf75d204217ef5705e7523c19a44|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-18591                   README.markdown                   2ea9d96b8b57e418755a4d7374f3fcabc5374e39bdc45874f1eb2a18b5ec51b8|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+18591                   README.markdown                   078b63f434af430683e1ac1c9fde9efd9f233b98d24219c5f8be31bef9ceabdf|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 831                     Rakefile                          fddc86439c7dde7191c62ef322b76dac0e6000391d46e5daddd65936ed44cf7e|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 345                     component.json                    4f17a831fdccb37c5fa536bde07280373072cba13effd3208b5458111639969b|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                         dist/                                                                                                                                                              
-9515                      underscore.string.min.js        8ee46f02d6093fe07e844b7c48b60e7bd916b52283ce10031998f86e8196ba18|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+9515                      underscore.string.min.js        ba5360c4cdc7b85a8544192bac1ce3bf4b8c4644edf8b85160725a557ba98dd8|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                         lib/                                                                                                                                                               
-20875                     underscore.string.js            44afee8855fea7aa9026213245f6999aa911492d2dc9b017e935126109963791|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+20875                     underscore.string.js            42f96244731eda47ca62eb2a5af175bd55136dad2813d5055d31ae0b8f6f5daa|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 0                       libpeerconnection.log             e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                                                                 
-21266                   package.json                      2cd09b16eb9b28cacb7092491ab26db3e2cfeb070d4ada12acb6dbeeea30ff29|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+21266                   package.json                      79ce033ce10bcf8eb3a8403299bc2dc316d5010f27c762146528a980d37dd8e3|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                         test/                                                                                                                                                              
 1207                      run-qunit.js                    14aac184b30e893d7bdceb02648965623719c20d051006282366d2f17549fb22|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-3334                      speed.js                        417635ec070ebec697d7ebdbb053af8187816109b5dd8a2091234e50eb8ba6fc|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-30153                     strings.js                      4388cb355f6ff648507e36846b247115b09e7870e01376ad426189a68197cdba|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+3334                      speed.js                        fd7e5e9d5fd25f9545be7ed9e99f2a8aa47041701e56f18c086447985fd6554b|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+30153                     strings.js                      8b2629a9d55153cfbcf0301197654c0d60851ede5fd5742401c4d4071f013dd0|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 273                       strings_standalone.js           eb28dd1de53cb89546eb4c1f069339b1bfe00e0bdd085188d80953444f4cc119|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1368                      test.html                       39e8d42d14a623ccd7308d1a922ad52bd65c5bd539827ce4cd5069a4721b7288|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 669                       test_standalone.html            b3bff2410b1c7c57fa10c3960314fbe289a6f4b1de4f1e26fc21dd52e710618c|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -120,9 +120,9 @@ size    exec  file                                        contents
 252881                        jquery.js                   1717ea1fde8ceb7584341a24efc85c853083c660a1185968fbf94520f7193de2|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 20196                         jslitmus.js                 acb380f79e394bbf75f0f285135cd6b3f711eacd34e1cb6b759ebf871054d396|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 4578                          qunit.css                   149e5a93d68307083161c851bd8be355a4d279ae2d8dc7e639a0acd027af2ee6|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-51709                         qunit.js                    b608ce933b00dec39170ac6ad77befff83829099e6f88ed8c62d6095b0d15e0d|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+51709                         qunit.js                    7740db2f199397d27a5f67e925681e6df8e5a6e8ec585d51dd400a12e1171011|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 40988                     underscore.js                   ecc89338a98e602aebc71a2d284f94ebd0c156846d6e0a91943ca06e2e1fb260|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-9109                package.json                          d9c054f265b3000b0e4234bd5467f5883e62c9ff607cc4164f1c06097cdccf9e|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+9109                package.json                          af8f9e5aca791255770c9aaf68315392288cce0f878c01172eac1f8c382d49ba|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                   glob-to-regexp/                                                                                                                                                          
 45                  .travis.yml                           aed9309717ddc0c8b893b49730f399ce92a0cc0f9d7dc146c69e0407db65e06a|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 2474                README.md                             6a6f75c9138432cad5a77ee5062dd2c7a0408e32edbe3ce5b959350f1b9013f7|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -182,7 +182,7 @@ size    exec  file                                        contents
 17                          .npmignore                    75d74adae9ae30b931461a842faacea154fd291d9f0e2575001e382da5239062|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 3220                        CHANGELOG.md                  b64337b2b984ba0f3b55c9ca86f1cbd120cc17d134a97d9fb035f6d504fc3425|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1087                        LICENSE                       1d85cc6c52a6789234703e36e025a59a7f43fadadb68ad9678cf5fed2f68af92|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-8659                        README.md                     a6962856013c9ca9e2a90c7166d86af718b473d9c809b6f18af5fc001e20b2de|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+8659                        README.md                     aafb236ddc2d5cf7c7e7a78974bfbeb448103ebb77d83bb03b1334785c4f01c0|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                             lib/                                                                                                                                                           
 2088                          copy.js                     d867551aa0fc774001c9fdb4bce1360bcd418007a1d4526c081eadb2f6075f4f|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1072                          create.js                   25ec09ad12546cba82c7c64215eb71aff00914ef9cb95b4643f57f721bb3c01d|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -238,7 +238,7 @@ size    exec  file                                        contents
 602                               setup.sh                38ae341efe8670bb5aa72be3f00a362530000ba36c0851be791b1d2850263643|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 138                               test-async.js           688449876a8446241c0e181ffe6c5a10ae0ce96b60d2e8b58a22bdb31079bc80|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 105                               test-sync.js            2ad1b6b6c64944b00fdcb88443d10f026a7ccd660aa611497d60c0a5643c478c|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-10337   x                   package.json                  f100ead1737ea2c3567ff775e0fff6720a46f39c5924de9463dee309c7fe2d6a|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+10337   x                   package.json                  8775e97b77533e03c3d5a198052b8aeee820fe00cfa800351dc2317d758928a6|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                           highlight.js/                                                                                                                                                    
 1498                        LICENSE                       bdb8f9bba7125549cb01d68d90050ac9604f5aa43f6fd63e070f6d7d095f8d74|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 4682                        README.md                     16bc78ff59e2683520c72e3d3ea57f5421d1377b2610c5ceb874b38171dfbdd5|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -246,13 +246,13 @@ size    exec  file                                        contents
 19839                         highlight.js                9419e38c1c48b6cfb143ec188752d734ab495aebfa62f5781feecfcf2f955ad1|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 4809                          index.js                    6e8ed734cbc5d6dbd86829340d98a9849e38c609da5a62311599494533bf4578|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                               languages/                                                                                                                                                   
-6170                            1c.js                     8b19ef03c10fc301d0b48b205dcf8bb3b9d4d3452e4316a85812ccdecd9ee5cb|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+6170                            1c.js                     01ce19a88bbfa5a133bf8ae474b1d8fd28c8dc9e89a3803f99133eb4d79fd424|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 2012                            actionscript.js           ab944b02a399b65597b7e9166db5271fd3583d6d1121bc7455e56f736e8b6cdd|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-1267                            apache.js                 acd429fb1b3805357808bba95a09870ab180412ebe86d992066b639afdfd92b4|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+1267                            apache.js                 db00e9a3b9735e9aba784effc549b3895f8381e18de6050e793a02f3713ac17e|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 3376                            applescript.js            1295e70b5f556f90d6add118ec23681e41407ebfb487b727f3edb4f6d2933663|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 4525                            asciidoc.js               b865d2129298f09ef5fc47cf2c62c18eda546829bb2cf80174b752f290da808f|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1471                            autohotkey.js             5661f53b26c57cad640f63fcf404839dfaabeb2c603e5ecd292f28c7d2e4c8c4|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-2595                            avrasm.js                 f9a93a1e5e2146ed111d02b53f022ab67779749e087d1735f7365c79a9041aa2|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2595                            avrasm.js                 dced6544cd75f629afd69bff8c73337787a50d01cccbff4d28043256744df65c|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1117                            axapta.js                 9b3a5f9253a1c71e6140e10e74c67a2837d13917a9694dd17de9d8ea8e052ead|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1443                            bash.js                   76a9d00998ada17262a073504ea7e383f5988f187cdecd298fbfe3c166c5bdff|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 690                             brainfuck.js              230b5c981f3cbb261e2d22a4fd474838a987310c49efb4898e50d6bbe92a8aab|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -261,7 +261,7 @@ size    exec  file                                        contents
 3482                            coffeescript.js           0a607442af55ccc84e8add27e64d17def439be2d1e67d6e2fff7bcd6372fad41|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 2489                            cpp.js                    cbc3c4897314097ca016604e933e9476bdc570986499d0506f5f30ec0c320c8b|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 2061                            cs.js                     784b9a40f9e19535fd13a959d76c673a8da403461be4848da1f519d6b5b4e16f|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-2899                            css.js                    a1628a6b2a72c655bc9dc878a0339c205b31899054107d891f0599e567beab10|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2899                            css.js                    5ce9606957ce2ff743dfd7a29ed66c70e346a984a5097d2398f7d430f4b44c55|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 6048                            d.js                      39840d620ef792f957c49143ab983643d952079b9898062892b48bb7c9357bd5|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1822                            delphi.js                 35a3115bd023e2780ebded822b790003646a46ee684a4cb159c5525bea2de01e|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 886                             diff.js                   83d0109860dcc5345843bb85b25b1cf222f770237e7ee462668e10760d3a2e6f|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -299,7 +299,7 @@ size    exec  file                                        contents
 4830                            perl.js                   78440ae9362f31c2916ecbef4cdcd8d5695a0bc20fc5232a7aaa7ea22e22f277|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 3059                            php.js                    569491be3d5323749fb53761a1b4e7bab28ac3c764067d68963ecd0d3b62ea07|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1019                            profile.js                83e0c61d76f899a4f763d724c75c2d8976dd9c079d561f9d6862ea65e33d013d|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-2037                            python.js                 f2349871aba00c43e8554c6d9fa91f584bd948c40f95b11ea3c132aac740b8ac|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+2037                            python.js                 bd86a6bcde1dbc0109507ee73ec7a1f38c0396b7dd2a285af4e1637321ba6cee|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1691                            r.js                      4d72ac3e4dd6743e0d66bd7939bd59b939d0ed9513319fbddabaf21c701b23c6|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1477                            rib.js                    bccaf7b83f5f366ac41bdfdbd7fe7f31268e4c77537e34deed9bc01c1a7e656a|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1355                            rsl.js                    f4b213009b774564ef2e8e81a30ee8fd13099346f6551017403647cb16b7b268|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -311,13 +311,13 @@ size    exec  file                                        contents
 7612                            scss.js                   97b76cdb9d9ffc2570d38d3112f97e8b69f43c5e6806414725dca072a1f8844d|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1359                            smalltalk.js              7be6a73cddfe087dc0a5d428c596b1c6e103e4fcdf4507131d65800d51046912|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 3113                            sql.js                    89feb976a61eb8f4cb3fe71de9b671676fb5519021b364cab1ed9443f2767b47|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-1202                            tex.js                    b470ef7dd785514da1c3da24af748958c6a2b0f62f6795108cf3bd8f73d100e1|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+1202                            tex.js                    3ee2392f29bd4d9b66636c9bce5988a1a6721fa7138dc083f784e3b05c650d63|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1472                            vala.js                   cf13dd7f9570835feb28c2f26308ad187300b16b729d96f11d7e99a203b5d239|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 2316                            vbnet.js                  7e7ec2d30effb885384edd7912378f21ef9953d1be6bf53a8fba40f1bb78756b|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1710                            vbscript.js               21ba1306085bdd5c77e332ebc52a53c0b9ca5cb6445e9b8f6e4b6ab3190bfd79|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 1797                            vhdl.js                   5b1858736b12556c46dbc4f9b2b250c15fa23c9b17a62f81b7e3d1b190c9348a|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 2490                            xml.js                    b616bbcb2edf29f5a0cff6d813f3315a38d2b6a116b6dcd53de59224513a3bda|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-13281                       package.json                  aa215e6ea132e5d8c0763693bd274f3f8265270c42390c42e2973b812c6ea8cf|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+13281                       package.json                  99634736fc538682ec0a5b47950e076ae99712a8d57e18a4bc5b20270b4e543b|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                           marked/                                                                                                                                                          
 12                          .npmignore                    5d6c294e6eda8006df568f851dccb854345e335301bba63d8f68d89c65973bb9|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 58                          .travis.yml                   597ddb173bcf70e51b7167d9fffd66a816d0883311be32f5c4b797e6d8621786|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -341,7 +341,7 @@ size    exec  file                                        contents
 1225                        README.md                     affd8fcfc373ca62525cdb92bcb28c61f9332bb40235d4545f9e373eac1275d0|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 2596                        package.json                  4cc2abad59cb8f75503fa8af2401cc249dad06689ede9d728e8a13bf73ff0eb3|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 14682                       underscore-min.js             163189ef69a3c210a04bb4cac2c336119d78b576fb84b4231977514419eb0faf|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-45489                       underscore.js                 84d1336557e7ecc35c9ed4236c143aa4adb687a247f0b8166b2e8f858fa418df|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+45489                       underscore.js                 ee8ba6b58a9c67d9f7148b31f90851767c45aeaa8c86fbf7e981ba255d39240b|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 2088                    package.json                      703b5c55ed0673d20c31c3c52461014c5db7684e79fe78c92a355e4de57338ff|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                         resources/                                                                                                                                                         
                           classic/                                                                                                                                                         
@@ -349,20 +349,20 @@ size    exec  file                                        contents
 1902                        docco.jst                     39b13f7cca4f5183972f37189e71d712633dbed479317e3c85c9d023d1217d4d|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                             public/                                                                                                                                                        
                               fonts/                                                                                                                                                       
-29804                           aller-bold.eot            4b5e1d746e4349b33b2e4ff7248e3339538d06d8594a0e9b706edc9adef531ce                                                                 
-66836                           aller-bold.ttf            070a41ab4d51f5e2a142c9ca662d92815832ff1a42c9fa0fb1e08e26353c1bc5                                                                 
-33244                           aller-bold.woff           d4c5b4aad8c4d065fa349f46461b0da00a22ca36b70184d170b780cefca8b51e                                                                 
-29509                           aller-light.eot           0bb8b16ab4326459be565d89da825c95c03abae7305b97630110410e88a5dc38                                                                 
-68620                           aller-light.ttf           ac35fc1a4369a5a9a5de3062303f532626b7325f87247115da1f7ebfb1163277                                                                 
-33124                           aller-light.woff          d6d511c38fbf5f59f3d6fed48dc56cf08be74c689ec7f6e67a30438188f59cb1                                                                 
-35557                           fleurons.eot              f88be1d35ac058271f1cfc14dc9bd2ebc1de1d25bd874f769384e907d86af0c5                                                                 
-64772                           fleurons.ttf              db07934b8fc08b9f4a7c2a31ad44ff3c7bf3211a99f1b3fe009329b05b90b611                                                                 
-36284                           fleurons.woff             a65361d90d9ebf31df818f1a384f33bf57201528715e5fbb27e3dafc9690b45d                                                                 
-18190                           novecento-bold.eot        4f77e4709ca73cdb2876477f0541ec8dd05cde6b37e37bc139d16ac4a6b49f96                                                                 
-48136                           novecento-bold.ttf        a3fe16b0659d1436d120c6ef8a79b20c4e1f09b4b5aa23be82502fd4cc9c33be                                                                 
-20576                           novecento-bold.woff       aa58cf580e8959ba23e896b4e4e980cfa73e4151b7bfe403b1a37793d5683a3d                                                                 
+29804                           aller-bold.eot            5edf2ce02620a4c5f00ccd17797c5fcefcb91a0948210852fad02201fe84b719                                                                 
+66836                           aller-bold.ttf            e92e184744d6f2f65c06d66bf972499801431493f9df75f2a8fe44b2f2b7ba8e                                                                 
+33244                           aller-bold.woff           1ccd90f0387d4c6e8f8b27a572c0ae673bb081c9eb4035a8f83651b14c610d27                                                                 
+29509                           aller-light.eot           a649c8c19c65ba50c2d58df8ae712dfa705c30102e55855dc438b52020f1ec9c                                                                 
+68620                           aller-light.ttf           ff246031b1b4d44812aaca6e76295637dc4cf79417e56b78ca09a6f92234714f                                                                 
+33124                           aller-light.woff          4d90adeb9aa020f7b00a0aadd106cf5fd80cbeb3da296c043b7d96999403ce4a                                                                 
+35557                           fleurons.eot              a4d8194829c1ed90b8bab3b6bd6cbadec99ddb8ad9bf220bdab9e5f1213a20b7                                                                 
+64772                           fleurons.ttf              fb0103cb018bdcaef8bb7881acdbf1e38c6d91264a36ffa0f74c1ba7f055bfcd                                                                 
+36284                           fleurons.woff             502f9246882477150290faf7fb315633187ea27e08b85a043dfdf055f394f206                                                                 
+18190                           novecento-bold.eot        adddcd079e607a98158258bc767425de08c93e3c8597ee629444e5b9d61e8450                                                                 
+48136                           novecento-bold.ttf        98cafd912fd4a90a7ba76f3f82b75b5d4d27a82715f68bb0d3a752e6cb87c8a0                                                                 
+20576                           novecento-bold.woff       2256ba500aeaaaf559b05e51c6a4d46da995ca4477c5d4c3c5f47442f4f54058                                                                 
                               images/                                                                                                                                                      
-56906                           gray.png                  bcbdc7109b11e5a85b9d87b58ce36bedfe65d2cb9d928aedf458a04e39b3f4f3                                                                 
+56906                           gray.png                  82ea50b90a0a6d165d8e4c8516736caea75ebe3ff096dc08256026f1d9c4c549                                                                 
                               stylesheets/                                                                                                                                                 
 6874                            normalize.css             c692ad1a7d71e6ca9d152375bd143133ba4f67583efc8112f03eef1a1cd5daf2|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 3265                      languages.json                  a7604cd65562b5a3277182692bbe803e9f1c5871ed22a8130c05fc9436bbc8cb|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -371,20 +371,20 @@ size    exec  file                                        contents
 1505                        docco.jst                     288e9a102999f41f8f19871934708686ef7e07a328841397a4c7f73887983580|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                             public/                                                                                                                                                        
                               fonts/                                                                                                                                                       
-29804                           aller-bold.eot            4b5e1d746e4349b33b2e4ff7248e3339538d06d8594a0e9b706edc9adef531ce                                                                 
-66836                           aller-bold.ttf            070a41ab4d51f5e2a142c9ca662d92815832ff1a42c9fa0fb1e08e26353c1bc5                                                                 
-33244                           aller-bold.woff           d4c5b4aad8c4d065fa349f46461b0da00a22ca36b70184d170b780cefca8b51e                                                                 
-29509                           aller-light.eot           0bb8b16ab4326459be565d89da825c95c03abae7305b97630110410e88a5dc38                                                                 
-68620                           aller-light.ttf           ac35fc1a4369a5a9a5de3062303f532626b7325f87247115da1f7ebfb1163277                                                                 
-33124                           aller-light.woff          d6d511c38fbf5f59f3d6fed48dc56cf08be74c689ec7f6e67a30438188f59cb1                                                                 
-35557                           fleurons.eot              f88be1d35ac058271f1cfc14dc9bd2ebc1de1d25bd874f769384e907d86af0c5                                                                 
-64772                           fleurons.ttf              db07934b8fc08b9f4a7c2a31ad44ff3c7bf3211a99f1b3fe009329b05b90b611                                                                 
-36284                           fleurons.woff             a65361d90d9ebf31df818f1a384f33bf57201528715e5fbb27e3dafc9690b45d                                                                 
-18190                           novecento-bold.eot        4f77e4709ca73cdb2876477f0541ec8dd05cde6b37e37bc139d16ac4a6b49f96                                                                 
-48136                           novecento-bold.ttf        a3fe16b0659d1436d120c6ef8a79b20c4e1f09b4b5aa23be82502fd4cc9c33be                                                                 
-20576                           novecento-bold.woff       aa58cf580e8959ba23e896b4e4e980cfa73e4151b7bfe403b1a37793d5683a3d                                                                 
+29804                           aller-bold.eot            5edf2ce02620a4c5f00ccd17797c5fcefcb91a0948210852fad02201fe84b719                                                                 
+66836                           aller-bold.ttf            e92e184744d6f2f65c06d66bf972499801431493f9df75f2a8fe44b2f2b7ba8e                                                                 
+33244                           aller-bold.woff           1ccd90f0387d4c6e8f8b27a572c0ae673bb081c9eb4035a8f83651b14c610d27                                                                 
+29509                           aller-light.eot           a649c8c19c65ba50c2d58df8ae712dfa705c30102e55855dc438b52020f1ec9c                                                                 
+68620                           aller-light.ttf           ff246031b1b4d44812aaca6e76295637dc4cf79417e56b78ca09a6f92234714f                                                                 
+33124                           aller-light.woff          4d90adeb9aa020f7b00a0aadd106cf5fd80cbeb3da296c043b7d96999403ce4a                                                                 
+35557                           fleurons.eot              a4d8194829c1ed90b8bab3b6bd6cbadec99ddb8ad9bf220bdab9e5f1213a20b7                                                                 
+64772                           fleurons.ttf              fb0103cb018bdcaef8bb7881acdbf1e38c6d91264a36ffa0f74c1ba7f055bfcd                                                                 
+36284                           fleurons.woff             502f9246882477150290faf7fb315633187ea27e08b85a043dfdf055f394f206                                                                 
+18190                           novecento-bold.eot        adddcd079e607a98158258bc767425de08c93e3c8597ee629444e5b9d61e8450                                                                 
+48136                           novecento-bold.ttf        98cafd912fd4a90a7ba76f3f82b75b5d4d27a82715f68bb0d3a752e6cb87c8a0                                                                 
+20576                           novecento-bold.woff       2256ba500aeaaaf559b05e51c6a4d46da995ca4477c5d4c3c5f47442f4f54058                                                                 
                               images/                                                                                                                                                      
-56906                           gray.png                  bcbdc7109b11e5a85b9d87b58ce36bedfe65d2cb9d928aedf458a04e39b3f4f3                                                                 
+56906                           gray.png                  82ea50b90a0a6d165d8e4c8516736caea75ebe3ff096dc08256026f1d9c4c549                                                                 
                               stylesheets/                                                                                                                                                 
 6874                            normalize.css             c692ad1a7d71e6ca9d152375bd143133ba4f67583efc8112f03eef1a1cd5daf2|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                           parallel/                                                                                                                                                        
@@ -392,15 +392,15 @@ size    exec  file                                        contents
 1902                        docco.jst                     39b13f7cca4f5183972f37189e71d712633dbed479317e3c85c9d023d1217d4d|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                             public/                                                                                                                                                        
                               fonts/                                                                                                                                                       
-29804                           aller-bold.eot            4b5e1d746e4349b33b2e4ff7248e3339538d06d8594a0e9b706edc9adef531ce                                                                 
-66836                           aller-bold.ttf            070a41ab4d51f5e2a142c9ca662d92815832ff1a42c9fa0fb1e08e26353c1bc5                                                                 
-33244                           aller-bold.woff           d4c5b4aad8c4d065fa349f46461b0da00a22ca36b70184d170b780cefca8b51e                                                                 
-29509                           aller-light.eot           0bb8b16ab4326459be565d89da825c95c03abae7305b97630110410e88a5dc38                                                                 
-68620                           aller-light.ttf           ac35fc1a4369a5a9a5de3062303f532626b7325f87247115da1f7ebfb1163277                                                                 
-33124                           aller-light.woff          d6d511c38fbf5f59f3d6fed48dc56cf08be74c689ec7f6e67a30438188f59cb1                                                                 
-18190                           novecento-bold.eot        4f77e4709ca73cdb2876477f0541ec8dd05cde6b37e37bc139d16ac4a6b49f96                                                                 
-48136                           novecento-bold.ttf        a3fe16b0659d1436d120c6ef8a79b20c4e1f09b4b5aa23be82502fd4cc9c33be                                                                 
-20576                           novecento-bold.woff       aa58cf580e8959ba23e896b4e4e980cfa73e4151b7bfe403b1a37793d5683a3d                                                                 
+29804                           aller-bold.eot            5edf2ce02620a4c5f00ccd17797c5fcefcb91a0948210852fad02201fe84b719                                                                 
+66836                           aller-bold.ttf            e92e184744d6f2f65c06d66bf972499801431493f9df75f2a8fe44b2f2b7ba8e                                                                 
+33244                           aller-bold.woff           1ccd90f0387d4c6e8f8b27a572c0ae673bb081c9eb4035a8f83651b14c610d27                                                                 
+29509                           aller-light.eot           a649c8c19c65ba50c2d58df8ae712dfa705c30102e55855dc438b52020f1ec9c                                                                 
+68620                           aller-light.ttf           ff246031b1b4d44812aaca6e76295637dc4cf79417e56b78ca09a6f92234714f                                                                 
+33124                           aller-light.woff          4d90adeb9aa020f7b00a0aadd106cf5fd80cbeb3da296c043b7d96999403ce4a                                                                 
+18190                           novecento-bold.eot        adddcd079e607a98158258bc767425de08c93e3c8597ee629444e5b9d61e8450                                                                 
+48136                           novecento-bold.ttf        98cafd912fd4a90a7ba76f3f82b75b5d4d27a82715f68bb0d3a752e6cb87c8a0                                                                 
+20576                           novecento-bold.woff       2256ba500aeaaaf559b05e51c6a4d46da995ca4477c5d4c3c5f47442f4f54058                                                                 
                               stylesheets/                                                                                                                                                 
 6874                            normalize.css             c692ad1a7d71e6ca9d152375bd143133ba4f67583efc8112f03eef1a1cd5daf2|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                         test/                                                                                                                                                              
@@ -473,11 +473,11 @@ size    exec  file                                        contents
                     node_modules/                                                                                                                                                          
                       colors/                                                                                                                                                              
 1085                    MIT-LICENSE.txt                   bf31c5eec1df64ee686f74f571f869debdb1fa4a00ef9c6cf8c4620d478d741f|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-1299                    ReadMe.md                         cfb24a7445fc0d656856c6791ffa6f7e46f970e5feb64f122e54e3cfe990e6d4|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-10646                   colors.js                         43de3d26c6e52f8d7ea2d88f42debe0766ec8f2909356aca4f7fd2dc823f40cd|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+1299                    ReadMe.md                         9a1513b3fe500d5d26c5dd10ab04510b400e89e3186a3eef198fb681d23b861d|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+10646                   colors.js                         06f91ea96610355e8a4464bd051648c7c1e20806a8ba177a7a4bf58801f68877|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 2551                    example.html                      351886c29b07681281e930182d756101f122727762d1108ee410315e7fbc8bff|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 2423                    example.js                        e6d20c6e7928e48dd904da77141b4cf32b6771f6e6d85a3a86cd0536de5b5092|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-1985                    package.json                      0b197be33657f874e5347a68b1a51c69783e871bd608c40a9e183bf6b4ae6bfc|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+1985                    package.json                      c05608e7d7da13eb5ed534f6627e50c75464aac4eff2f76f5131c5bb21666ec4|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 2138                    test.js                           a3745a2ea3be672ff3f133edce7f6f029cd361b51b8756b3454270d66d12be64|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                         themes/                                                                                                                                                            
 198                       winston-dark.js                 b5d633b5845dacc7ecdf233f58a71975a1c7c22713118cb3591ad943d61f6ce9|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -507,10 +507,10 @@ size    exec  file                                        contents
 23                      head.js                           cfbb2af9f50e3e1e3495ab58df48df25d21f703d51af244d099762e716adffb2|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 7054                    package.json                      db5422eade68a8abc1331a185afe618f33c079751a86bfa444b69822f354940e|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 26522                   semver.browser.js                 7ddd75b2b63f2e4caee7af713b241d111af8976bb8907f701f3bb98bbc968ee5|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-6903                    semver.browser.js.gz              dc9d88313eed618ddb3c7eec20b1b0d51ad483d14f2bbaeee8a9c588374bd9f8                                                                 
+6903                    semver.browser.js.gz              0ea6ee273572e09b3fff0fe0117ad4dda2a0af84da7bfb5e0203c1c58c81add4                                                                 
 27601                   semver.js                         8e9eb0f0f688e9325ac89beffe2a5d2e3138eeb77d9cbfd7115ea723cccecdb4|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 10671                   semver.min.js                     af4f966412ad5e6fbb0cdbee42e1e13aa15b74141609cea27f97fdd134491272|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-3231                    semver.min.js.gz                  bee6600ed10fc154c9a55252d54d3c7ea093c02f8c1400c14558ee23a24635b6                                                                 
+3231                    semver.min.js.gz                  2ba0f0bdf925eb1835e7bbbf05ecd2c78b4fd6c96cedb79f936a7b7afb6ba6da                                                                 
                         test/                                                                                                                                                              
 354                       amd.js                          397c753c807511529b92622b8eeb865fe3652e9b59411923ef7813f0ac447a69|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 4935                      gtr.js                          d493ce05553b5d29c72f9b6a6e02695a1ed81ecd00a83fb136f31a98755e8bba|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
@@ -572,7 +572,7 @@ size    exec  file                                        contents
 9471              summarizer.iced                         f2f59535b06cc69d1c8ab1ad292760910ecc005283b57d8ab43ec870eca4e81a|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 75                top.iced                                e675e53d96477ba48a7d7d7df37f94bed095882f5955bd82f1b71673a4085894|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
 920               utils.iced                              729eec0fab11b2fccfa0d9fba3c651b7852f51b65073ecf61474a99c74cac3b0|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
-1433              x_platform_hash.iced                    a857a3de1372106d05b8ffa80bfca7138c5f2c74c996876c3d643bda993af850|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+1453              x_platform_hash.iced                    5cd5a895e806a52d0c925bc8e42b9d1bc85ae97854a120daa320ec32e2ead7b6|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                 tests/                                                                                                                                                                     
 18                .gitignore                              51e157e35910264bacdd03cfa1beb2e21638125f5667d5b2f3f88130441933d7|e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                   1/                                                                                                                                                                       
