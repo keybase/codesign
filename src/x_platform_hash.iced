@@ -34,7 +34,7 @@ class XPlatformHash
       cb null, {hash: hash.read(), alt_hash: alt_hash.read()}
     read_stream.on 'error', (e) -> cb e, null
     read_stream.pipe hash
-    read_stream.pipe(rstream('\r', '')).pipe alt_hash
+    read_stream.pipe(rstream('\r\n', '\n')).pipe alt_hash
 
   # ------------------------------------------------------------------------------------------------------------------
 
