@@ -106,7 +106,7 @@ class FileInfo
 
   is_user_executable_file: -> 
     @check_init()
-    @lstat.isFile() and !!(parseInt(100,8) & @lstat.mode)    
+    @lstat.isFile() and !!(parseInt(100,8) & @lstat.mode)
 
   # ---------------------------------------------------------------------------
 

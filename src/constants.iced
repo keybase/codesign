@@ -3,7 +3,7 @@ exp =
     filename: 'SIGNED.md'
   hash:
     ALG:          'sha256'
-    ENCODING:     'base64'
+    ENCODING:     'hex'
   item_types:
     FILE:         0
     DIR:          1
@@ -23,11 +23,11 @@ exp =
     ALT_SYMLINK_MATCH:     11
     MISSING_DIR:           12
     ORPHAN_DIR:            13
+    WRONG_EXEC_PRIVS:      14
     MISSING_FILE:          100 # 100... is an error
     ORPHAN_FILE:           101
     HASH_MISMATCH:         102
     WRONG_ITEM_TYPE:       103
-    WRONG_EXEC_PRIVS:      104
     WRONG_SYMLINK:         105
 
   item_type_names: {}
