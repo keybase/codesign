@@ -27,6 +27,7 @@ class SummarizedItem
     @contents         = null
     @finfo            = null
     @hash             = null
+    @link_hash        = null
     @binary           = false
 
   # -------------------------------------------------------------------------------------------------------------------
@@ -42,7 +43,7 @@ class SummarizedItem
     @binary    = @finfo.is_binary()
 
     if @item_type is item_types.FILE
-      await @finfo.hash 'sha256', 'hex', esc defer @hash
+      await @finfo.hash constants.hash.ALG, constants.hash.ENCODING, esc defer @hash
     else if @item_type is item_types.DIR
       @contents  = []
       await @finfo.dir_contents esc defer fnames
@@ -56,6 +57,8 @@ class SummarizedItem
         #else
         #  console.log "Ignoring #{subpath}..."
       @contents.sort (a,b) -> a.fname.localeCompare(b.fname, 'us')
+    else if @item_type is item_types.SYMLINK
+      await @finfo.link_hash constants.hash.ALG, constants.hash.ENCODING, esc defer @link_hash
     cb()
 
   # -------------------------------------------------------------------------------------------------------------------
@@ -72,20 +75,23 @@ class SummarizedItem
 
   signable_info: ->
     info =
-      depth:         @depth
-      parent_path:   @parent_path
-      item_type:     @item_type
-      fname:         @fname
-      path:          if @parent_path.length then "#{@parent_path}/#{@fname}" else @fname
-      exec:          @finfo.is_user_executable_file()
-      binary:        @binary
+      depth:          @depth
+      parent_path:    @parent_path
+      item_type:      @item_type
+      fname:          @fname
+      path:           if @parent_path.length then "#{@parent_path}/#{@fname}" else @fname
+      exec:           @finfo.is_user_executable_file()
+      binary:         @binary
 
     switch @item_type
       when item_types.FILE
-        info.hash = @hash
-        info.size = @finfo.stat.size
-      when item_types.SYMLINK, item_types.WIN_SYMLINK
-        info.link = @link
+        info.hash               = @hash
+        info.size               = @finfo.stat.size
+        info.possible_win_link  = @finfo.possible_win_link
+      when item_types.SYMLINK
+        info.link               = @link
+        info.link_hash          = @link_hash
+
     return info
 
   # -------------------------------------------------------------------------------------------------------------------
@@ -187,21 +193,28 @@ class Summarizer
     exp_by_path[f.path] = f for f in obj.found
 
     for p1, expected of exp_by_path
+      status = vc.OK
       if not (got = got_by_path[p1])?
         if expected.item_type is item_types.DIR
-          probs.push [vc.MISSING_DIR,      {got: null, expected}]
+          status = vc.MISSING_DIR
         else
-          probs.push [vc.MISSING_FILE,     {got: null, expected}]
+          status = vc.MISSING_FILE
+      else if (expected.item_type is item_types.SYMLINK) and (got.item_type is item_types.FILE) and (expected.hash.hash is got.link_hash)
+        status = vc.ALT_SYMLINK_MATCH
+      else if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK) and (expected.hash.hash is got.link_hash)
+        status = vc.ALT_SYMLINK_MATCH
       else if expected.item_type isnt got.item_type
-        probs.push [vc.WRONG_ITEM_TYPE,  {got, expected}]
+        status = vc.WRONG_ITEM_TYPE
       else if (expected.item_type is item_types.FILE) and (expected.exec isnt got.exec)
-        probs.push [vc.WRONG_EXEC_PRIVS, {got, expected}]
+        status = vc.WRONG_EXEC_PRIVS
       else if (expected.link isnt got.link)
-        probs.push [vc.WRONG_SYMLINK,    {got, expected}]
+        status = vc.WRONG_SYMLINK
       else if not @hash_alt_match got.hash, expected.hash
-        probs.push [vc.HASH_MISMATCH,    {got, expected}]
+        status = vc.HASH_MISMATCH
       else if not @hash_match     got.hash, expected.hash
-        probs.push [vc.ALT_HASH_MATCH,   {got, expected}]
+        status = vc.ALT_HASH_MATCH
+      if status isnt vc.OK
+        probs.push [status, {got: (got or null), expected: (expected or null)}]
 
     for p1, got of got_by_path when not exp_by_path[p1]?
       if got.item_type is item_types.DIR

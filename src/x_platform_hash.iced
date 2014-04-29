@@ -36,6 +36,14 @@ class XPlatformHash
     read_stream.pipe hash
     read_stream.pipe(rstream('\r', '')).pipe alt_hash
 
+  # ------------------------------------------------------------------------------------------------------------------
+
+  hash_str: (str, cb) ->
+    alt_str = str.replace /\r/g, ''
+    cb null,
+      hash:     crypto.createHash(@alg).update(str).digest     @encoding
+      alt_hash: crypto.createHash(@alg).update(alt_str).digest @encoding
+
 # =====================================================================================================================
 
 module.exports = XPlatformHash

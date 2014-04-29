@@ -1,6 +1,9 @@
 exp = 
   defaults:
     filename: 'SIGNED.md'
+  hash:
+    ALG:          'sha256'
+    ENCODING:     'base64'
   item_types:
     FILE:         0
     DIR:          1

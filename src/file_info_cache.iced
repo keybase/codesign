@@ -29,12 +29,14 @@ class FileInfo
     @lstat              = null
     @stat               = null
     @_hash              = {}
+    @_link_hash         = {}
     @_is_binary         = null
     @_dir_contents      = null
     @_locks             = new LockTable()
     @_init_done         = false
     @link               = null
-    @item_type          = null # dir, file, symlink, win_symlink, etc.
+    @possible_win_link  = null # this is set to a path if it appears to be a git-converted symlink
+    @item_type          = null # dir, file, symlink etc.
 
   # ---------------------------------------------------------------------------
 
@@ -65,6 +67,17 @@ class FileInfo
       await h.hash fd, defer @err, @_hash[k]
     lock.release()
     cb @err, @_hash[k]
+
+  # ---------------------------------------------------------------------------
+
+  link_hash: (alg, encoding, cb) ->
+    @check_init()
+    k = "#{alg}|#{encoding}|link_hash"
+    await @_locks.acquire k, defer(lock), true  
+    if (not @err) and (not @_link_hash[k]?)
+      await (new XPlatformHash {alg, encoding}).hash_str @link, defer err, @_link_hash[k]
+    lock.release()
+    cb @err, @_link_hash[k]
 
   # ---------------------------------------------------------------------------
 
@@ -100,8 +113,8 @@ class FileInfo
   _x_platform_type_check: (cb) ->
     ###
     gets link if it's a symbolic link; however if it is a regular
-    file with mode 120000 and a single short line in the file, it will consider
-    that a symbolic link too
+    file with a single short line in the file, it will save that in
+    'possible_win_link' for cross-platform warnings
     ###
     if @stat.isFile()
       @item_type = item_types.FILE
@@ -113,16 +126,13 @@ class FileInfo
       @item_type = item_types.DIR
 
     # let's discover if it's a windows style link
-    if (@item_type is item_types.FILE) and (@stat.mode is parseInt(120000,8)) and (@stat.size < 1024) and (not @_is_binary)
+    if (@item_type is item_types.FILE) and (@stat.size < 1024) and (not @_is_binary)
       console.log "Possible win sym link: #{@full_path}"
       await fs.readFile @full_path, {encoding: 'utf8'}, defer @err, data
       data  = data.replace /(^[\s]*)|([\s]*$)/g, ''
       lines = data.split   /[\n\r]+/g
       if lines.length is 1
-        @link      = lines[0]
-        @item_type = item_types.WIN_SYMLINK
-      console.log "Possible result: #{@link}"
-
+        @possible_win_link      = lines[0]
     cb()
 
   # ---------------------------------------------------------------------------
