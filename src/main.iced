@@ -128,7 +128,7 @@ class Main
           when vc.MISSING_FILE then       'file is missing'
           when vc.ORPHAN_FILE then        'unknown file found'
           when vc.HASH_MISMATCH then      'file contents do not match'
-          when vc.WRONG_ITEM_TYPE then    "expected a #{utils.item_type_name expected.item_type} but got a #{utils.item_type_namegot.item_type}"
+          when vc.WRONG_ITEM_TYPE then    "expected a #{utils.item_type_name expected.item_type} but got a #{utils.item_type_name got.item_type}"
           when vc.WRONG_EXEC_PRIVS then   "unexpected execution privileges (expected exec=#{expected.exec} but got exec=#{got.exec})"
           when vc.WRONG_SYMLINK then      "expected symlink to `#{expected.link}` but got `#{got.link}`"
 

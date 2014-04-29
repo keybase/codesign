@@ -19,7 +19,6 @@
     "iced-coffee-script": "~1.7.1-a",
     "iced-error": "~0.0.8",
     "glob-to-regexp": ">=0.0.1",
-    "replacestream": ">=0.1.3",
     "tablify": ">=0.1.5"
   },
   "devDependencies": {
