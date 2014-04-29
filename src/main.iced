@@ -1,12 +1,15 @@
 fs                = require 'fs'
 {ArgumentParser}  = require 'argparse'
+tablify           = require 'tablify'
+path              = require 'path'
 {PackageJson}     = require './package'
 {Summarizer}      = require './summarizer'
 constants         = require './constants'
 {to_md, from_md}  = require './markdown'
 {item_type_names} = require './constants'
-tablify           = require 'tablify'
-path              = require 'path'
+utils             = require './utils'
+vc                = constants.verify_codes
+
 
 class Main
 
@@ -109,7 +112,35 @@ class Main
     if err? then @exit_err err
 
     # see if they match
-    {err, warn} = summ.compare_to_json_obj json_obj
+    await summ.compare_to_json_obj json_obj, defer probs
+    err_count = warn_count  = 0
+    out_table = []
+    if probs.length
+      for [code, {got, expected}] in probs
+        if code < 100 then warn_count++ else err_count++
+        label     = if code < 100 then 'warning' else 'ERROR'
+        fname     = got?.path or expected?.path
+        msg       = switch code
+          when vc.ALT_HASH_MATCH then     'hash matches when dropping \\r chars (possible Windows issue)'
+          when vc.ALT_SYMLINK_MATCH then  'symlink matches contents of file (possible Windows issue)'
+          when vc.MISSING_DIR then        'directory is missing'
+          when vc.ORPHAN_DIR then         'unknown directory found'
+          when vc.MISSING_FILE then       'file is missing'
+          when vc.ORPHAN_FILE then        'unknown file found'
+          when vc.HASH_MISMATCH then      'file contents do not match'
+          when vc.WRONG_ITEM_TYPE then    "expected a #{utils.item_type_name expected.item_type} but got a #{utils.item_type_namegot.item_type}"
+          when vc.WRONG_EXEC_PRIVS then   "unexpected execution privileges"
+          when vc.WRONG_SYMLINK then      "expected symlink to `#{expected.link}` but got `#{got.link}`"
+
+        out_table.push [label, fname, msg]
+      console.log tablify out_table
+
+    if err_count
+      console.log "FAILURE! Exited after #{err_count} error(s)."
+    else
+      console.log "Success! #{json_obj.found.length} items checked#{if warn_count then ' with ' + warn_count + ' warning(s); pass --strict to prevent success on warnings' else ''}"
+
+    ###
     if err?
       console.log "ERRORS\n---------------"
       table = []
@@ -127,11 +158,9 @@ class Main
       console.log tablify table
       console.log "BAD FILES: #{err.missing.length + err.orphans.length + err.wrong.length}"
       process.exit 1
-    if warn?
-      console.log "WARNINGS\n-----------------"
-      console.log tablify warn
     if not err?
       console.log "Success! #{if warn? then ' (with warnings)' else ''}"
+    ###
 
   # -------------------------------------------------------------------------------------------------------------------
 

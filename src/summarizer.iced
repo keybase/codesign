@@ -10,6 +10,7 @@ DropboxPreset  = require './preset/dropbox'
 GlobberPreset  = require './preset/globber'
 XPlatformHash  = require './x_platform_hash'
 finfo_cache    = require './file_info_cache'
+vc             = constants.verify_codes
 
 # =====================================================================================================================
 
@@ -172,66 +173,44 @@ class Summarizer
 
   # -------------------------------------------------------------------------------------------------------------------
 
-  compare_to_json_obj: (obj) ->
+  compare_to_json_obj: (obj, cb) ->
     ###
-    returns {err, warn}
-      err will be null if there are none
-      warn will be null if there are none
-
-    err:
-      wrong:      [files with incorrect hashes, size, or privs]
-      missing:    [files that should've been found but weren't]
-      orphans:    [files of unknown origin]
-    warn:
-      alt_hash_matches: [files that only match with line breaks modded]
-      dir_missing:      [missing directories]
+    calls back with an array of problems
+    each item in the array is a pair [code, {got, expected}]
     ###
-    err = 
-      missing:          []
-      wrong:            []
-      orphans:          []
-    warn =
-      missing_dirs:     []
-      orphan_dirs:      []
-      alt_hash_matches: []
+    probs = []
 
-    o1_by_path = {}
-    o2_by_path = {}
+    got_by_path = {}
+    exp_by_path = {}
 
-    o1_by_path[f.path] = f for f in @to_json_obj().found
-    o2_by_path[f.path] = f for f in obj.found
+    got_by_path[f.path] = f for f in @to_json_obj().found
+    exp_by_path[f.path] = f for f in obj.found
 
-    for k,v of o2_by_path
-      if not (v2 = o1_by_path[k])?
-        if v.item_type is item_types.DIR
-          warn.missing_dirs.push v
+    for p1, expected of exp_by_path
+      if not (got = got_by_path[p1])?
+        if expected.item_type is item_types.DIR
+          probs.push [vc.MISSING_DIR,      {got: null, expected}]
         else
-          err.missing.push v
-      else
-        ok = true
-        for k in ['item_type', 'link', 'exec']
-          if (v[k] isnt v2[k])
-            ok = false
-            err.wrong.push {expected: v, got: v2}
-            break
-        if ok and not @hash_alt_match(v.hash, v2.hash)
-          err.wrong.push {expected: v, got: v2}
-          break          
-        else if ok
-          if not @hash_match v.hash, v2.hash
-            warn.alt_hash_matches.push {expected: v, got: v2}
+          probs.push [vc.MISSING_FILE,     {got: null, expected}]
+      else if expected.item_type isnt got.item_type
+        probs.push [vc.WRONG_ITEM_TYPE,  {got, expected}]
+      else if (expected.item_type is item_types.FILE) and (expected.exec isnt got.exec)
+        probs.push [vc.WRONG_EXEC_PRIVS, {got, expected}]
+      else if (expected.link isnt got.link)
+        probs.push [vc.WRONG_SYMLINK,    {got, expected}]
+      else if not @hash_alt_match got.hash, expected.hash
+        probs.push [vc.HASH_MISMATCH,    {got, expected}]
+      else if not @hash_match     got.hash, expected.hash
+        probs.push [vc.ALT_HASH_MATCH,   {got, expected}]
 
-    for k,v of o1_by_path when not o2_by_path[k]?
-      if v.item_type is item_types.DIR
-        warn.orphan_dirs.push v
+    for p1, got of got_by_path when not exp_by_path[p1]?
+      if got.item_type is item_types.DIR
+        probs.push   [vc.ORPHAN_DIR,     {got, expected: null}]
       else
-        err.orphans.push v
+        probs.push   [vc.ORPHAN_FILE,    {got, expected: null}]
 
-    if not (err.missing.length or err.wrong.length or err.orphans.length)
-      err = null
-    if not (warn.missing_dirs.length or warn.orphan_dirs.length or warn.alt_hash_matches.length)
-      warn = null
-    return {err, warn}
+    probs.sort (a,b) -> a[0] - b[0]
+    cb probs
 
   # -------------------------------------------------------------------------------------------------------------------
 

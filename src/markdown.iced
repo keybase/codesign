@@ -12,16 +12,22 @@ utils        = require './utils'
 
 # ======================================================================================================================
 
-HEADINGS  = ['size', 'exec', 'file', 'contents']
-SPACER    = '  '
+HEADINGS      = ['size', 'exec', 'file', 'contents']
+SPACER        = '  '
+TABLIFY_OPTS  =
+  show_index:     false
+  row_start:      ''
+  row_end:        ''
+  spacer:         SPACER
+  row_sep_char:   ''
 
 # ======================================================================================================================
 
 hash_to_str   = (h) -> if h.hash is h.alt_hash then h.hash else "#{h.hash}|#{h.alt_hash}"
+
 hash_from_str = (s) ->
   hashes = s.split '|'
   return {hash: hashes[0], alt_hash: hashes[1] or hashes[0]}
-
 
 max_depth = (found_files) ->
   max_depth = 0
@@ -44,13 +50,7 @@ pretty_format_files = (found_files) ->
         else
           "#{f.hash.hash}|#{f.hash.alt_hash}"
     rows.push [ c0, c1, c2, c3 ]
-  return tablify rows, {
-    show_index:     false
-    row_start:      ''
-    row_end:        ''
-    spacer:         SPACER
-    row_sep_char:   ''
-  }
+  return tablify rows, TABLIFY_OPTS
 
 files_from_pretty_format = (str_arr) ->
   res               = []
@@ -100,7 +100,7 @@ exports.to_md = (o) ->
 
   ignore_list = (utils.escape s for s in o.ignore).join '\n'
   file_list   = pretty_format_files o.found
-  preset_list = ("#{p}  # #{constants.presets[p.toUpperCase()]}" for p in o.presets).join '\n'
+  preset_list = tablify ([p, "# #{constants.presets[p.toUpperCase()]}"] for p in o.presets), TABLIFY_OPTS
 
   res = 
   """
