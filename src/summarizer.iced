@@ -199,7 +199,7 @@ class Summarizer
           status = vc.MISSING_DIR
         else
           status = vc.MISSING_FILE
-      else if (expected.item_type is item_types.SYMLINK) and (got.item_type is item_types.FILE) and (expected.hash.hash is got.link_hash)
+      else if (expected.item_type is item_types.SYMLINK) and (got.item_type is item_types.FILE) and (expected.link is got.possible_win_link)
         status = vc.ALT_SYMLINK_MATCH
       else if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK) and (expected.hash.hash is got.link_hash)
         status = vc.ALT_SYMLINK_MATCH
