@@ -33,7 +33,8 @@ class XPlatformHash
       cb null, {hash: hash.read(), alt_hash: alt_hash.read()}
     read_stream.on 'error', (e) -> cb e, null
     read_stream.on 'data', (data) ->
-      hash.update new Buffer data.toString().replace('\r', ''), 'utf8'
+      hash.update data
+      alt_hash.update new Buffer data.toString().replace('\r', ''), 'utf8'
 
   # ------------------------------------------------------------------------------------------------------------------
 
