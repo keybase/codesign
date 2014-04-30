@@ -12,9 +12,9 @@ size    exec  file                                        contents
 3173              sample_output.md                        4c105947626a0291f413d64663cc7beed8ceda6c4afea76d57a3e5e74dc7ea17                                                                 
                 lib/                                                                                                                                                                       
 1071              constants.js                            7dd6d3a527af97aa91e183381f95f166b90da5caded19543762ee1ef6afd2f42                                                                 
-20234             file_info_cache.js                      49647e94ab4972575ceefba7672d90cae0ae902c2c1d41decb597712f44a6f56                                                                 
+20243             file_info_cache.js                      7e5e56e5f900201aba14a6e4bee27f89a31b1189e95ef59f7d31bc6a4cdc4c2b                                                                 
 3232              lock.js                                 19a640f93370adfaad794c5f01a3044cd9450349b85e7a2ed656ee515dde180a                                                                 
-12810             main.js                                 fadabd3d709c43a4303605d2a952b2d204e4362ec47ccc67d7354e107753e487                                                                 
+12831             main.js                                 5320241fa871dd97900a3e0c4cfc8abd145bf91dba3a8c138963dbd487202345                                                                 
 6896              markdown.js                             b89afb6f002f6f5c985f1d196d41289b5d2e2a793cfe8f1b596cd2948fc54b03                                                                 
 822               package.js                              0835bb4b94e0cd9fb36a02baf58bf134761fdb151d0b41a14d81795876e5ec3c                                                                 
                   preset/                                                                                                                                                                  
@@ -28,8 +28,8 @@ size    exec  file                                        contents
 1642              x_platform_hash.js                      c3c19255024d6f1ca2b7e4551d44979546df4bf380a25112c19a146542ccab3b                                                                 
                 node_modules/                                                                                                                                                              
                   .bin/                                                                                                                                                                    
-195                 icake                                 2a40f756defb1686447f71492451d6efe0eca7e7f51c7877598260ec3f2cf1fd                                                                 
-198                 iced                                  61dcd306d072677bb81c0d84e3161c4c64a8c6a1de08e5803f6cea6df01315ab                                                                 
+                    icake                                 -> ../iced-coffee-script/bin/cake                                                                                                
+                    iced                                  -> ../iced-coffee-script/bin/coffee                                                                                              
                   argparse/                                                                                                                                                                
 2157                HISTORY.md                            70ceb72bd78b9801df9e5621544b1377b618937667088f4ee325dd8cda2ba934                                                                 
 1079                LICENSE                               c8442419dc614089ea022b3da6bfc089b41a58fb7b9030d1e651f2f36189dce2                                                                 
@@ -163,7 +163,7 @@ size    exec  file                                        contents
 4713                    sourcemap.js                      9dfbcdbba92900e23caa40421efff9286b20546c7f12923186f7e0ee0474bd1c                                                                 
                     node_modules/                                                                                                                                                          
                       .bin/                                                                                                                                                                
-177                     docco                             ac6e10f1ccf1ff5d5534ce05c574f56ea5ff4ce92df938c87be4bbfb295d7748                                                                 
+                        docco                             -> ../docco/bin/docco                                                                                                            
                       docco/                                                                                                                                                               
 52                      .npmignore                        f284bf88f24609abdc6163225848f154d04827d6b6b3e455b3a8579d476b1b01                                                                 
 1064                    LICENSE                           c193dda8a701c4b51abc175bc96244520d7c6e4bc8cf1a0745248e43ac8729e4                                                                 
@@ -173,7 +173,7 @@ size    exec  file                                        contents
 8102                    docco.js                          36dd78b933a8f106ec9aae4c48bcd06705e73b873cd38e8d465320d8490be087                                                                 
                         node_modules/                                                                                                                                                      
                           .bin/                                                                                                                                                            
-3528                        marked                        453fb2d2832eb98e593508a553f172becfb9abacfeb0735e9e323da949b7343c                                                                 
+                            marked                        -> ../marked/bin/marked                                                                                                          
                           commander/                                                                                                                                                       
 6014                        Readme.md                     3d4d4a9bfe88397af0a03f88fca267325929cb438ef72bb52d169276a94490ef                                                                 
 18790                       index.js                      4012b70b32a5cac6c561bb8ba8d58ec6c71fdf5b5f5173f147a598f47781bf2f                                                                 
@@ -193,8 +193,8 @@ size    exec  file                                        contents
 341                           remove.js                   b2ae74aa00b857826830baa2a3284645ea7b4da77a746a193a4854b28ab87d5b                                                                 
                             node_modules/                                                                                                                                                  
                               .bin/                                                                                                                                                        
-1084                            ncp                       c7ca0417a675931d7d4f549009af66f25b47ea5a07e6ddcd85efb712afba3178                                                                 
-744                             rimraf                    a950a4f39d00ac97e9f33c3b9dd7345293ef67b4529ef2b4748edd1a49d844c1                                                                 
+                                ncp                       -> ../ncp/bin/ncp                                                                                                                
+                                rimraf                    -> ../rimraf/bin.js                                                                                                              
                               jsonfile/                                                                                                                                                    
 17                              .npmignore                75d74adae9ae30b931461a842faacea154fd291d9f0e2575001e382da5239062                                                                 
 476                             CHANGELOG.md              37e8500f2728bda09f47d9a5000954212d5de948d49f90fc090eca7defddcce9                                                                 
@@ -495,7 +495,7 @@ size    exec  file                                        contents
 3204                  stream.js                           22e4a3fe9741136bc6cd33b448788401ca22b81c785653e1f0331d96e0585374                                                                 
                     node_modules/                                                                                                                                                          
                       .bin/                                                                                                                                                                
-3689                    semver                            cef919d33ae99c9475431fa0442438a44b4a138c3405ab1ad5c18834af6e91e4                                                                 
+                        semver                            -> ../semver/bin/semver                                                                                                          
                       semver/                                                                                                                                                              
 7                       .npmignore                        bd0e6101c9a3570a9deb976b37b91be850841ae01cc7797c151a2d8d54529eca                                                                 
 1310                    LICENSE                           6dca3e98ceb51bd8ee4205b354718da7952905e73f1ef30fb38bf81c12bfa40c                                                                 
@@ -559,9 +559,9 @@ size    exec  file                                        contents
 715             package.json                              f2335f0bae4ff8811a1d66efad2b85c6d3ba2af1a3faf55cbb0804a645c394d9                                                                 
                 src/                                                                                                                                                                       
 997               constants.iced                          b0859b79e1cb2df330045e295dd0cb055733d3d7e83fd332f039ed2f1d68a062                                                                 
-6172              file_info_cache.iced                    f84375eee215b457a10412e26d32b071ef1ccdebc032a169bc40948006906cf9                                                                 
+6208              file_info_cache.iced                    29c78f8cbd362693560c41ffd39f20cc39baeabcb5a5a84edcc83ddcddc10fc7                                                                 
 1123              lock.iced                               00e0aad9cbe1aac2031640a78d7f6a71e05975af1850b815311f9290f9ce2fd9                                                                 
-6650              main.iced                               53b5029b5587470807c17d18bcf95f53ebfef893a3afc50067c47682e5482f2c                                                                 
+6651              main.iced                               d9344f9d0f8f2601f4387f23bf84e8606917dd0d37caa28ebe7d87e05dc388d0                                                                 
 4889              markdown.iced                           72a4a8684bacb794d2af94c9117b3d1974aa0185f5a9e2338df498b2c7139a11                                                                 
 558               package.iced                            630c83cc199d990e46e47039d0824ca37e222611bc25a1747662f596f735a69a                                                                 
                   preset/                                                                                                                                                                  
@@ -576,11 +576,11 @@ size    exec  file                                        contents
                 tests/                                                                                                                                                                     
 18                .gitignore                              51e157e35910264bacdd03cfa1beb2e21638125f5667d5b2f3f88130441933d7                                                                 
                   1/                                                                                                                                                                       
-4                   bar.txt                               b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c                                                                 
+                    bar.txt                               -> foo.txt                                                                                                                       
                     d1/                                                                                                                                                                    
 6                     apple.txt                           303980bcb9e9e6cdec515230791af8b0ab1aaa244b58a8d99152673aa22197d0                                                                 
 4                     car.txt                             f35ab270f45957f6c65656aefcbc37e799ad19eb454218e2f2e6bf4cd88638e5                                                                 
-4                     foobar.txt                          b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c                                                                 
+                      foobar.txt                          -> ../foo.txt                                                                                                                    
                       loop                                -> ../                                                                                                                           
 3                     loop2                               fa08499e14d0113ba6794623f1badedcc8e9ae51cb5bafc7e14a5af1454bcfe7                                                                 
                     d2                                    -> d1                                                                                                                            

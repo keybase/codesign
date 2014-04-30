@@ -116,23 +116,23 @@ class FileInfo
     file with a single short line in the file, it will save that in
     'possible_win_link' for cross-platform warnings
     ###
-    if @stat.isFile()
-      @item_type = item_types.FILE
-      await @_binary_check defer()
-    else if @lstat.isSymbolicLink()
+    if @lstat.isSymbolicLink()
       await fs.readlink @full_path, defer @err, @link
       @item_type = item_types.SYMLINK
+    else if @stat.isFile()
+      @item_type = item_types.FILE
+      await @_binary_check defer()
     else if @stat.isDirectory()
       @item_type = item_types.DIR
 
     # let's discover if it's a windows style link
     if (@item_type is item_types.FILE) and (@stat.size < 1024) and (not @_is_binary)
-      console.log "Possible win sym link: #{@full_path}"
       await fs.readFile @full_path, {encoding: 'utf8'}, defer @err, data
       data  = data.replace /(^[\s]*)|([\s]*$)/g, ''
       lines = data.split   /[\n\r]+/g
       if lines.length is 1
         @possible_win_link      = lines[0]
+        console.log "Found possible windows link '#{@full_path}' -> '#{@possible_win_link}'"
     cb()
 
   # ---------------------------------------------------------------------------
