@@ -1,0 +1,565 @@
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\.gitignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\bin\main.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\lib\package.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\lib\top.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\Makefile
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\.bin\icake
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\.bin\iced
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\examples\arguments.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\examples\choice.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\examples\help.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\examples\nargs.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\examples\parents.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\examples\prefix_chars.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\examples\sum.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\index.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\lib\action\store\false.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\lib\action\store\true.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\lib\argparse.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\lib\const.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\node_modules\underscore\.npmignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\node_modules\underscore\.travis.yml
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\node_modules\underscore\CNAME
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\node_modules\underscore\CONTRIBUTING.md
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\node_modules\underscore\index.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\node_modules\underscore.string\.travis.yml
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\node_modules\underscore.string\component.json
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\node_modules\underscore.string\Gemfile
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\node_modules\underscore.string\Gemfile.lock
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\node_modules\underscore.string\Rakefile
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\node_modules\underscore.string\test\strings_standalone.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\argparse\node_modules\underscore.string\test\test_standalone.html
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\glob-to-regexp\.travis.yml
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\.npmignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\bin\cake
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\bin\coffee
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\CNAME
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\CONTRIBUTING.md
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\lib\coffee-script\index.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\.bin\docco
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\.npmignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\bin\docco
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\.bin\marked
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\.npmignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\lib\json.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\lib\mkdir.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\lib\output.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\lib\remove.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\.bin\ncp
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\.bin\rimraf
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\jsonfile\.npmignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\jsonfile\CHANGELOG.md
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\ncp\.npmignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\ncp\.travis.yml
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\ncp\test\fixtures\src\a
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\ncp\test\fixtures\src\b
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\ncp\test\fixtures\src\sub\a
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\rimraf\AUTHORS
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\rimraf\bin.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\rimraf\README.md
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\rimraf\test\run.sh
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\rimraf\test\setup.sh
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\rimraf\test\test-async.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\fs-extra\node_modules\rimraf\test\test-sync.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\highlight.js\lib\languages\brainfuck.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\highlight.js\lib\languages\diff.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\highlight.js\lib\languages\dos.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\highlight.js\lib\languages\fix.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\highlight.js\lib\languages\handlebars.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\highlight.js\lib\languages\http.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\highlight.js\lib\languages\ini.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\highlight.js\lib\languages\makefile.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\highlight.js\lib\languages\mizar.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\highlight.js\lib\languages\parser3.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\marked\.npmignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\marked\.travis.yml
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\marked\component.json
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\marked\doc\todo.md
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\marked\index.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\node_modules\marked\Makefile
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\test\data\comments_test\c\c.html
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\test\data\comments_test\coffee-script\coffee-script.html
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\test\data\comments_test\javascript\javascript.html
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\test\data\comments_test\python\python.html
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\test\data\comments_test\ruby\ruby.html
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\docco\test\data\comments_test\tex\tex.html
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\mkdirp\.npmignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\mkdirp\.travis.yml
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\mkdirp\examples\pow.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\mkdirp\test\clobber.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\mkdirp\test\mkdirp.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\mkdirp\test\perm.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\mkdirp\test\return.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\mkdirp\test\return_sync.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\mkdirp\test\root.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\mkdirp\test\sync.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\mkdirp\test\umask.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\node_modules\mkdirp\test\umask_sync.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-coffee-script\register.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-error\.npmignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-error\Makefile
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-logger\.npmignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-logger\Makefile
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-logger\node_modules\colors\themes\winston-dark.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-logger\node_modules\colors\themes\winston-light.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-logger\package.json
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-logger\README.md
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\.npmignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\CHANGELOG.md
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\lib\main.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\Makefile
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\node_modules\.bin\semver
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\node_modules\semver\.npmignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\node_modules\semver\foot.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\node_modules\semver\head.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\node_modules\semver\Makefile
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\node_modules\semver\test\amd.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\node_modules\semver\test\no-module.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\package.json
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\README.md
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\src\main.iced
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-spawn\test\run.iced
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-utils\.npmignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-utils\lib\main.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-utils\Makefile
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-utils\README.md
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\iced-utils\src\main.iced
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\node_modules\tablify\Cakefile
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\package.json
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\README.md
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\src\package.iced
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\src\top.iced
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\src\utils.iced
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\.gitignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\1\bar.txt
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\1\d1\apple.txt
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\1\d1\car.txt
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\1\d1\foobar.txt
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\1\d1\loop
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\1\d1\loop2
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\1\d2
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\1\foo.txt
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\2\file with space.txt
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\2\file_with_chars!@#$%^&.txt
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\3\executable.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\3\not_executable.js
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\4\4b\.gitignore
+Possible win sym link: c:\Users\keybase\Dropbox (Team Malgorithms)\keybase_test\dir-summarize\tests\4\4b\foo.please_ignore_me
+0      warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/go.js                     hash matches when dropping \r chars (possible Windows issue)           
+1      warning    ./.gitignore                                                                                                           hash matches when dropping \r chars (possible Windows issue)           
+2      warning    ./README.md                                                                                                            hash matches when dropping \r chars (possible Windows issue)           
+3      warning    ./tests/4/4b/foo.please_ignore_me                                                                                      hash matches when dropping \r chars (possible Windows issue)           
+4      warning    ./docs/sample_output.md                                                                                                hash matches when dropping \r chars (possible Windows issue)           
+5      warning    ./lib/constants.js                                                                                                     hash matches when dropping \r chars (possible Windows issue)           
+6      warning    ./lib/file_info_cache.js                                                                                               hash matches when dropping \r chars (possible Windows issue)           
+7      warning    ./lib/lock.js                                                                                                          hash matches when dropping \r chars (possible Windows issue)           
+8      warning    ./tests/4/4b/.gitignore                                                                                                hash matches when dropping \r chars (possible Windows issue)           
+9      warning    ./lib/markdown.js                                                                                                      hash matches when dropping \r chars (possible Windows issue)           
+10     warning    ./lib/package.js                                                                                                       hash matches when dropping \r chars (possible Windows issue)           
+11     warning    ./lib/preset/dropbox.js                                                                                                hash matches when dropping \r chars (possible Windows issue)           
+12     warning    ./lib/preset/git.js                                                                                                    hash matches when dropping \r chars (possible Windows issue)           
+13     warning    ./lib/preset/globber.js                                                                                                hash matches when dropping \r chars (possible Windows issue)           
+14     warning    ./lib/preset/preset_base.js                                                                                            hash matches when dropping \r chars (possible Windows issue)           
+15     warning    ./lib/summarizer.js                                                                                                    hash matches when dropping \r chars (possible Windows issue)           
+16     warning    ./lib/top.js                                                                                                           hash matches when dropping \r chars (possible Windows issue)           
+17     warning    ./lib/utils.js                                                                                                         hash matches when dropping \r chars (possible Windows issue)           
+18     warning    ./lib/x_platform_hash.js                                                                                               hash matches when dropping \r chars (possible Windows issue)           
+19     warning    ./tests/1/foo.txt                                                                                                      hash matches when dropping \r chars (possible Windows issue)           
+20     warning    ./tests/1/d1/car.txt                                                                                                   hash matches when dropping \r chars (possible Windows issue)           
+21     warning    ./node_modules/argparse/HISTORY.md                                                                                     hash matches when dropping \r chars (possible Windows issue)           
+22     warning    ./node_modules/argparse/LICENSE                                                                                        hash matches when dropping \r chars (possible Windows issue)           
+23     warning    ./node_modules/argparse/README.md                                                                                      hash matches when dropping \r chars (possible Windows issue)           
+24     warning    ./tests/1/d1/apple.txt                                                                                                 hash matches when dropping \r chars (possible Windows issue)           
+25     warning    ./src/x_platform_hash.iced                                                                                             hash matches when dropping \r chars (possible Windows issue)           
+26     warning    ./src/utils.iced                                                                                                       hash matches when dropping \r chars (possible Windows issue)           
+27     warning    ./src/top.iced                                                                                                         hash matches when dropping \r chars (possible Windows issue)           
+28     warning    ./src/summarizer.iced                                                                                                  hash matches when dropping \r chars (possible Windows issue)           
+29     warning    ./src/preset/preset_base.iced                                                                                          hash matches when dropping \r chars (possible Windows issue)           
+30     warning    ./src/preset/globber.iced                                                                                              hash matches when dropping \r chars (possible Windows issue)           
+31     warning    ./src/preset/git.iced                                                                                                  hash matches when dropping \r chars (possible Windows issue)           
+32     warning    ./src/preset/dropbox.iced                                                                                              hash matches when dropping \r chars (possible Windows issue)           
+33     warning    ./node_modules/argparse/examples/testformatters.js                                                                     hash matches when dropping \r chars (possible Windows issue)           
+34     warning    ./node_modules/argparse/index.js                                                                                       hash matches when dropping \r chars (possible Windows issue)           
+35     warning    ./node_modules/argparse/lib/action/append/constant.js                                                                  hash matches when dropping \r chars (possible Windows issue)           
+36     warning    ./node_modules/argparse/lib/action/append.js                                                                           hash matches when dropping \r chars (possible Windows issue)           
+37     warning    ./node_modules/argparse/lib/action/count.js                                                                            hash matches when dropping \r chars (possible Windows issue)           
+38     warning    ./node_modules/argparse/lib/action/help.js                                                                             hash matches when dropping \r chars (possible Windows issue)           
+39     warning    ./node_modules/argparse/lib/action/store/constant.js                                                                   hash matches when dropping \r chars (possible Windows issue)           
+40     warning    ./node_modules/argparse/lib/action/store/false.js                                                                      hash matches when dropping \r chars (possible Windows issue)           
+41     warning    ./node_modules/argparse/lib/action/store/true.js                                                                       hash matches when dropping \r chars (possible Windows issue)           
+42     warning    ./node_modules/argparse/lib/action/store.js                                                                            hash matches when dropping \r chars (possible Windows issue)           
+43     warning    ./node_modules/argparse/lib/action/subparsers.js                                                                       hash matches when dropping \r chars (possible Windows issue)           
+44     warning    ./node_modules/argparse/lib/action/version.js                                                                          hash matches when dropping \r chars (possible Windows issue)           
+45     warning    ./node_modules/argparse/lib/action.js                                                                                  hash matches when dropping \r chars (possible Windows issue)           
+46     warning    ./node_modules/argparse/lib/action_container.js                                                                        hash matches when dropping \r chars (possible Windows issue)           
+47     warning    ./node_modules/argparse/lib/argparse.js                                                                                hash matches when dropping \r chars (possible Windows issue)           
+48     warning    ./node_modules/argparse/lib/argument/error.js                                                                          hash matches when dropping \r chars (possible Windows issue)           
+49     warning    ./node_modules/argparse/lib/argument/exclusive.js                                                                      hash matches when dropping \r chars (possible Windows issue)           
+50     warning    ./node_modules/argparse/lib/argument/group.js                                                                          hash matches when dropping \r chars (possible Windows issue)           
+51     warning    ./node_modules/argparse/lib/argument_parser.js                                                                         hash matches when dropping \r chars (possible Windows issue)           
+52     warning    ./node_modules/argparse/lib/const.js                                                                                   hash matches when dropping \r chars (possible Windows issue)           
+53     warning    ./node_modules/argparse/lib/help/added_formatters.js                                                                   hash matches when dropping \r chars (possible Windows issue)           
+54     warning    ./node_modules/argparse/lib/help/formatter.js                                                                          hash matches when dropping \r chars (possible Windows issue)           
+55     warning    ./node_modules/argparse/lib/namespace.js                                                                               hash matches when dropping \r chars (possible Windows issue)           
+56     warning    ./node_modules/argparse/node_modules/underscore/.npmignore                                                             hash matches when dropping \r chars (possible Windows issue)           
+57     warning    ./node_modules/argparse/node_modules/underscore/.travis.yml                                                            hash matches when dropping \r chars (possible Windows issue)           
+58     warning    ./node_modules/argparse/node_modules/underscore/CNAME                                                                  hash matches when dropping \r chars (possible Windows issue)           
+59     warning    ./node_modules/argparse/node_modules/underscore/CONTRIBUTING.md                                                        hash matches when dropping \r chars (possible Windows issue)           
+60     warning    ./node_modules/argparse/node_modules/underscore/LICENSE                                                                hash matches when dropping \r chars (possible Windows issue)           
+61     warning    ./node_modules/argparse/node_modules/underscore/README.md                                                              hash matches when dropping \r chars (possible Windows issue)           
+62     warning    ./node_modules/argparse/node_modules/underscore/index.html                                                             hash matches when dropping \r chars (possible Windows issue)           
+63     warning    ./node_modules/argparse/node_modules/underscore/index.js                                                               hash matches when dropping \r chars (possible Windows issue)           
+64     warning    ./node_modules/argparse/node_modules/underscore/package.json                                                           hash matches when dropping \r chars (possible Windows issue)           
+65     warning    ./node_modules/argparse/node_modules/underscore/underscore.js                                                          hash matches when dropping \r chars (possible Windows issue)           
+66     warning    ./node_modules/argparse/node_modules/underscore.string/.travis.yml                                                     hash matches when dropping \r chars (possible Windows issue)           
+67     warning    ./node_modules/argparse/node_modules/underscore.string/Gemfile                                                         hash matches when dropping \r chars (possible Windows issue)           
+68     warning    ./node_modules/argparse/node_modules/underscore.string/Gemfile.lock                                                    hash matches when dropping \r chars (possible Windows issue)           
+69     warning    ./node_modules/argparse/node_modules/underscore.string/README.markdown                                                 hash matches when dropping \r chars (possible Windows issue)           
+70     warning    ./node_modules/argparse/node_modules/underscore.string/Rakefile                                                        hash matches when dropping \r chars (possible Windows issue)           
+71     warning    ./node_modules/argparse/node_modules/underscore.string/component.json                                                  hash matches when dropping \r chars (possible Windows issue)           
+72     warning    ./node_modules/argparse/node_modules/underscore.string/lib/underscore.string.js                                        hash matches when dropping \r chars (possible Windows issue)           
+73     warning    ./node_modules/argparse/node_modules/underscore.string/package.json                                                    hash matches when dropping \r chars (possible Windows issue)           
+74     warning    ./node_modules/argparse/node_modules/underscore.string/test/run-qunit.js                                               hash matches when dropping \r chars (possible Windows issue)           
+75     warning    ./node_modules/argparse/node_modules/underscore.string/test/speed.js                                                   hash matches when dropping \r chars (possible Windows issue)           
+76     warning    ./node_modules/argparse/node_modules/underscore.string/test/strings.js                                                 hash matches when dropping \r chars (possible Windows issue)           
+77     warning    ./node_modules/argparse/node_modules/underscore.string/test/strings_standalone.js                                      hash matches when dropping \r chars (possible Windows issue)           
+78     warning    ./node_modules/argparse/node_modules/underscore.string/test/test.html                                                  hash matches when dropping \r chars (possible Windows issue)           
+79     warning    ./node_modules/argparse/node_modules/underscore.string/test/test_standalone.html                                       hash matches when dropping \r chars (possible Windows issue)           
+80     warning    ./node_modules/argparse/node_modules/underscore.string/test/test_underscore/arrays.js                                  hash matches when dropping \r chars (possible Windows issue)           
+81     warning    ./node_modules/argparse/node_modules/underscore.string/test/test_underscore/chaining.js                                hash matches when dropping \r chars (possible Windows issue)           
+82     warning    ./node_modules/argparse/node_modules/underscore.string/test/test_underscore/collections.js                             hash matches when dropping \r chars (possible Windows issue)           
+83     warning    ./node_modules/argparse/node_modules/underscore.string/test/test_underscore/functions.js                               hash matches when dropping \r chars (possible Windows issue)           
+84     warning    ./node_modules/argparse/node_modules/underscore.string/test/test_underscore/index.html                                 hash matches when dropping \r chars (possible Windows issue)           
+85     warning    ./node_modules/argparse/node_modules/underscore.string/test/test_underscore/objects.js                                 hash matches when dropping \r chars (possible Windows issue)           
+86     warning    ./node_modules/argparse/node_modules/underscore.string/test/test_underscore/speed.js                                   hash matches when dropping \r chars (possible Windows issue)           
+87     warning    ./node_modules/argparse/node_modules/underscore.string/test/test_underscore/utility.js                                 hash matches when dropping \r chars (possible Windows issue)           
+88     warning    ./node_modules/argparse/node_modules/underscore.string/test/test_underscore/vendor/jquery.js                           hash matches when dropping \r chars (possible Windows issue)           
+89     warning    ./node_modules/argparse/node_modules/underscore.string/test/test_underscore/vendor/jslitmus.js                         hash matches when dropping \r chars (possible Windows issue)           
+90     warning    ./node_modules/argparse/node_modules/underscore.string/test/test_underscore/vendor/qunit.css                           hash matches when dropping \r chars (possible Windows issue)           
+91     warning    ./node_modules/argparse/node_modules/underscore.string/test/test_underscore/vendor/qunit.js                            hash matches when dropping \r chars (possible Windows issue)           
+92     warning    ./node_modules/argparse/node_modules/underscore.string/test/underscore.js                                              hash matches when dropping \r chars (possible Windows issue)           
+93     warning    ./node_modules/argparse/package.json                                                                                   hash matches when dropping \r chars (possible Windows issue)           
+94     warning    ./node_modules/glob-to-regexp/.travis.yml                                                                              hash matches when dropping \r chars (possible Windows issue)           
+95     warning    ./node_modules/glob-to-regexp/README.md                                                                                hash matches when dropping \r chars (possible Windows issue)           
+96     warning    ./node_modules/glob-to-regexp/index.js                                                                                 hash matches when dropping \r chars (possible Windows issue)           
+97     warning    ./node_modules/glob-to-regexp/package.json                                                                             hash matches when dropping \r chars (possible Windows issue)           
+98     warning    ./node_modules/glob-to-regexp/test.js                                                                                  hash matches when dropping \r chars (possible Windows issue)           
+99     warning    ./node_modules/iced-coffee-script/.npmignore                                                                           hash matches when dropping \r chars (possible Windows issue)           
+100    warning    ./node_modules/iced-coffee-script/CNAME                                                                                hash matches when dropping \r chars (possible Windows issue)           
+101    warning    ./node_modules/iced-coffee-script/CONTRIBUTING.md                                                                      hash matches when dropping \r chars (possible Windows issue)           
+102    warning    ./node_modules/iced-coffee-script/LICENSE                                                                              hash matches when dropping \r chars (possible Windows issue)           
+103    warning    ./node_modules/iced-coffee-script/README                                                                               hash matches when dropping \r chars (possible Windows issue)           
+104    warning    ./node_modules/iced-coffee-script/UPDATING.md                                                                          hash matches when dropping \r chars (possible Windows issue)           
+105    warning    ./src/package.iced                                                                                                     hash matches when dropping \r chars (possible Windows issue)           
+106    warning    ./src/markdown.iced                                                                                                    hash matches when dropping \r chars (possible Windows issue)           
+107    warning    ./node_modules/iced-coffee-script/iced.md                                                                              hash matches when dropping \r chars (possible Windows issue)           
+108    warning    ./node_modules/iced-coffee-script/lib/coffee-script/browser.js                                                         hash matches when dropping \r chars (possible Windows issue)           
+109    warning    ./node_modules/iced-coffee-script/lib/coffee-script/cake.js                                                            hash matches when dropping \r chars (possible Windows issue)           
+110    warning    ./node_modules/iced-coffee-script/lib/coffee-script/coffee-script.js                                                   hash matches when dropping \r chars (possible Windows issue)           
+111    warning    ./node_modules/iced-coffee-script/lib/coffee-script/command.js                                                         hash matches when dropping \r chars (possible Windows issue)           
+112    warning    ./node_modules/iced-coffee-script/lib/coffee-script/extensions.js                                                      hash matches when dropping \r chars (possible Windows issue)           
+113    warning    ./node_modules/iced-coffee-script/lib/coffee-script/grammar.js                                                         hash matches when dropping \r chars (possible Windows issue)           
+114    warning    ./node_modules/iced-coffee-script/lib/coffee-script/helpers.js                                                         hash matches when dropping \r chars (possible Windows issue)           
+115    warning    ./node_modules/iced-coffee-script/lib/coffee-script/iced.js                                                            hash matches when dropping \r chars (possible Windows issue)           
+116    warning    ./node_modules/iced-coffee-script/lib/coffee-script/icedlib.js                                                         hash matches when dropping \r chars (possible Windows issue)           
+117    warning    ./node_modules/iced-coffee-script/lib/coffee-script/index.js                                                           hash matches when dropping \r chars (possible Windows issue)           
+118    warning    ./node_modules/iced-coffee-script/lib/coffee-script/lexer.js                                                           hash matches when dropping \r chars (possible Windows issue)           
+119    warning    ./node_modules/iced-coffee-script/lib/coffee-script/nodes.js                                                           hash matches when dropping \r chars (possible Windows issue)           
+120    warning    ./node_modules/iced-coffee-script/lib/coffee-script/optparse.js                                                        hash matches when dropping \r chars (possible Windows issue)           
+121    warning    ./src/lock.iced                                                                                                        hash matches when dropping \r chars (possible Windows issue)           
+122    warning    ./node_modules/iced-coffee-script/lib/coffee-script/register.js                                                        hash matches when dropping \r chars (possible Windows issue)           
+123    warning    ./node_modules/iced-coffee-script/lib/coffee-script/repl.js                                                            hash matches when dropping \r chars (possible Windows issue)           
+124    warning    ./node_modules/iced-coffee-script/lib/coffee-script/rewriter.js                                                        hash matches when dropping \r chars (possible Windows issue)           
+125    warning    ./node_modules/iced-coffee-script/lib/coffee-script/scope.js                                                           hash matches when dropping \r chars (possible Windows issue)           
+126    warning    ./node_modules/iced-coffee-script/lib/coffee-script/sourcemap.js                                                       hash matches when dropping \r chars (possible Windows issue)           
+127    warning    ./src/file_info_cache.iced                                                                                             hash matches when dropping \r chars (possible Windows issue)           
+128    warning    ./node_modules/iced-coffee-script/node_modules/docco/.npmignore                                                        hash matches when dropping \r chars (possible Windows issue)           
+129    warning    ./node_modules/iced-coffee-script/node_modules/docco/LICENSE                                                           hash matches when dropping \r chars (possible Windows issue)           
+130    warning    ./node_modules/iced-coffee-script/node_modules/docco/README                                                            hash matches when dropping \r chars (possible Windows issue)           
+131    warning    ./src/constants.iced                                                                                                   hash matches when dropping \r chars (possible Windows issue)           
+132    warning    ./node_modules/iced-coffee-script/node_modules/docco/docco.js                                                          hash matches when dropping \r chars (possible Windows issue)           
+133    warning    ./package.json                                                                                                         hash matches when dropping \r chars (possible Windows issue)           
+134    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/commander/Readme.md                                  hash matches when dropping \r chars (possible Windows issue)           
+135    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/commander/index.js                                   hash matches when dropping \r chars (possible Windows issue)           
+136    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/commander/package.json                               hash matches when dropping \r chars (possible Windows issue)           
+137    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/.npmignore                                  hash matches when dropping \r chars (possible Windows issue)           
+138    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/CHANGELOG.md                                hash matches when dropping \r chars (possible Windows issue)           
+139    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/LICENSE                                     hash matches when dropping \r chars (possible Windows issue)           
+140    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/README.md                                   hash matches when dropping \r chars (possible Windows issue)           
+141    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/lib/copy.js                                 hash matches when dropping \r chars (possible Windows issue)           
+142    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/lib/create.js                               hash matches when dropping \r chars (possible Windows issue)           
+143    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/lib/index.js                                hash matches when dropping \r chars (possible Windows issue)           
+144    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/lib/json.js                                 hash matches when dropping \r chars (possible Windows issue)           
+145    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/lib/mkdir.js                                hash matches when dropping \r chars (possible Windows issue)           
+146    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/lib/output.js                               hash matches when dropping \r chars (possible Windows issue)           
+147    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/lib/remove.js                               hash matches when dropping \r chars (possible Windows issue)           
+148    warning    ./node_modules/tablify/src/tablify.coffee                                                                              hash matches when dropping \r chars (possible Windows issue)           
+149    warning    ./node_modules/tablify/package.json                                                                                    hash matches when dropping \r chars (possible Windows issue)           
+150    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/jsonfile/.npmignore            hash matches when dropping \r chars (possible Windows issue)           
+151    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/jsonfile/CHANGELOG.md          hash matches when dropping \r chars (possible Windows issue)           
+152    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/jsonfile/LICENSE               hash matches when dropping \r chars (possible Windows issue)           
+153    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/jsonfile/README.md             hash matches when dropping \r chars (possible Windows issue)           
+154    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/jsonfile/lib/jsonfile.js       hash matches when dropping \r chars (possible Windows issue)           
+155    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/jsonfile/package.json          hash matches when dropping \r chars (possible Windows issue)           
+156    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/ncp/.npmignore                 hash matches when dropping \r chars (possible Windows issue)           
+157    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/ncp/.travis.yml                hash matches when dropping \r chars (possible Windows issue)           
+158    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/ncp/LICENSE.md                 hash matches when dropping \r chars (possible Windows issue)           
+159    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/ncp/README.md                  hash matches when dropping \r chars (possible Windows issue)           
+160    warning    ./node_modules/tablify/lib/tablify.js                                                                                  hash matches when dropping \r chars (possible Windows issue)           
+161    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/ncp/lib/ncp.js                 hash matches when dropping \r chars (possible Windows issue)           
+162    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/ncp/package.json               hash matches when dropping \r chars (possible Windows issue)           
+163    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/ncp/test/fixtures/src/a        hash matches when dropping \r chars (possible Windows issue)           
+164    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/ncp/test/fixtures/src/b        hash matches when dropping \r chars (possible Windows issue)           
+165    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/ncp/test/fixtures/src/sub/a    hash matches when dropping \r chars (possible Windows issue)           
+166    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/ncp/test/ncp-test.js           hash matches when dropping \r chars (possible Windows issue)           
+167    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/rimraf/AUTHORS                 hash matches when dropping \r chars (possible Windows issue)           
+168    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/rimraf/LICENSE                 hash matches when dropping \r chars (possible Windows issue)           
+169    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/rimraf/README.md               hash matches when dropping \r chars (possible Windows issue)           
+170    warning    ./node_modules/tablify/README.md                                                                                       hash matches when dropping \r chars (possible Windows issue)           
+171    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/rimraf/package.json            hash matches when dropping \r chars (possible Windows issue)           
+172    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/rimraf/rimraf.js               hash matches when dropping \r chars (possible Windows issue)           
+173    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/rimraf/test/run.sh             hash matches when dropping \r chars (possible Windows issue)           
+174    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/rimraf/test/setup.sh           hash matches when dropping \r chars (possible Windows issue)           
+175    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/rimraf/test/test-async.js      hash matches when dropping \r chars (possible Windows issue)           
+176    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/rimraf/test/test-sync.js       hash matches when dropping \r chars (possible Windows issue)           
+177    warning    ./node_modules/tablify/LICENSE                                                                                         hash matches when dropping \r chars (possible Windows issue)           
+178    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/LICENSE                                 hash matches when dropping \r chars (possible Windows issue)           
+179    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/README.md                               hash matches when dropping \r chars (possible Windows issue)           
+180    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/highlight.js                        hash matches when dropping \r chars (possible Windows issue)           
+181    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/index.js                            hash matches when dropping \r chars (possible Windows issue)           
+182    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/1c.js                     hash matches when dropping \r chars (possible Windows issue)           
+183    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/actionscript.js           hash matches when dropping \r chars (possible Windows issue)           
+184    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/apache.js                 hash matches when dropping \r chars (possible Windows issue)           
+185    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/applescript.js            hash matches when dropping \r chars (possible Windows issue)           
+186    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/asciidoc.js               hash matches when dropping \r chars (possible Windows issue)           
+187    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/autohotkey.js             hash matches when dropping \r chars (possible Windows issue)           
+188    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/avrasm.js                 hash matches when dropping \r chars (possible Windows issue)           
+189    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/axapta.js                 hash matches when dropping \r chars (possible Windows issue)           
+190    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/bash.js                   hash matches when dropping \r chars (possible Windows issue)           
+191    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/brainfuck.js              hash matches when dropping \r chars (possible Windows issue)           
+192    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/clojure.js                hash matches when dropping \r chars (possible Windows issue)           
+193    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/cmake.js                  hash matches when dropping \r chars (possible Windows issue)           
+194    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/coffeescript.js           hash matches when dropping \r chars (possible Windows issue)           
+195    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/cpp.js                    hash matches when dropping \r chars (possible Windows issue)           
+196    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/cs.js                     hash matches when dropping \r chars (possible Windows issue)           
+197    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/css.js                    hash matches when dropping \r chars (possible Windows issue)           
+198    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/d.js                      hash matches when dropping \r chars (possible Windows issue)           
+199    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/delphi.js                 hash matches when dropping \r chars (possible Windows issue)           
+200    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/diff.js                   hash matches when dropping \r chars (possible Windows issue)           
+201    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/django.js                 hash matches when dropping \r chars (possible Windows issue)           
+202    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/dos.js                    hash matches when dropping \r chars (possible Windows issue)           
+203    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/erlang-repl.js            hash matches when dropping \r chars (possible Windows issue)           
+204    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/erlang.js                 hash matches when dropping \r chars (possible Windows issue)           
+205    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/fix.js                    hash matches when dropping \r chars (possible Windows issue)           
+206    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/fsharp.js                 hash matches when dropping \r chars (possible Windows issue)           
+207    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/glsl.js                   hash matches when dropping \r chars (possible Windows issue)           
+208    warning    ./Makefile                                                                                                             hash matches when dropping \r chars (possible Windows issue)           
+209    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/haml.js                   hash matches when dropping \r chars (possible Windows issue)           
+210    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/handlebars.js             hash matches when dropping \r chars (possible Windows issue)           
+211    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/haskell.js                hash matches when dropping \r chars (possible Windows issue)           
+212    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/http.js                   hash matches when dropping \r chars (possible Windows issue)           
+213    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/ini.js                    hash matches when dropping \r chars (possible Windows issue)           
+214    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/java.js                   hash matches when dropping \r chars (possible Windows issue)           
+215    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/javascript.js             hash matches when dropping \r chars (possible Windows issue)           
+216    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/json.js                   hash matches when dropping \r chars (possible Windows issue)           
+217    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/lasso.js                  hash matches when dropping \r chars (possible Windows issue)           
+218    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/lisp.js                   hash matches when dropping \r chars (possible Windows issue)           
+219    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/livecodeserver.js         hash matches when dropping \r chars (possible Windows issue)           
+220    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/lua.js                    hash matches when dropping \r chars (possible Windows issue)           
+221    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/makefile.js               hash matches when dropping \r chars (possible Windows issue)           
+222    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/markdown.js               hash matches when dropping \r chars (possible Windows issue)           
+223    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/mathematica.js            hash matches when dropping \r chars (possible Windows issue)           
+224    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/matlab.js                 hash matches when dropping \r chars (possible Windows issue)           
+225    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/mel.js                    hash matches when dropping \r chars (possible Windows issue)           
+226    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/mizar.js                  hash matches when dropping \r chars (possible Windows issue)           
+227    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/nginx.js                  hash matches when dropping \r chars (possible Windows issue)           
+228    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/objectivec.js             hash matches when dropping \r chars (possible Windows issue)           
+229    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/ocaml.js                  hash matches when dropping \r chars (possible Windows issue)           
+230    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/parser3.js                hash matches when dropping \r chars (possible Windows issue)           
+231    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/perl.js                   hash matches when dropping \r chars (possible Windows issue)           
+232    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/php.js                    hash matches when dropping \r chars (possible Windows issue)           
+233    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/profile.js                hash matches when dropping \r chars (possible Windows issue)           
+234    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/python.js                 hash matches when dropping \r chars (possible Windows issue)           
+235    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/r.js                      hash matches when dropping \r chars (possible Windows issue)           
+236    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/rib.js                    hash matches when dropping \r chars (possible Windows issue)           
+237    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/rsl.js                    hash matches when dropping \r chars (possible Windows issue)           
+238    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/ruby.js                   hash matches when dropping \r chars (possible Windows issue)           
+239    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/ruleslanguage.js          hash matches when dropping \r chars (possible Windows issue)           
+240    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/rust.js                   hash matches when dropping \r chars (possible Windows issue)           
+241    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/scala.js                  hash matches when dropping \r chars (possible Windows issue)           
+242    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/scilab.js                 hash matches when dropping \r chars (possible Windows issue)           
+243    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/scss.js                   hash matches when dropping \r chars (possible Windows issue)           
+244    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/smalltalk.js              hash matches when dropping \r chars (possible Windows issue)           
+245    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/sql.js                    hash matches when dropping \r chars (possible Windows issue)           
+246    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/tex.js                    hash matches when dropping \r chars (possible Windows issue)           
+247    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/vala.js                   hash matches when dropping \r chars (possible Windows issue)           
+248    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/vbnet.js                  hash matches when dropping \r chars (possible Windows issue)           
+249    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/vbscript.js               hash matches when dropping \r chars (possible Windows issue)           
+250    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/vhdl.js                   hash matches when dropping \r chars (possible Windows issue)           
+251    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/lib/languages/xml.js                    hash matches when dropping \r chars (possible Windows issue)           
+252    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/highlight.js/package.json                            hash matches when dropping \r chars (possible Windows issue)           
+253    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/marked/.npmignore                                    hash matches when dropping \r chars (possible Windows issue)           
+254    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/marked/.travis.yml                                   hash matches when dropping \r chars (possible Windows issue)           
+255    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/marked/LICENSE                                       hash matches when dropping \r chars (possible Windows issue)           
+256    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/marked/Makefile                                      hash matches when dropping \r chars (possible Windows issue)           
+257    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/marked/README.md                                     hash matches when dropping \r chars (possible Windows issue)           
+258    warning    ./node_modules/tablify/Cakefile                                                                                        hash matches when dropping \r chars (possible Windows issue)           
+259    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/marked/component.json                                hash matches when dropping \r chars (possible Windows issue)           
+260    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/marked/doc/broken.md                                 hash matches when dropping \r chars (possible Windows issue)           
+261    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/marked/doc/todo.md                                   hash matches when dropping \r chars (possible Windows issue)           
+262    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/marked/index.js                                      hash matches when dropping \r chars (possible Windows issue)           
+263    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/marked/lib/marked.js                                 hash matches when dropping \r chars (possible Windows issue)           
+264    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/marked/man/marked.1                                  hash matches when dropping \r chars (possible Windows issue)           
+265    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/marked/package.json                                  hash matches when dropping \r chars (possible Windows issue)           
+266    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/underscore/LICENSE                                   hash matches when dropping \r chars (possible Windows issue)           
+267    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/underscore/README.md                                 hash matches when dropping \r chars (possible Windows issue)           
+268    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/underscore/package.json                              hash matches when dropping \r chars (possible Windows issue)           
+269    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/underscore/underscore-min.js                         hash matches when dropping \r chars (possible Windows issue)           
+270    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/underscore/underscore.js                             hash matches when dropping \r chars (possible Windows issue)           
+271    warning    ./node_modules/iced-coffee-script/node_modules/docco/package.json                                                      hash matches when dropping \r chars (possible Windows issue)           
+272    warning    ./node_modules/iced-coffee-script/node_modules/docco/resources/classic/docco.css                                       hash matches when dropping \r chars (possible Windows issue)           
+273    warning    ./node_modules/iced-coffee-script/node_modules/docco/resources/classic/docco.jst                                       hash matches when dropping \r chars (possible Windows issue)           
+274    warning    ./node_modules/iced-coffee-script/node_modules/docco/resources/classic/public/stylesheets/normalize.css                hash matches when dropping \r chars (possible Windows issue)           
+275    warning    ./node_modules/iced-coffee-script/node_modules/docco/resources/languages.json                                          hash matches when dropping \r chars (possible Windows issue)           
+276    warning    ./node_modules/iced-coffee-script/node_modules/docco/resources/linear/docco.css                                        hash matches when dropping \r chars (possible Windows issue)           
+277    warning    ./node_modules/iced-coffee-script/node_modules/docco/resources/linear/docco.jst                                        hash matches when dropping \r chars (possible Windows issue)           
+278    warning    ./node_modules/iced-coffee-script/node_modules/docco/resources/linear/public/stylesheets/normalize.css                 hash matches when dropping \r chars (possible Windows issue)           
+279    warning    ./node_modules/iced-coffee-script/node_modules/docco/resources/parallel/docco.css                                      hash matches when dropping \r chars (possible Windows issue)           
+280    warning    ./node_modules/iced-coffee-script/node_modules/docco/resources/parallel/docco.jst                                      hash matches when dropping \r chars (possible Windows issue)           
+281    warning    ./node_modules/iced-coffee-script/node_modules/docco/resources/parallel/public/stylesheets/normalize.css               hash matches when dropping \r chars (possible Windows issue)           
+282    warning    ./node_modules/iced-coffee-script/node_modules/docco/test/data/comments_test/c/docco.css                               hash matches when dropping \r chars (possible Windows issue)           
+283    warning    ./node_modules/iced-coffee-script/node_modules/docco/test/data/comments_test/coffee-script/docco.css                   hash matches when dropping \r chars (possible Windows issue)           
+284    warning    ./node_modules/iced-coffee-script/node_modules/docco/test/data/comments_test/javascript/docco.css                      hash matches when dropping \r chars (possible Windows issue)           
+285    warning    ./node_modules/iced-coffee-script/node_modules/docco/test/data/comments_test/python/docco.css                          hash matches when dropping \r chars (possible Windows issue)           
+286    warning    ./node_modules/iced-coffee-script/node_modules/docco/test/data/comments_test/ruby/docco.css                            hash matches when dropping \r chars (possible Windows issue)           
+287    warning    ./node_modules/iced-coffee-script/node_modules/docco/test/data/comments_test/tex/docco.css                             hash matches when dropping \r chars (possible Windows issue)           
+288    warning    ./node_modules/iced-coffee-script/node_modules/docco/test/data/custom_css/pagelet.css                                  hash matches when dropping \r chars (possible Windows issue)           
+289    warning    ./node_modules/iced-coffee-script/node_modules/docco/test/data/custom_css/tests.html                                   hash matches when dropping \r chars (possible Windows issue)           
+290    warning    ./node_modules/iced-coffee-script/node_modules/docco/test/data/custom_jst/docco.css                                    hash matches when dropping \r chars (possible Windows issue)           
+291    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/.npmignore                                                       hash matches when dropping \r chars (possible Windows issue)           
+292    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/.travis.yml                                                      hash matches when dropping \r chars (possible Windows issue)           
+293    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/LICENSE                                                          hash matches when dropping \r chars (possible Windows issue)           
+294    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/examples/pow.js                                                  hash matches when dropping \r chars (possible Windows issue)           
+295    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/index.js                                                         hash matches when dropping \r chars (possible Windows issue)           
+296    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/package.json                                                     hash matches when dropping \r chars (possible Windows issue)           
+297    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/readme.markdown                                                  hash matches when dropping \r chars (possible Windows issue)           
+298    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/test/chmod.js                                                    hash matches when dropping \r chars (possible Windows issue)           
+299    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/test/clobber.js                                                  hash matches when dropping \r chars (possible Windows issue)           
+300    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/test/mkdirp.js                                                   hash matches when dropping \r chars (possible Windows issue)           
+301    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/test/perm.js                                                     hash matches when dropping \r chars (possible Windows issue)           
+302    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/test/perm_sync.js                                                hash matches when dropping \r chars (possible Windows issue)           
+303    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/test/race.js                                                     hash matches when dropping \r chars (possible Windows issue)           
+304    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/test/rel.js                                                      hash matches when dropping \r chars (possible Windows issue)           
+305    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/test/return.js                                                   hash matches when dropping \r chars (possible Windows issue)           
+306    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/test/return_sync.js                                              hash matches when dropping \r chars (possible Windows issue)           
+307    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/test/root.js                                                     hash matches when dropping \r chars (possible Windows issue)           
+308    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/test/sync.js                                                     hash matches when dropping \r chars (possible Windows issue)           
+309    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/test/umask.js                                                    hash matches when dropping \r chars (possible Windows issue)           
+310    warning    ./node_modules/iced-coffee-script/node_modules/mkdirp/test/umask_sync.js                                               hash matches when dropping \r chars (possible Windows issue)           
+311    warning    ./node_modules/iced-coffee-script/package.json                                                                         hash matches when dropping \r chars (possible Windows issue)           
+312    warning    ./node_modules/iced-coffee-script/register.js                                                                          hash matches when dropping \r chars (possible Windows issue)           
+313    warning    ./node_modules/iced-error/.npmignore                                                                                   hash matches when dropping \r chars (possible Windows issue)           
+314    warning    ./node_modules/iced-error/Makefile                                                                                     hash matches when dropping \r chars (possible Windows issue)           
+315    warning    ./node_modules/iced-error/README.md                                                                                    hash matches when dropping \r chars (possible Windows issue)           
+316    warning    ./node_modules/iced-error/index.iced                                                                                   hash matches when dropping \r chars (possible Windows issue)           
+317    warning    ./node_modules/iced-error/index.js                                                                                     hash matches when dropping \r chars (possible Windows issue)           
+318    warning    ./node_modules/iced-error/index.map                                                                                    hash matches when dropping \r chars (possible Windows issue)           
+319    warning    ./node_modules/iced-error/package.json                                                                                 hash matches when dropping \r chars (possible Windows issue)           
+320    warning    ./node_modules/iced-logger/.npmignore                                                                                  hash matches when dropping \r chars (possible Windows issue)           
+321    warning    ./node_modules/iced-logger/LICENSE                                                                                     hash matches when dropping \r chars (possible Windows issue)           
+322    warning    ./node_modules/iced-logger/Makefile                                                                                    hash matches when dropping \r chars (possible Windows issue)           
+323    warning    ./node_modules/iced-logger/README.md                                                                                   hash matches when dropping \r chars (possible Windows issue)           
+324    warning    ./node_modules/iced-logger/index.iced                                                                                  hash matches when dropping \r chars (possible Windows issue)           
+325    warning    ./node_modules/iced-logger/index.js                                                                                    hash matches when dropping \r chars (possible Windows issue)           
+326    warning    ./node_modules/iced-logger/node_modules/colors/MIT-LICENSE.txt                                                         hash matches when dropping \r chars (possible Windows issue)           
+327    warning    ./node_modules/iced-logger/node_modules/colors/ReadMe.md                                                               hash matches when dropping \r chars (possible Windows issue)           
+328    warning    ./node_modules/iced-logger/node_modules/colors/colors.js                                                               hash matches when dropping \r chars (possible Windows issue)           
+329    warning    ./node_modules/iced-logger/node_modules/colors/example.html                                                            hash matches when dropping \r chars (possible Windows issue)           
+330    warning    ./node_modules/iced-logger/node_modules/colors/example.js                                                              hash matches when dropping \r chars (possible Windows issue)           
+331    warning    ./node_modules/iced-logger/node_modules/colors/package.json                                                            hash matches when dropping \r chars (possible Windows issue)           
+332    warning    ./node_modules/iced-logger/node_modules/colors/test.js                                                                 hash matches when dropping \r chars (possible Windows issue)           
+333    warning    ./node_modules/iced-logger/node_modules/colors/themes/winston-dark.js                                                  hash matches when dropping \r chars (possible Windows issue)           
+334    warning    ./node_modules/iced-logger/node_modules/colors/themes/winston-light.js                                                 hash matches when dropping \r chars (possible Windows issue)           
+335    warning    ./node_modules/iced-logger/package.json                                                                                hash matches when dropping \r chars (possible Windows issue)           
+336    warning    ./node_modules/iced-spawn/.npmignore                                                                                   hash matches when dropping \r chars (possible Windows issue)           
+337    warning    ./node_modules/iced-spawn/CHANGELOG.md                                                                                 hash matches when dropping \r chars (possible Windows issue)           
+338    warning    ./node_modules/iced-spawn/LICENSE                                                                                      hash matches when dropping \r chars (possible Windows issue)           
+339    warning    ./node_modules/iced-spawn/Makefile                                                                                     hash matches when dropping \r chars (possible Windows issue)           
+340    warning    ./node_modules/iced-spawn/README.md                                                                                    hash matches when dropping \r chars (possible Windows issue)           
+341    warning    ./node_modules/iced-spawn/lib/cmd.js                                                                                   hash matches when dropping \r chars (possible Windows issue)           
+342    warning    ./node_modules/iced-spawn/lib/main.js                                                                                  hash matches when dropping \r chars (possible Windows issue)           
+343    warning    ./node_modules/iced-spawn/lib/stream.js                                                                                hash matches when dropping \r chars (possible Windows issue)           
+344    warning    ./node_modules/iced-utils/src/util.iced                                                                                hash matches when dropping \r chars (possible Windows issue)           
+345    warning    ./node_modules/iced-spawn/node_modules/semver/.npmignore                                                               hash matches when dropping \r chars (possible Windows issue)           
+346    warning    ./node_modules/iced-spawn/node_modules/semver/LICENSE                                                                  hash matches when dropping \r chars (possible Windows issue)           
+347    warning    ./node_modules/iced-spawn/node_modules/semver/Makefile                                                                 hash matches when dropping \r chars (possible Windows issue)           
+348    warning    ./node_modules/iced-spawn/node_modules/semver/README.md                                                                hash matches when dropping \r chars (possible Windows issue)           
+349    warning    ./node_modules/iced-utils/src/spawn.iced                                                                               hash matches when dropping \r chars (possible Windows issue)           
+350    warning    ./node_modules/iced-spawn/node_modules/semver/foot.js                                                                  hash matches when dropping \r chars (possible Windows issue)           
+351    warning    ./node_modules/iced-spawn/node_modules/semver/head.js                                                                  hash matches when dropping \r chars (possible Windows issue)           
+352    warning    ./node_modules/iced-spawn/node_modules/semver/package.json                                                             hash matches when dropping \r chars (possible Windows issue)           
+353    warning    ./node_modules/iced-spawn/node_modules/semver/semver.browser.js                                                        hash matches when dropping \r chars (possible Windows issue)           
+354    warning    ./node_modules/iced-spawn/node_modules/semver/semver.js                                                                hash matches when dropping \r chars (possible Windows issue)           
+355    warning    ./node_modules/iced-spawn/node_modules/semver/test/amd.js                                                              hash matches when dropping \r chars (possible Windows issue)           
+356    warning    ./node_modules/iced-spawn/node_modules/semver/test/gtr.js                                                              hash matches when dropping \r chars (possible Windows issue)           
+357    warning    ./node_modules/iced-spawn/node_modules/semver/test/index.js                                                            hash matches when dropping \r chars (possible Windows issue)           
+358    warning    ./node_modules/iced-spawn/node_modules/semver/test/ltr.js                                                              hash matches when dropping \r chars (possible Windows issue)           
+359    warning    ./node_modules/iced-spawn/node_modules/semver/test/no-module.js                                                        hash matches when dropping \r chars (possible Windows issue)           
+360    warning    ./node_modules/iced-spawn/package.json                                                                                 hash matches when dropping \r chars (possible Windows issue)           
+361    warning    ./node_modules/iced-spawn/src/cmd.iced                                                                                 hash matches when dropping \r chars (possible Windows issue)           
+362    warning    ./node_modules/iced-spawn/src/main.iced                                                                                hash matches when dropping \r chars (possible Windows issue)           
+363    warning    ./node_modules/iced-spawn/src/stream.iced                                                                              hash matches when dropping \r chars (possible Windows issue)           
+364    warning    ./node_modules/iced-spawn/test/files/0_basics.iced                                                                     hash matches when dropping \r chars (possible Windows issue)           
+365    warning    ./node_modules/iced-spawn/test/run.iced                                                                                hash matches when dropping \r chars (possible Windows issue)           
+366    warning    ./node_modules/iced-utils/.npmignore                                                                                   hash matches when dropping \r chars (possible Windows issue)           
+367    warning    ./node_modules/iced-utils/Makefile                                                                                     hash matches when dropping \r chars (possible Windows issue)           
+368    warning    ./node_modules/iced-utils/README.md                                                                                    hash matches when dropping \r chars (possible Windows issue)           
+369    warning    ./node_modules/iced-utils/lib/fs.js                                                                                    hash matches when dropping \r chars (possible Windows issue)           
+370    warning    ./node_modules/iced-utils/lib/getopt.js                                                                                hash matches when dropping \r chars (possible Windows issue)           
+371    warning    ./node_modules/iced-utils/lib/lock.js                                                                                  hash matches when dropping \r chars (possible Windows issue)           
+372    warning    ./node_modules/iced-utils/lib/lockfile.js                                                                              hash matches when dropping \r chars (possible Windows issue)           
+373    warning    ./node_modules/iced-utils/lib/main.js                                                                                  hash matches when dropping \r chars (possible Windows issue)           
+374    warning    ./node_modules/iced-utils/lib/spawn.js                                                                                 hash matches when dropping \r chars (possible Windows issue)           
+375    warning    ./node_modules/iced-utils/lib/util.js                                                                                  hash matches when dropping \r chars (possible Windows issue)           
+376    warning    ./node_modules/iced-utils/package.json                                                                                 hash matches when dropping \r chars (possible Windows issue)           
+377    warning    ./node_modules/iced-utils/src/fs.iced                                                                                  hash matches when dropping \r chars (possible Windows issue)           
+378    warning    ./node_modules/iced-utils/src/getopt.iced                                                                              hash matches when dropping \r chars (possible Windows issue)           
+379    warning    ./node_modules/iced-utils/src/lock.iced                                                                                hash matches when dropping \r chars (possible Windows issue)           
+380    warning    ./node_modules/iced-utils/src/lockfile.iced                                                                            hash matches when dropping \r chars (possible Windows issue)           
+381    warning    ./node_modules/iced-utils/src/main.iced                                                                                hash matches when dropping \r chars (possible Windows issue)           
+382    warning    ./tests/1/d2                                                                                                           symlink matches contents of file (possible Windows issue)              
+383    warning    ./tests/1/d1/loop                                                                                                      symlink matches contents of file (possible Windows issue)              
+384    warning    ./tests/4/4a                                                                                                           directory is missing                                                   
+385    warning    ./node_modules/argparse/examples/prefix_chars.js                                                                       unexpected execution privileges (expected exec=true but got exec=false)
+386    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/rimraf/bin.js                  unexpected execution privileges (expected exec=true but got exec=false)
+387    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/ncp/bin/ncp                    unexpected execution privileges (expected exec=true but got exec=false)
+388    warning    ./bin/main.js                                                                                                          unexpected execution privileges (expected exec=true but got exec=false)
+389    warning    ./node_modules/iced-spawn/node_modules/semver/bin/semver                                                               unexpected execution privileges (expected exec=true but got exec=false)
+390    warning    ./tests/3/executable.js                                                                                                unexpected execution privileges (expected exec=true but got exec=false)
+391    warning    ./node_modules/iced-coffee-script/node_modules/docco/bin/docco                                                         unexpected execution privileges (expected exec=true but got exec=false)
+392    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/marked/bin/marked                                    unexpected execution privileges (expected exec=true but got exec=false)
+393    warning    ./node_modules/iced-coffee-script/lib/coffee-script/parser.js                                                          unexpected execution privileges (expected exec=true but got exec=false)
+394    warning    ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/package.json                                unexpected execution privileges (expected exec=true but got exec=false)
+395    warning    ./node_modules/iced-coffee-script/bin/coffee                                                                           unexpected execution privileges (expected exec=true but got exec=false)
+396    warning    ./node_modules/iced-coffee-script/bin/cake                                                                             unexpected execution privileges (expected exec=true but got exec=false)
+397    warning    ./node_modules/argparse/examples/sum.js                                                                                unexpected execution privileges (expected exec=true but got exec=false)
+398    warning    ./node_modules/argparse/examples/sub_commands.js                                                                       unexpected execution privileges (expected exec=true but got exec=false)
+399    warning    ./node_modules/argparse/examples/arguments.js                                                                          unexpected execution privileges (expected exec=true but got exec=false)
+400    warning    ./node_modules/argparse/examples/parents.js                                                                            unexpected execution privileges (expected exec=true but got exec=false)
+401    warning    ./node_modules/argparse/examples/nargs.js                                                                              unexpected execution privileges (expected exec=true but got exec=false)
+402    warning    ./node_modules/argparse/examples/help.js                                                                               unexpected execution privileges (expected exec=true but got exec=false)
+403    warning    ./node_modules/argparse/examples/constants.js                                                                          unexpected execution privileges (expected exec=true but got exec=false)
+404    warning    ./node_modules/argparse/examples/choice.js                                                                             unexpected execution privileges (expected exec=true but got exec=false)
+405    ERROR      ./res.txt                                                                                                              unknown file found                                                     
+406    ERROR      ./tests/1/bar.txt                                                                                                      file contents do not match (expected b5bb... but got ddab...)          
+407    ERROR      ./node_modules/.bin/iced                                                                                               file contents do not match (expected 61dc... but got 1025...)          
+408    ERROR      ./tests/1/d1/foobar.txt                                                                                                file contents do not match (expected b5bb... but got 308a...)          
+409    ERROR      ./src/main.iced                                                                                                        file contents do not match (expected 53b5... but got b3ef...)          
+410    ERROR      ./node_modules/iced-coffee-script/node_modules/.bin/docco                                                              file contents do not match (expected ac6e... but got 482b...)          
+411    ERROR      ./node_modules/iced-spawn/node_modules/.bin/semver                                                                     file contents do not match (expected cef9... but got 0225...)          
+412    ERROR      ./node_modules/iced-coffee-script/node_modules/docco/node_modules/.bin/marked                                          file contents do not match (expected 453f... but got b764...)          
+413    ERROR      ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/.bin/ncp                       file contents do not match (expected c7ca... but got 9c37...)          
+414    ERROR      ./lib/main.js                                                                                                          file contents do not match (expected fada... but got 1984...)          
+415    ERROR      ./node_modules/iced-coffee-script/node_modules/docco/node_modules/fs-extra/node_modules/.bin/rimraf                    file contents do not match (expected a950... but got a4b6...)          
+416    ERROR      ./node_modules/.bin/icake                                                                                              file contents do not match (expected 2a40... but got f6a5...)          
+**** FAILURE! Exited after 12 error(s).
