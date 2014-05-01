@@ -28,7 +28,7 @@ class FileInfo
     @full_path          = full_path
     @err                = null
     @lstat              = null
-    @stat               = null
+    @stat               = null # a synonym for lstat for our purposes
     @_hash              = {}
     @_link_hash         = {}
     @_is_binary         = null
@@ -43,9 +43,8 @@ class FileInfo
 
   init: (cb) ->
     await 
-      fs.stat   @full_path, defer err1, @stat
-      fs.lstat  @full_path, defer err2, @lstat
-    @err = err1 or err2
+      fs.lstat  @full_path, defer @err, @lstat
+    @stat = @lstat
     if not @err
       await @_x_platform_type_check defer()
     @_init_done = true

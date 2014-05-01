@@ -12,7 +12,7 @@ size    exec  file                                        contents
 3173              sample_output.md                        4c105947626a0291f413d64663cc7beed8ceda6c4afea76d57a3e5e74dc7ea17                                                                 
                 lib/                                                                                                                                                                       
 1128              constants.js                            45ccfe3f3fd285df9250f920c59ae379249f05d8c718739412089f2a992dcbc8                                                                 
-20220             file_info_cache.js                      9832dd21448d078b9292f9b32d4d0c028f62408bcf6316fed5099c2543abaadb                                                                 
+19926             file_info_cache.js                      6804894247ea7fffe328450f0e4ad5c599aa0b07e086f590601fdc46a8a9c373                                                                 
 3232              lock.js                                 19a640f93370adfaad794c5f01a3044cd9450349b85e7a2ed656ee515dde180a                                                                 
 15131             main.js                                 0d03325bb84a13782c52d232a77b4c3fad1dcd4ba4bf2621dbb99fe2b24264d7                                                                 
 6940              markdown.js                             8b0f0fd4fceaedb141632e7a1297fe1bfafba6b7da08fdd8aeee28e4897c6247                                                                 
@@ -23,7 +23,7 @@ size    exec  file                                        contents
 5890                globber.js                            0f499683a0aaf058fdffcca3b67678ae70605a7f0227f5a30bf89ab5218352b4                                                                 
 5354                kb.js                                 d3e6ee2d7063db453fae4febb122ecceec639b9045e564b2ed65d6420a69a57e                                                                 
 3164                preset_base.js                        4ca24f0583a9f069ee8d863b64208025a51b496efba611fcb171af129f88408b                                                                 
-21078             summarizer.js                           e1d7b548a59122191d511a221e53bd33538572d65ee46eef191b5d8d8c1a957b                                                                 
+21079             summarizer.js                           701dc27fb87707fa6cab20d7979de98c124d2f3d609a3899950a29ce62819ec8                                                                 
 182               top.js                                  eec47b1319cd332aca5bb3f032ede7fbb6f7055e31a48b5b5b084e190b1cb5c9                                                                 
 1625              utils.js                                057c2a73b990b4e42772c16e9a128baf56010acc020cbffc26f0ee42226317b1                                                                 
 1642              x_platform_hash.js                      c3c19255024d6f1ca2b7e4551d44979546df4bf380a25112c19a146542ccab3b                                                                 
@@ -561,7 +561,7 @@ size    exec  file                                        contents
 109570          res.txt                                   de254a2e526c583debf6cfb0d44dfe7c4cbb7534b72aaed0d29e1b515103f264                                                                 
                 src/                                                                                                                                                                       
 1245              constants.iced                          fb311209fb13dda6dd93f10ca4b58a56b2502286228007766fdaa121449b7e53                                                                 
-6191              file_info_cache.iced                    18ed6d786ea4eae9f0f4d1643f661dfc4aed88008fb22d5691e2a6a2421c4ecb                                                                 
+6179              file_info_cache.iced                    a1305cf5233d419ca533b770041d74cdd297b9e556a7182d60348acff5cb06c7                                                                 
 1123              lock.iced                               00e0aad9cbe1aac2031640a78d7f6a71e05975af1850b815311f9290f9ce2fd9                                                                 
 7811              main.iced                               b8d0a9e247e188c64c85c9b7e7f15453ccb9446207190f20bea3f93247df9103                                                                 
 4903              markdown.iced                           49d84a2be62e7181aadff63b3e8333289dfefcafbffd83a69385ba399ca79a8d                                                                 
@@ -572,7 +572,7 @@ size    exec  file                                        contents
 4074                globber.iced                          836266db99ac20b1d1ac24f17f47d84be1a9b32288e84622c7d34c836ec64dfe                                                                 
 1217                kb.iced                               b3dd12e37625499851de23bfb1e5503c556c6a9f335fe45ca891d053aaf9f9de                                                                 
 2119                preset_base.iced                      27a324f0946a93010bbb499f83df53e36b280ff4774bf56156d0fd7ac52e6318                                                                 
-9813              summarizer.iced                         6a6852037e05110ef0631cf0ce5058c2014b9de91a60d973b506369a53520b7a                                                                 
+9814              summarizer.iced                         45d65fb02fc58cbe781b463685dc5040fd5d65c7cab72f1fc3abde41726f96c2                                                                 
 75                top.iced                                e675e53d96477ba48a7d7d7df37f94bed095882f5955bd82f1b71673a4085894                                                                 
 920               utils.iced                              729eec0fab11b2fccfa0d9fba3c651b7852f51b65073ecf61474a99c74cac3b0                                                                 
 1489              x_platform_hash.iced                    228e27fee04ce6ffe4215cad24068ebf982b952973aa076d0cbdc73eef550134                                                                 

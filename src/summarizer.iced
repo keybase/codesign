@@ -87,7 +87,7 @@ class SummarizedItem
     switch @item_type
       when item_types.FILE
         info.hash               = @hash
-        info.size               = @finfo.stat.size
+        info.size               = @finfo.lstat.size
         info.possible_win_link  = @finfo.possible_win_link
       when item_types.SYMLINK
         info.link               = @link
