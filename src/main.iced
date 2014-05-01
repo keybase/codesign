@@ -39,13 +39,15 @@ class Main
       title:  'subcommands'
       dest:   'subcommand_name'
     }
-    sign           = subparsers.addParser 'sign',   {addHelp:true}
-    verify         = subparsers.addParser 'verify', {addHelp:true}
-    sign.addArgument   ['-o', '--output'],  {action: 'store', type:'string', help: 'output to a specific file'}    
-    sign.addArgument   ['-p', '--presets'], {action: 'store', type:'string', help: 'specify ignore presets, comma-separated',  defaultValue: 'git,dropbox,kb'}
-    sign.addArgument   ['-d', '--dir'],     {action: 'store', type:'string', help: 'the directory to sign', defaultValue: '.'}
-    verify.addArgument ['-i', '--input'],   {action: 'store', type:'string', help: 'load a specific signature file'}
-    verify.addArgument ['-d', '--dir'],     {action: 'store', type:'string', help: 'the directory to verify', defaultValue: '.'}
+    sign           = subparsers.addParser 'sign',     {addHelp:true}
+    verify         = subparsers.addParser 'verify',   {addHelp:true}
+    tojson         = subparsers.addParser 'tojson', {addHelp:true}
+    sign.addArgument      ['-o', '--output'],  {action: 'store', type:'string', help: 'output to a specific file'}    
+    sign.addArgument      ['-p', '--presets'], {action: 'store', type:'string', help: 'specify ignore presets, comma-separated',  defaultValue: 'git,dropbox,kb'}
+    sign.addArgument      ['-d', '--dir'],     {action: 'store', type:'string', help: 'the directory to sign', defaultValue: '.'}
+    verify.addArgument    ['-i', '--input'],   {action: 'store', type:'string', help: 'load a specific signature file'}
+    verify.addArgument    ['-d', '--dir'],     {action: 'store', type:'string', help: 'the directory to verify', defaultValue: '.'}
+    tojson.addArgument    ['-i', '--input'],   {action: 'store', type:'string', help: 'load a specific signature file to convert to JSON'}
 
   # -------------------------------------------------------------------------------------------------------------------
 
@@ -92,6 +94,21 @@ class Main
     switch @args.subcommand_name
       when 'sign'   then @sign()
       when 'verify' then @verify()
+      when 'tojson' then @to_json()
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  to_json: ->
+    input = @args.input or constants.defaults.FILENAME
+    # load the file
+    await fs.readFile input, 'utf8', defer err, body
+    if err? then @exit_err "Couldn't open #{input}; if using another filename pass with -i <filename>"
+    json_obj = from_md body
+
+    if not json_obj?
+      @exit_err "Failed to parse/load #{input}"
+    else
+      console.log JSON.stringify json_obj, null, 2
 
   # -------------------------------------------------------------------------------------------------------------------
 

@@ -158,7 +158,7 @@ exports.from_md = (str) ->
     preset_rows = (f.replace /\s*(\#.*)?\s*$/g , '' for f in preset_rows)
     return {
       found:   files_from_pretty_format file_rows
-      ignore:  (f for f in ignore_rows)
+      ignore:  (f for f in ignore_rows when f.length)
       presets: preset_rows
       meta:
         version: version
