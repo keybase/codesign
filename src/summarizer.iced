@@ -204,8 +204,9 @@ class Summarizer
       else if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK) and (expected.hash.hash is got.link_hash)
         status = vc.ALT_SYMLINK_MATCH
       else if expected.item_type isnt got.item_type
-        status = vc.WRONG_ITEM_TYPE
-      else if (expected.item_type is item_types.FILE) and (expected.exec isnt got.exec)
+        status = vc.WRONG_ITEM_TYPE        
+      else if (expected.item_type is item_types.FILE) and (expected.exec isnt got.exec)      
+        console.log "****** #{expected.path}"
         status = vc.WRONG_EXEC_PRIVS
       else if (expected.link isnt got.link)
         status = vc.WRONG_SYMLINK
