@@ -162,6 +162,7 @@ class Main
     if err_table.length
       log.error "#{r[0]}\t#{r[1]}" for r in err_table
       log.error "Exited after #{err_table.length} error(s)"
+      process.exit 1
     else
       if not @args.quiet
         log.info  "Success! #{json_obj.found.length} items checked#{if warn_table.length then ' with ' + warn_table.length + ' warning(s); pass --strict to prevent success on warnings; --quiet to hide warnings' else ''}"
