@@ -201,12 +201,13 @@ class Summarizer
           status = vc.MISSING_FILE
       else if (expected.item_type is item_types.SYMLINK) and (got.item_type is item_types.FILE) and (expected.link is got.possible_win_link)
         status = vc.ALT_SYMLINK_MATCH
-      else if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK) and (expected.hash.hash is got.link_hash)
+      else if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK) and @hash_alt_match(expected.hash, got.link_hash)
         status = vc.ALT_SYMLINK_MATCH
       else if expected.item_type isnt got.item_type
+        if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK)
+          console.log "expected hash: #{expected.hash.hash} (or #{expected.hash.alt_hash}); got link_hash: #{got.link_hash.hash}"
         status = vc.WRONG_ITEM_TYPE        
       else if (expected.item_type is item_types.FILE) and (expected.exec isnt got.exec)      
-        console.log "****** #{expected.path}"
         status = vc.WRONG_EXEC_PRIVS
       else if (expected.link isnt got.link)
         status = vc.WRONG_SYMLINK

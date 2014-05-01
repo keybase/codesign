@@ -77,7 +77,7 @@ class Main
   # -------------------------------------------------------------------------------------------------------------------
 
   sign: ->
-    output  = @args.output or constants.defaults.filename
+    output  = @args.output or constants.defaults.FILENAME
     await @get_ignore_list output, defer ignore
     await Summarizer.from_dir @args.dir, {ignore, presets: @get_preset_list()}, defer err, summ
     if err? then @exit_err err
@@ -97,7 +97,7 @@ class Main
   # -------------------------------------------------------------------------------------------------------------------
 
   verify: ->
-    input = @args.input or constants.defaults.filename
+    input = @args.input or constants.defaults.FILENAME
 
     # load the file
     await fs.readFile input, 'utf8', defer err, body

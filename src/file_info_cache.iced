@@ -4,6 +4,7 @@ crypto          = require 'crypto'
 LockTable       = require('./lock').Table
 utils           = require './utils'
 XPlatformHash   = require './x_platform_hash'
+constants       = require './constants'
 {item_types}    = require './constants'
 
 # =============================================================================
@@ -126,13 +127,12 @@ class FileInfo
       @item_type = item_types.DIR
 
     # let's discover if it's a windows style link
-    if (@item_type is item_types.FILE) and (@stat.size < 1024) and (not @_is_binary)
+    if (@item_type is item_types.FILE) and (@stat.size < constants.tweakables.WIN_SYMLINK_MAX_LEN) and (not @_is_binary)
       await fs.readFile @full_path, {encoding: 'utf8'}, defer @err, data
       data  = data.replace /(^[\s]*)|([\s]*$)/g, ''
       lines = data.split   /[\n\r]+/g
       if lines.length is 1
         @possible_win_link      = lines[0]
-        console.log "Found possible windows link '#{@full_path}' -> '#{@possible_win_link}'"
     cb()
 
   # ---------------------------------------------------------------------------
