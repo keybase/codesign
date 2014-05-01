@@ -14,7 +14,7 @@ size    exec  file                                        contents
 1128              constants.js                            45ccfe3f3fd285df9250f920c59ae379249f05d8c718739412089f2a992dcbc8                                                                 
 20220             file_info_cache.js                      9832dd21448d078b9292f9b32d4d0c028f62408bcf6316fed5099c2543abaadb                                                                 
 3232              lock.js                                 19a640f93370adfaad794c5f01a3044cd9450349b85e7a2ed656ee515dde180a                                                                 
-14930             main.js                                 adf12d8fa80a4002b52dd95e27d43c3fc146566134d2940caee578a52576501a                                                                 
+14926             main.js                                 a159f9a0e56e4e194bf85053164ec1118896d4757c2be6283d385c0df09263b7                                                                 
 6940              markdown.js                             8b0f0fd4fceaedb141632e7a1297fe1bfafba6b7da08fdd8aeee28e4897c6247                                                                 
 822               package.js                              0835bb4b94e0cd9fb36a02baf58bf134761fdb151d0b41a14d81795876e5ec3c                                                                 
                   preset/                                                                                                                                                                  
@@ -563,7 +563,7 @@ size    exec  file                                        contents
 1245              constants.iced                          fb311209fb13dda6dd93f10ca4b58a56b2502286228007766fdaa121449b7e53                                                                 
 6191              file_info_cache.iced                    18ed6d786ea4eae9f0f4d1643f661dfc4aed88008fb22d5691e2a6a2421c4ecb                                                                 
 1123              lock.iced                               00e0aad9cbe1aac2031640a78d7f6a71e05975af1850b815311f9290f9ce2fd9                                                                 
-7877              main.iced                               c1449ccce86a1ca9aed4f6a1d224dda6449cbab36d4a65e9898292e6c33972ae                                                                 
+7873              main.iced                               db6e9c72303e6eec66ee7446fc067ac6877beb29608c080058969e0bbbeb2fca                                                                 
 4903              markdown.iced                           49d84a2be62e7181aadff63b3e8333289dfefcafbffd83a69385ba399ca79a8d                                                                 
 558               package.iced                            630c83cc199d990e46e47039d0824ca37e222611bc25a1747662f596f735a69a                                                                 
                   preset/                                                                                                                                                                  

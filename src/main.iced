@@ -143,8 +143,8 @@ class Main
       label     = if code < 100 then 'warning' else 'ERROR'
       fname     = got?.path or expected?.path
       msg       = switch code
-        when vc.ALT_HASH_MATCH then     'hash matches when dropping \\r chars (possible Windows issue)'
-        when vc.ALT_SYMLINK_MATCH then  'symlink matches contents of file (possible Windows issue)'
+        when vc.ALT_HASH_MATCH then     'hash matches when disregarding CRLF line-endings'
+        when vc.ALT_SYMLINK_MATCH then  'symlink matches file contents (possible Windows issue)'
         when vc.MISSING_DIR then        'directory is missing'
         when vc.ORPHAN_DIR then         'unknown directory found'
         when vc.MISSING_FILE then       'file is missing'
@@ -154,9 +154,9 @@ class Main
         when vc.WRONG_EXEC_PRIVS then   "unexpected execution privileges (expected exec=#{expected.exec} but got exec=#{got.exec})"
         when vc.WRONG_SYMLINK then      "expected symlink to `#{expected.link}` but got `#{got.link}`"
       if (code < 100) and (not @args.strict)
-        warn_table.push [label, fname, msg]
+        warn_table.push [msg, fname]
       else
-        err_table.push [label, fname, msg]
+        err_table.push [msg, fname]
     if warn_table.length and not @args.quiet
       log.info utils.plain_tablify warn_table
     if err_table.length
@@ -164,7 +164,7 @@ class Main
       log.error "Exited after #{err_table.length} error(s)"
     else
       if not @args.quiet
-        log.info  "Success! #{json_obj.found.length} items checked#{if warn_table.length then ' with ' + warn_table.length + ' warning(s); pass --strict to prevent success on warnings' else ''}"
+        log.info  "Success! #{json_obj.found.length} items checked#{if warn_table.length then ' with ' + warn_table.length + ' warning(s); pass --strict to prevent success on warnings; --quiet to hide warnings' else ''}"
 
   # -------------------------------------------------------------------------------------------------------------------
 
