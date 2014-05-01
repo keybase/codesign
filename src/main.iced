@@ -41,9 +41,8 @@ class Main
     }
     sign           = subparsers.addParser 'sign',   {addHelp:true}
     verify         = subparsers.addParser 'verify', {addHelp:true}
-    preset_choices = (k.toLoweCase() for k of constants.preset_aliases)
     sign.addArgument   ['-o', '--output'],  {action: 'store', type:'string', help: 'output to a specific file'}    
-    sign.addArgument   ['-p', '--presets'], {action: 'store', type:'string', help: 'specify ignore presets, comma-separated',  defaultValue: 'git,dropbox'}
+    sign.addArgument   ['-p', '--presets'], {action: 'store', type:'string', help: 'specify ignore presets, comma-separated',  defaultValue: 'git,dropbox,kb'}
     sign.addArgument   ['-d', '--dir'],     {action: 'store', type:'string', help: 'the directory to sign', defaultValue: '.'}
     verify.addArgument ['-i', '--input'],   {action: 'store', type:'string', help: 'load a specific signature file'}
     verify.addArgument ['-d', '--dir'],     {action: 'store', type:'string', help: 'the directory to verify', defaultValue: '.'}

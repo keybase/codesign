@@ -24,6 +24,7 @@ $(BUILD_STAMP): \
 	lib/preset/dropbox.js \
 	lib/preset/git.js \
 	lib/preset/globber.js \
+	lib/preset/kb.js \
 	lib/preset/preset_base.js \
 	lib/summarizer.js \
 	lib/top.js \

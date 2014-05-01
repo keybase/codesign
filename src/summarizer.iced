@@ -6,6 +6,7 @@ constants      = require './constants'
 {item_types}   = require './constants'
 utils          = require './utils'
 GitPreset      = require './preset/git'
+KbPreset       = require './preset/kb'
 DropboxPreset  = require './preset/dropbox'
 GlobberPreset  = require './preset/globber'
 XPlatformHash  = require './x_platform_hash'
@@ -249,6 +250,7 @@ class Summarizer
       switch p
         when 'git'      then @presets.push new GitPreset()
         when 'dropbox'  then @presets.push new DropboxPreset()
+        when 'kb'       then @presets.push new KbPreset()
         when 'none'     then continue
         else throw new Error "Unknown preset: #{p}"
 
