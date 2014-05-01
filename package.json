@@ -18,6 +18,7 @@
     "argparse": "0.1.15",
     "iced-coffee-script": "~1.7.1-a",
     "iced-error": "~0.0.8",
+    "iced-logger": ">=0.0.3",
     "glob-to-regexp": ">=0.0.1",
     "tablify": ">=0.1.5"
   },

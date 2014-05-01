@@ -8,6 +8,7 @@ constants         = require './constants'
 {to_md, from_md}  = require './markdown'
 {item_type_names} = require './constants'
 utils             = require './utils'
+log               = require 'iced-logger'
 vc                = constants.verify_codes
 
 
@@ -23,7 +24,7 @@ class Main
   # -------------------------------------------------------------------------------------------------------------------
 
   exit_err: (e) ->
-    console.log "Error: #{e.toString()}"
+    log.error e.toString()
     process.exit 1
 
   # -------------------------------------------------------------------------------------------------------------------
@@ -39,14 +40,16 @@ class Main
       title:  'subcommands'
       dest:   'subcommand_name'
     }
-    sign           = subparsers.addParser 'sign',     {addHelp:true}
-    verify         = subparsers.addParser 'verify',   {addHelp:true}
+    sign           = subparsers.addParser 'sign',   {addHelp:true}
+    verify         = subparsers.addParser 'verify', {addHelp:true}
     tojson         = subparsers.addParser 'tojson', {addHelp:true}
     sign.addArgument      ['-o', '--output'],  {action: 'store', type:'string', help: 'output to a specific file'}    
     sign.addArgument      ['-p', '--presets'], {action: 'store', type:'string', help: 'specify ignore presets, comma-separated',  defaultValue: 'git,dropbox,kb'}
     sign.addArgument      ['-d', '--dir'],     {action: 'store', type:'string', help: 'the directory to sign', defaultValue: '.'}
     verify.addArgument    ['-i', '--input'],   {action: 'store', type:'string', help: 'load a specific signature file'}
     verify.addArgument    ['-d', '--dir'],     {action: 'store', type:'string', help: 'the directory to verify', defaultValue: '.'}
+    verify.addArgument    ['-q', '--quiet'],   {action: 'storeTrue', help: 'withhold output unless an error'}
+    verify.addArgument    ['-s', '--strict'],  {action: 'storeTrue', help: 'fail on warnings (typically cross-platform problems)'}
     tojson.addArgument    ['-i', '--input'],   {action: 'store', type:'string', help: 'load a specific signature file to convert to JSON'}
 
   # -------------------------------------------------------------------------------------------------------------------
@@ -85,7 +88,7 @@ class Main
     o = summ.to_json_obj()
     await fs.writeFile output, to_md(o) + "\n", {encoding: 'utf8'}, defer err    
     if err? then @exit_err err
-    console.log "Success! Output: #{output}"
+    log.info "Success! Output: #{output}"
 
   # -------------------------------------------------------------------------------------------------------------------
 
@@ -108,7 +111,7 @@ class Main
     if not json_obj?
       @exit_err "Failed to parse/load #{input}"
     else
-      console.log JSON.stringify json_obj, null, 2
+      log.console.log JSON.stringify json_obj, null, 2
 
   # -------------------------------------------------------------------------------------------------------------------
 
@@ -143,18 +146,19 @@ class Main
           when vc.ORPHAN_DIR then         'unknown directory found'
           when vc.MISSING_FILE then       'file is missing'
           when vc.ORPHAN_FILE then        'unknown file found'
-          when vc.HASH_MISMATCH then      "file contents do not match (expected #{expected.hash.hash[0...4]}... but got #{got.hash.hash[0...4]}...)"
+          when vc.HASH_MISMATCH then      "file contents do not match (expected #{expected.hash.hash[0...8]}... but got #{got.hash.hash[0...8]}...)"
           when vc.WRONG_ITEM_TYPE then    "expected a #{utils.item_type_name expected.item_type} but got a #{utils.item_type_name got.item_type}"
           when vc.WRONG_EXEC_PRIVS then   "unexpected execution privileges (expected exec=#{expected.exec} but got exec=#{got.exec})"
           when vc.WRONG_SYMLINK then      "expected symlink to `#{expected.link}` but got `#{got.link}`"
 
         out_table.push [label, fname, msg]
-      console.log utils.plain_tablify out_table, 4
+      log.warn utils.plain_tablify out_table, 4
     if err_count
-      console.log "**** FAILURE! Exited after #{err_count} error(s)."
+      log.error "Exited after #{err_count} error(s)."
     else
-      console.log "Success! #{json_obj.found.length} items checked#{if warn_count then ' with ' + warn_count + ' warning(s); pass --strict to prevent success on warnings' else ''}"
-
+      if not @args.quiet
+        log.info  "Success! #{json_obj.found.length} items checked#{if warn_count then ' with ' + warn_count + ' warning(s); pass --strict to prevent success on warnings' else ''}"
+        
   # -------------------------------------------------------------------------------------------------------------------
 
 exports.run = ->
