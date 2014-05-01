@@ -599,6 +599,7 @@ size    exec  file                                        contents
                     4b/                                                                                                                                                                    
 53                    .gitignore                          a83f07906ff0a440507e1fda72dff7b3eb30003b8aa71709099e4604e4613a9c                                                                 
 4                     foo.please_ignore_me                b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c                                                                 
+3878              SIGNED.md                               2760a206738518850428c7ecc3c823a5d8c0f45574dbe99c6e20198765c8e5d2                                                                 
                   kb/                                                                                                                                                                      
 22                  .kbignore                             253264c269132f1d41f786953b66b2486bbc8c49e40265e4cfa10b69a0332299                                                                 
 18                  should_be_ok.md                       c7bc0835eb15d6b74b95e57100d6870aa20e95fb2913c5031036f8d317abe14a                                                                 
