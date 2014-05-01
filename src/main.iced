@@ -158,9 +158,9 @@ class Main
       else
         err_table.push [msg, fname]
     if warn_table.length and not @args.quiet
-      log.warn utils.plain_tablify warn_table
+      log.warn "#{r[0]}\t#{r[1]}" for r in warn_table
     if err_table.length
-      log.error utils.plain_tablify err_table
+      log.error "#{r[0]}\t#{r[1]}" for r in err_table
       log.error "Exited after #{err_table.length} error(s)"
     else
       if not @args.quiet
