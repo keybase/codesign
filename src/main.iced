@@ -143,22 +143,22 @@ class Main
       label     = if code < 100 then 'warning' else 'ERROR'
       fname     = got?.path or expected?.path
       msg       = switch code
-        when vc.ALT_HASH_MATCH then     'hash matches when disregarding CRLF line-endings'
-        when vc.ALT_SYMLINK_MATCH then  'symlink matches file contents (possible Windows issue)'
+        when vc.ALT_HASH_MATCH then     'hash matches when disregarding CRLF\'s'
+        when vc.ALT_SYMLINK_MATCH then  'symlink matches file contents'
         when vc.MISSING_DIR then        'directory is missing'
         when vc.ORPHAN_DIR then         'unknown directory found'
         when vc.MISSING_FILE then       'file is missing'
         when vc.ORPHAN_FILE then        'unknown file found'
-        when vc.HASH_MISMATCH then      "file contents do not match (expected #{expected.hash.hash[0...8]}... but got #{got.hash.hash[0...8]}...)"
-        when vc.WRONG_ITEM_TYPE then    "expected a #{utils.item_type_name expected.item_type} but got a #{utils.item_type_name got.item_type}"
-        when vc.WRONG_EXEC_PRIVS then   "unexpected execution privileges (expected exec=#{expected.exec} but got exec=#{got.exec})"
+        when vc.HASH_MISMATCH then      "contents mismatch (expected #{expected.hash.hash[0...8]}, got #{got.hash.hash[0...8]}...)"
+        when vc.WRONG_ITEM_TYPE then    "expected a #{utils.item_type_name expected.item_type}, got a #{utils.item_type_name got.item_type}"
+        when vc.WRONG_EXEC_PRIVS then   "execution privileges (got exec=#{got.exec})"
         when vc.WRONG_SYMLINK then      "expected symlink to `#{expected.link}` but got `#{got.link}`"
       if (code < 100) and (not @args.strict)
         warn_table.push [msg, fname]
       else
         err_table.push [msg, fname]
     if warn_table.length and not @args.quiet
-      log.info utils.plain_tablify warn_table
+      log.warn utils.plain_tablify warn_table
     if err_table.length
       log.error utils.plain_tablify err_table
       log.error "Exited after #{err_table.length} error(s)"
