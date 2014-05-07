@@ -15,6 +15,7 @@ lib/preset/%.js: src/preset/%.iced
 	$(ICED) -I browserify -c -o `dirname $@` $<
 
 $(BUILD_STAMP): \
+	lib/codesign.js \
 	lib/constants.js \
 	lib/file_info_cache.js \
 	lib/main.js \
@@ -25,7 +26,7 @@ $(BUILD_STAMP): \
 	lib/preset/globber.js \
 	lib/preset/kb.js \
 	lib/preset/preset_base.js \
-	lib/summarizer.js \
+	lib/summarized_item.js \
 	lib/top.js \
 	lib/utils.js \
 	lib/x_platform_hash.js

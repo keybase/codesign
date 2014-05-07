@@ -4,27 +4,27 @@
 size    exec  file                                        contents                                                                                                                         
               ./                                                                                                                                                                           
 55              .gitignore                                7ae4f10575924004944f9aaceac9fdf896689dd474302da3bb2642a08f319ba0                                                                 
-722             Makefile                                  c6e31e38797ee35b5d5095e39f811854abe7f5c9f3f23d81195e775cdbdb33c3                                                                 
-410             README.md                                 aadd75e604177ef920e4da1126108403bc524d8726674cb6f8e7bb3f59237af1                                                                 
+733             Makefile                                  efcd37e39e2669bc305df2889ea6fd3923a019d16f4fabc9a76aa5823a1deee6                                                                 
+405             README.md                                 9aa36f39d2bf4988f1ac836265ca4db800c15d588cdc016d6e7ab3ec94e3dead                                                                 
                 bin/                                                                                                                                                                       
 50      x         main.js                                 837cf842cf30424e76654bbd7ca3bf6d17c29f51c98d0ef2d5deedd818cb1ed7                                                                 
                 docs/                                                                                                                                                                      
 3173              sample_output.md                        4c105947626a0291f413d64663cc7beed8ceda6c4afea76d57a3e5e74dc7ea17                                                                 
                 lib/                                                                                                                                                                       
 1128              constants.js                            45ccfe3f3fd285df9250f920c59ae379249f05d8c718739412089f2a992dcbc8                                                                 
-19926             file_info_cache.js                      6804894247ea7fffe328450f0e4ad5c599aa0b07e086f590601fdc46a8a9c373                                                                 
-3232              lock.js                                 19a640f93370adfaad794c5f01a3044cd9450349b85e7a2ed656ee515dde180a                                                                 
-15131             main.js                                 0d03325bb84a13782c52d232a77b4c3fad1dcd4ba4bf2621dbb99fe2b24264d7                                                                 
+19855             file_info_cache.js                      4826dc57bfa4ac5088d9226638386a9dd7c4b2dcde272192e1687d309e1ee4f8                                                                 
+15096             main.js                                 f91afa76634f7e7e4df1947bbfc0ae1c153c2b3e8f1e4d4599db7269fd833afa                                                                 
 6940              markdown.js                             8b0f0fd4fceaedb141632e7a1297fe1bfafba6b7da08fdd8aeee28e4897c6247                                                                 
 822               package.js                              0835bb4b94e0cd9fb36a02baf58bf134761fdb151d0b41a14d81795876e5ec3c                                                                 
                   preset/                                                                                                                                                                  
 1471                dropbox.js                            8b1601cd687f724402714d619177949381b199c626b4f97a14706de9f96838fc                                                                 
-5856                git.js                                c0c686a26506fc56c2a699cfd438dec6086c9bad4df5b196dbea10aa32701ad2                                                                 
-5890                globber.js                            0f499683a0aaf058fdffcca3b67678ae70605a7f0227f5a30bf89ab5218352b4                                                                 
-5354                kb.js                                 d3e6ee2d7063db453fae4febb122ecceec639b9045e564b2ed65d6420a69a57e                                                                 
-3164                preset_base.js                        4ca24f0583a9f069ee8d863b64208025a51b496efba611fcb171af129f88408b                                                                 
-21079             summarizer.js                           701dc27fb87707fa6cab20d7979de98c124d2f3d609a3899950a29ce62819ec8                                                                 
-182               top.js                                  eec47b1319cd332aca5bb3f032ede7fbb6f7055e31a48b5b5b084e190b1cb5c9                                                                 
+5841                git.js                                fc0115fdaf187315983ee634cedd3cafa2529851e5b21cb57be64d3c5d868e95                                                                 
+5880                globber.js                            db08901218e00e613a3c4ecad23945141d0fbb3ca5cc444df57ac3f60746ec45                                                                 
+5339                kb.js                                 23266dd0fe64eed825067aaf39fd45459cd270fddaeced87b5af862813eebb4e                                                                 
+3159                preset_base.js                        a43985d0441a6a1ee5461f768a25b4160223d84f9ae5539c77bb1fe132a35b4a                                                                 
+10782             summarized_item.js                      183e1989994ba94b908499ec8ad05d8850dd50cbe3148ac9fa989ef410b82a98                                                                 
+10719             summarizer.js                           c0987fb7e325beb0fe0b0631804578644bcc4eab66a0905548e25fb61b8ab72c                                                                 
+261               top.js                                  0e6c61dfeb34597068a2d18b94365a700fc122ecc121d92ef22908efbe28d146                                                                 
 1625              utils.js                                057c2a73b990b4e42772c16e9a128baf56010acc020cbffc26f0ee42226317b1                                                                 
 1642              x_platform_hash.js                      c3c19255024d6f1ca2b7e4551d44979546df4bf380a25112c19a146542ccab3b                                                                 
                 node_modules/                                                                                                                                                              
@@ -557,12 +557,10 @@ size    exec  file                                        contents
 4362                package.json                          3fba24b4e578cd8ae4aa754c9bea3c76d9cd16a0d6e527934181528d8fa01cae                                                                 
                     src/                                                                                                                                                                   
 5242                  tablify.coffee                      0afc21a66c1b9807817fa84e4ae408af15a4da9a2cdc13dedacf44bdcd484a34                                                                 
-745             package.json                              4c068bf1e10bb10436c65076373a64bd6bb263fbc8ab225d607d4172cdacd037                                                                 
-109570          res.txt                                   de254a2e526c583debf6cfb0d44dfe7c4cbb7534b72aaed0d29e1b515103f264                                                                 
+735             package.json                              dea60f1df472c7211e3b72a097ec8632b5497de38a3c957672eb1a22b827876f                                                                 
                 src/                                                                                                                                                                       
 1245              constants.iced                          fb311209fb13dda6dd93f10ca4b58a56b2502286228007766fdaa121449b7e53                                                                 
-6179              file_info_cache.iced                    a1305cf5233d419ca533b770041d74cdd297b9e556a7182d60348acff5cb06c7                                                                 
-1123              lock.iced                               00e0aad9cbe1aac2031640a78d7f6a71e05975af1850b815311f9290f9ce2fd9                                                                 
+6188              file_info_cache.iced                    05e89cc329a7f7b0cca2e668ec669c0d2b819837a6577925bd1eeab72bc90ab7                                                                 
 7811              main.iced                               b8d0a9e247e188c64c85c9b7e7f15453ccb9446207190f20bea3f93247df9103                                                                 
 4903              markdown.iced                           49d84a2be62e7181aadff63b3e8333289dfefcafbffd83a69385ba399ca79a8d                                                                 
 558               package.iced                            630c83cc199d990e46e47039d0824ca37e222611bc25a1747662f596f735a69a                                                                 
@@ -572,8 +570,9 @@ size    exec  file                                        contents
 4074                globber.iced                          836266db99ac20b1d1ac24f17f47d84be1a9b32288e84622c7d34c836ec64dfe                                                                 
 1217                kb.iced                               b3dd12e37625499851de23bfb1e5503c556c6a9f335fe45ca891d053aaf9f9de                                                                 
 2119                preset_base.iced                      27a324f0946a93010bbb499f83df53e36b280ff4774bf56156d0fd7ac52e6318                                                                 
-9814              summarizer.iced                         45d65fb02fc58cbe781b463685dc5040fd5d65c7cab72f1fc3abde41726f96c2                                                                 
-75                top.iced                                e675e53d96477ba48a7d7d7df37f94bed095882f5955bd82f1b71673a4085894                                                                 
+3694              summarized_item.iced                    2cb481dad415b81fde8c60b24783a00debaa094f0c4c1828d11e808ba62575b8                                                                 
+6316              summarizer.iced                         6906448b5c0dddea4b317e8c2f02d941f4116a1912861ac13c8ceb43ba8dcfdf                                                                 
+138               top.iced                                7474b7811f47aa4a27bd6043c2eb1e5c8bb26d19662c19dfb23b70c9deb3a48d                                                                 
 920               utils.iced                              729eec0fab11b2fccfa0d9fba3c651b7852f51b65073ecf61474a99c74cac3b0                                                                 
 1489              x_platform_hash.iced                    228e27fee04ce6ffe4215cad24068ebf982b952973aa076d0cbdc73eef550134                                                                 
                 tests/                                                                                                                                                                     
@@ -595,11 +594,10 @@ size    exec  file                                        contents
 46      x           executable.js                         4600239d91638439b8c27777668a7e67985b6a7c1a93bb315d2d9988b64dae73                                                                 
 30                  not_executable.js                     ab73237fe40ecf22405751b988f5b0e3cfbfbe9d9ba194c8ba6eff8f7936ed62                                                                 
                   4/                                                                                                                                                                       
-                    4a/                                                                                                                                                                    
                     4b/                                                                                                                                                                    
 53                    .gitignore                          a83f07906ff0a440507e1fda72dff7b3eb30003b8aa71709099e4604e4613a9c                                                                 
 4                     foo.please_ignore_me                b5bb9d8014a0f9b1d61e21e796d78dccdf1352f23cd32812f4850b878ae4944c                                                                 
-3878              SIGNED.md                               2760a206738518850428c7ecc3c823a5d8c0f45574dbe99c6e20198765c8e5d2                                                                 
+5644              SIGNED.md                               9e885666125ac08faa0dc84961a7795837dffe46689fe22b25458f2add2188b8                                                                 
                   kb/                                                                                                                                                                      
 22                  .kbignore                             253264c269132f1d41f786953b66b2486bbc8c49e40265e4cfa10b69a0332299                                                                 
 18                  should_be_ok.md                       c7bc0835eb15d6b74b95e57100d6870aa20e95fb2913c5031036f8d317abe14a                                                                 
