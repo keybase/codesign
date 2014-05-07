@@ -1,5 +1,5 @@
 {
-  "name": "dir-summarize",
+  "name": "codesign",
   "version": "0.0.1",
   "description": "Directory content summarizer and comparer",
   "scripts": {
@@ -11,7 +11,7 @@
   "main": "./lib/top.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/keybase/dir-summarize"
+    "url": "git://github.com/keybase/codesign"
   },
   "engineStrict": true,
   "dependencies": {
