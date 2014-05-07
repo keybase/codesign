@@ -17,7 +17,6 @@ lib/preset/%.js: src/preset/%.iced
 $(BUILD_STAMP): \
 	lib/constants.js \
 	lib/file_info_cache.js \
-	lib/lock.js \
 	lib/main.js \
 	lib/markdown.js \
 	lib/package.js \

@@ -1,7 +1,7 @@
 path            = require 'path'
 fs              = require 'fs'
 crypto          = require 'crypto'
-LockTable       = require('./lock').Table
+LockTable       = require('iced-utils').lock.Table
 utils           = require './utils'
 XPlatformHash   = require './x_platform_hash'
 constants       = require './constants'
