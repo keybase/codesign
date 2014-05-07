@@ -1,4 +1,5 @@
 path              = require 'path'
+{make_esc}        = require 'iced-error'
 {PackageJson}     = require './package'
 constants         = require './constants'
 {item_types}      = require './constants'
@@ -13,29 +14,55 @@ vc                = constants.verify_codes
 #
 # This is the mother class.
 #
+#     1. cs = new CodeSign(dir, opts)
+#     2. cs.walk(cb) # calls back with errors on walking
+#     ...
+#     from there, you may:
+#        - compare to payload_obj
+#        - convert to payload_str
+#        - convert to json_obj
+#        - add a signature
+#        - check a signature
+#        - etc.
 #
 # =====================================================================================================================
 
 class CodeSign
 
-  constructor: (opts) ->
-    @root_item     =    null
-    @presets       =    [] # not the preset names, but the actual instances
-    @opts          =    opts or {}
-    @opts.ignore   or=  [] # specific files to ignore (such as '/SIGNED.md')
-    @opts.presets  or=  [] # the preset names
-    @opts.root_dir = path.resolve (@opts.root_dir or '.')
+  constructor: (root_dir, opts) ->
+    @root_dir       =    path.resolve root_dir
+    @root_item      =    null
+    @presets        =    [] # not the preset names, but the actual instances
+    @opts           =    opts or {}
+    @opts.ignore    or=  [] # specific files to ignore (such as '/SIGNED.md')
+    @opts.presets   or=  [] # the preset names
+    @_init_done     =    false
     @_create_presets()
 
   # -------------------------------------------------------------------------------------------------------------------
 
-  should_ignore: (path_to_file, cb) ->
+  walk: (cb) ->
+    esc         = make_esc cb, "SummarizedItem::load"
+    @root_item = new SummarizedItem {
+      fname:            '.'
+      parent_path:      ''
+      codesign:         this
+    }
+    await @root_item.load_traverse esc defer()
+    @_init_done = true
+    cb()
+
+  # -------------------------------------------------------------------------------------------------------------------
+  # semi-private items, used by summarized_item objects
+  # -------------------------------------------------------------------------------------------------------------------
+
+  _should_ignore: (path_to_file, cb) ->
     res = false
     if path_to_file in @opts.ignore
       res = true
     else
       for p in @presets
-        await p.handle @opts.root_dir, path_to_file, defer r
+        await p.handle @root_dir, path_to_file, defer r
         if r is constants.ignore_res.IGNORE
           res = true
           break
@@ -43,36 +70,6 @@ class CodeSign
           res = false
           break
     cb null, res
-
-  # -------------------------------------------------------------------------------------------------------------------
-
-  set_root_item: (ri) -> @root_item = ri
-
-  # -------------------------------------------------------------------------------------------------------------------
-
-  root_dir: -> @opts.root_dir
-
-  # -------------------------------------------------------------------------------------------------------------------
-
-  @from_dir: (dir, opts, cb) ->
-    ###
-    takes the path to a directory and returns a Summarize instance
-    ###
-    opts            = opts or {}
-    opts.root_dir or= dir
-    summ            = new CodeSign opts
-    err             = null
-
-    root_item = new SummarizedItem {
-      fname:            '.'
-      parent_path:      ''
-      codesign:       summ
-    }
-    await root_item.load_traverse defer err
-    if not err? then summ.set_root_item root_item
-    else
-      console.log err
-    cb err, summ
 
   # -------------------------------------------------------------------------------------------------------------------
 
@@ -160,7 +157,7 @@ class CodeSign
 
     # and a special Globber one for the ignore list
     if @opts.ignore.length
-      @presets.push new GlobberPreset @opts.root_dir, @opts.ignore
+      @presets.push new GlobberPreset @root_dir, @opts.ignore
 
 # =====================================================================================================================
 

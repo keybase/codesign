@@ -28,7 +28,7 @@ exports.SummarizedItem = class SummarizedItem
 
   load_traverse: (cb) ->
     esc         = make_esc cb, "SummarizedItem::load"
-    p           = path.join @codesign.root_dir(), @parent_path, @fname
+    p           = path.join @codesign.root_dir, @parent_path, @fname
     @realpath   = path.resolve p
     await  finfo_cache @realpath, esc defer @finfo
 
@@ -43,7 +43,7 @@ exports.SummarizedItem = class SummarizedItem
       await @finfo.dir_contents esc defer fnames
       for f in fnames
         subpath = path.join @realpath, f
-        await @codesign.should_ignore subpath, esc defer ignore
+        await @codesign._should_ignore subpath, esc defer ignore
         if not ignore
           si = @subitem f
           await si.load_traverse esc defer()
@@ -59,9 +59,9 @@ exports.SummarizedItem = class SummarizedItem
 
   subitem: (f) ->
     new SummarizedItem {
-      fname:        f, 
+      fname:        f 
       parent_path:  if @parent_path.length then "#{@parent_path}/#{@fname}" else @fname 
-      codesign:   @codesign
+      codesign:     @codesign
       depth:        @depth + 1
     }
 

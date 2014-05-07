@@ -3,7 +3,7 @@ fs                = require 'fs'
 tablify           = require 'tablify'
 path              = require 'path'
 {PackageJson}     = require './package'
-{CodeSign}      = require './codesign'
+{CodeSign}        = require './codesign'
 constants         = require './constants'
 {to_md, from_md}  = require './markdown'
 {item_type_names} = require './constants'
@@ -87,7 +87,8 @@ class Main
   sign: ->
     output  = @args.output or constants.defaults.FILENAME
     await @get_ignore_list output, defer ignore
-    await CodeSign.from_dir @args.dir, {ignore, presets: @get_preset_list()}, defer err, summ
+    summ = new CodeSign @args.dir, {ignore, presets: @get_preset_list()}
+    await summ.walk defer err
     if err? then @exit_err err
     o = summ.to_json_obj()
     await fs.writeFile output, to_md(o) + "\n", {encoding: 'utf8'}, defer err    
@@ -132,7 +133,8 @@ class Main
       @exit_err "Failed to parse/load #{input}"
 
     # do our own analysis
-    await CodeSign.from_dir @args.dir, {ignore: json_obj.ignore, presets: json_obj.presets}, defer err, summ
+    summ = new CodeSign @args.dir, {ignore: json_obj.ignore, presets: json_obj.presets}
+    await summ.walk defer err
     if err? then @exit_err err
 
     # see if they match

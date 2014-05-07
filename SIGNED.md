@@ -11,10 +11,10 @@ size    exec  file                                        contents
                 docs/                                                                                                                                                                      
 3173              sample_output.md                        4c105947626a0291f413d64663cc7beed8ceda6c4afea76d57a3e5e74dc7ea17                                                                 
                 lib/                                                                                                                                                                       
-10677             codesign.js                             63ddd72e7d0f8d1f463bc967bf8c7aacb0ae8ccd751b0d808721b3b5180a2892                                                                 
+10133             codesign.js                             5410eb81ec352046e554aa94628c9555d25124ad2930ffcdf6a74c98e06e290a                                                                 
 1128              constants.js                            45ccfe3f3fd285df9250f920c59ae379249f05d8c718739412089f2a992dcbc8                                                                 
 19855             file_info_cache.js                      4826dc57bfa4ac5088d9226638386a9dd7c4b2dcde272192e1687d309e1ee4f8                                                                 
-15082             main.js                                 874d7ce46822cf8aa527de915495c290dd61e3e325ee6b2e16575d9ebd00b7f6                                                                 
+15038             main.js                                 7e0a0116844028217d990f28dbb61bb65d2077ed0fb4446522d18c3e874c00d5                                                                 
 6938              markdown.js                             44fa22732d0eeb7febc93ef361d2f0c1e6e05c7e9fda4e55252b942732c2150f                                                                 
 822               package.js                              0835bb4b94e0cd9fb36a02baf58bf134761fdb151d0b41a14d81795876e5ec3c                                                                 
                   preset/                                                                                                                                                                  
@@ -23,7 +23,7 @@ size    exec  file                                        contents
 5880                globber.js                            db08901218e00e613a3c4ecad23945141d0fbb3ca5cc444df57ac3f60746ec45                                                                 
 5339                kb.js                                 23266dd0fe64eed825067aaf39fd45459cd270fddaeced87b5af862813eebb4e                                                                 
 3159                preset_base.js                        a43985d0441a6a1ee5461f768a25b4160223d84f9ae5539c77bb1fe132a35b4a                                                                 
-10764             summarized_item.js                      22bb07bcc0c24a42c3fb5f09da341391e5a81b774f0d69b24f57d465b6951c16                                                                 
+10763             summarized_item.js                      297e9654cb22862120b1fedd250b69c3e5baae6cebd713db4178b719352daf2d                                                                 
 249               top.js                                  80997ba042e67e0ebfcf3871d203a7fa930492eae0cd0ae92c40b98c752f3053                                                                 
 1625              utils.js                                057c2a73b990b4e42772c16e9a128baf56010acc020cbffc26f0ee42226317b1                                                                 
 1642              x_platform_hash.js                      c3c19255024d6f1ca2b7e4551d44979546df4bf380a25112c19a146542ccab3b                                                                 
@@ -559,10 +559,10 @@ size    exec  file                                        contents
 5242                  tablify.coffee                      0afc21a66c1b9807817fa84e4ae408af15a4da9a2cdc13dedacf44bdcd484a34                                                                 
 733             package.json                              acc7b5370501614e2bdb48161aac57d43608a9ea48d20318a3d368c2de3d5296                                                                 
                 src/                                                                                                                                                                       
-6460              codesign.iced                           082a1fd7cceab8a89f173f0238ec57f26b6335b44bde70de293654d288b64aef                                                                 
+6459              codesign.iced                           5bbefbb3452f4afc231d0b9b13e5a717fe14cc8febeab8b0c666c138778ff8db                                                                 
 1245              constants.iced                          fb311209fb13dda6dd93f10ca4b58a56b2502286228007766fdaa121449b7e53                                                                 
 6188              file_info_cache.iced                    05e89cc329a7f7b0cca2e668ec669c0d2b819837a6577925bd1eeab72bc90ab7                                                                 
-7801              main.iced                               d6f9e7c1b19b38145b180514fcac57ad331c4eaf38177a2622a53adb6d028c65                                                                 
+7821              main.iced                               4ed447aa52951b777200648ddff98c187f0f30810c1a66f5b621738fb7dd310a                                                                 
 4901              markdown.iced                           ec62f9f8b0e1fca435d6b4454a040be001a2b555cb217e70f33f34d5679c045c                                                                 
 558               package.iced                            630c83cc199d990e46e47039d0824ca37e222611bc25a1747662f596f735a69a                                                                 
                   preset/                                                                                                                                                                  
@@ -571,7 +571,7 @@ size    exec  file                                        contents
 4074                globber.iced                          836266db99ac20b1d1ac24f17f47d84be1a9b32288e84622c7d34c836ec64dfe                                                                 
 1217                kb.iced                               b3dd12e37625499851de23bfb1e5503c556c6a9f335fe45ca891d053aaf9f9de                                                                 
 2119                preset_base.iced                      27a324f0946a93010bbb499f83df53e36b280ff4774bf56156d0fd7ac52e6318                                                                 
-3680              summarized_item.iced                    5e6ee1232b65213745e8d21a61d42995646cd16210dc3dec1940c794cec2218c                                                                 
+3680              summarized_item.iced                    c1f568f18bd72fa845d18b7b74386d3ed866e0e674353c9cb5ea8efa7c451428                                                                 
 130               top.iced                                8a74ee1f4907508330684f55dbc612a14bc4166c2c4fa3482f1f1f74c1f154f9                                                                 
 920               utils.iced                              729eec0fab11b2fccfa0d9fba3c651b7852f51b65073ecf61474a99c74cac3b0                                                                 
 1489              x_platform_hash.iced                    228e27fee04ce6ffe4215cad24068ebf982b952973aa076d0cbdc73eef550134                                                                 
