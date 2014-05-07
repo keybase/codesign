@@ -6,7 +6,7 @@ utils        = require './utils'
 
 ###
 
-  A serializer/deserialized for Markdown from summarizer objects
+  A serializer/deserialized for Markdown from codesign objects
 
 ###
 

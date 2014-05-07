@@ -1,5 +1,5 @@
-{Summarizer} = require './summarizer'
+{CodeSign} = require './codesign'
 constants    = require './constants'
 
-exports.Summarizer = Summarizer
+exports.CodeSign = CodeSign
 exports.constants  = constants

@@ -3,7 +3,7 @@ fs                = require 'fs'
 tablify           = require 'tablify'
 path              = require 'path'
 {PackageJson}     = require './package'
-{Summarizer}      = require './summarizer'
+{CodeSign}      = require './codesign'
 constants         = require './constants'
 {to_md, from_md}  = require './markdown'
 {item_type_names} = require './constants'
@@ -33,7 +33,7 @@ class Main
     @ap     = new ArgumentParser {
       addHelp:      true
       version:      @pkjson.version()
-      description:  'keybase.io directory summarizer'
+      description:  'keybase.io directory codesign'
       prog:         @pkjson.bin()     
     }
     subparsers = @ap.addSubparsers {
@@ -87,7 +87,7 @@ class Main
   sign: ->
     output  = @args.output or constants.defaults.FILENAME
     await @get_ignore_list output, defer ignore
-    await Summarizer.from_dir @args.dir, {ignore, presets: @get_preset_list()}, defer err, summ
+    await CodeSign.from_dir @args.dir, {ignore, presets: @get_preset_list()}, defer err, summ
     if err? then @exit_err err
     o = summ.to_json_obj()
     await fs.writeFile output, to_md(o) + "\n", {encoding: 'utf8'}, defer err    
@@ -132,7 +132,7 @@ class Main
       @exit_err "Failed to parse/load #{input}"
 
     # do our own analysis
-    await Summarizer.from_dir @args.dir, {ignore: json_obj.ignore, presets: json_obj.presets}, defer err, summ
+    await CodeSign.from_dir @args.dir, {ignore: json_obj.ignore, presets: json_obj.presets}, defer err, summ
     if err? then @exit_err err
 
     # see if they match

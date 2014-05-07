@@ -16,7 +16,7 @@ vc                = constants.verify_codes
 #
 # =====================================================================================================================
 
-class Summarizer
+class CodeSign
 
   constructor: (opts) ->
     @root_item     =    null
@@ -60,13 +60,13 @@ class Summarizer
     ###
     opts            = opts or {}
     opts.root_dir or= dir
-    summ            = new Summarizer opts
+    summ            = new CodeSign opts
     err             = null
 
     root_item = new SummarizedItem {
       fname:            '.'
       parent_path:      ''
-      summarizer:       summ
+      codesign:       summ
     }
     await root_item.load_traverse defer err
     if not err? then summ.set_root_item root_item
@@ -164,6 +164,6 @@ class Summarizer
 
 # =====================================================================================================================
 
-exports.Summarizer = Summarizer
+exports.CodeSign = CodeSign
 
 # =====================================================================================================================

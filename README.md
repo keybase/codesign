@@ -1,7 +1,7 @@
 codesign
 =============
 
-directory contents summarizer - will be used for code signing feature
+directory contents codesign - will be used for code signing feature
 
 ### TODO
 

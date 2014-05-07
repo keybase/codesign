@@ -4,17 +4,18 @@
 size    exec  file                                        contents                                                                                                                         
               ./                                                                                                                                                                           
 55              .gitignore                                7ae4f10575924004944f9aaceac9fdf896689dd474302da3bb2642a08f319ba0                                                                 
-733             Makefile                                  efcd37e39e2669bc305df2889ea6fd3923a019d16f4fabc9a76aa5823a1deee6                                                                 
-405             README.md                                 9aa36f39d2bf4988f1ac836265ca4db800c15d588cdc016d6e7ab3ec94e3dead                                                                 
+731             Makefile                                  1e24fdc22b0c4a87e8ab60c9fa00069a5b8a019c932d966e5366ae92e7c87099                                                                 
+403             README.md                                 5e7027cb9f1ec24ec65bbc068acfba08c1765c22522bd528964380fdc71392ab                                                                 
                 bin/                                                                                                                                                                       
 50      x         main.js                                 837cf842cf30424e76654bbd7ca3bf6d17c29f51c98d0ef2d5deedd818cb1ed7                                                                 
                 docs/                                                                                                                                                                      
 3173              sample_output.md                        4c105947626a0291f413d64663cc7beed8ceda6c4afea76d57a3e5e74dc7ea17                                                                 
                 lib/                                                                                                                                                                       
+10677             codesign.js                             63ddd72e7d0f8d1f463bc967bf8c7aacb0ae8ccd751b0d808721b3b5180a2892                                                                 
 1128              constants.js                            45ccfe3f3fd285df9250f920c59ae379249f05d8c718739412089f2a992dcbc8                                                                 
 19855             file_info_cache.js                      4826dc57bfa4ac5088d9226638386a9dd7c4b2dcde272192e1687d309e1ee4f8                                                                 
-15096             main.js                                 f91afa76634f7e7e4df1947bbfc0ae1c153c2b3e8f1e4d4599db7269fd833afa                                                                 
-6940              markdown.js                             8b0f0fd4fceaedb141632e7a1297fe1bfafba6b7da08fdd8aeee28e4897c6247                                                                 
+15082             main.js                                 874d7ce46822cf8aa527de915495c290dd61e3e325ee6b2e16575d9ebd00b7f6                                                                 
+6938              markdown.js                             44fa22732d0eeb7febc93ef361d2f0c1e6e05c7e9fda4e55252b942732c2150f                                                                 
 822               package.js                              0835bb4b94e0cd9fb36a02baf58bf134761fdb151d0b41a14d81795876e5ec3c                                                                 
                   preset/                                                                                                                                                                  
 1471                dropbox.js                            8b1601cd687f724402714d619177949381b199c626b4f97a14706de9f96838fc                                                                 
@@ -22,9 +23,8 @@ size    exec  file                                        contents
 5880                globber.js                            db08901218e00e613a3c4ecad23945141d0fbb3ca5cc444df57ac3f60746ec45                                                                 
 5339                kb.js                                 23266dd0fe64eed825067aaf39fd45459cd270fddaeced87b5af862813eebb4e                                                                 
 3159                preset_base.js                        a43985d0441a6a1ee5461f768a25b4160223d84f9ae5539c77bb1fe132a35b4a                                                                 
-10782             summarized_item.js                      183e1989994ba94b908499ec8ad05d8850dd50cbe3148ac9fa989ef410b82a98                                                                 
-10719             summarizer.js                           c0987fb7e325beb0fe0b0631804578644bcc4eab66a0905548e25fb61b8ab72c                                                                 
-261               top.js                                  0e6c61dfeb34597068a2d18b94365a700fc122ecc121d92ef22908efbe28d146                                                                 
+10764             summarized_item.js                      22bb07bcc0c24a42c3fb5f09da341391e5a81b774f0d69b24f57d465b6951c16                                                                 
+249               top.js                                  80997ba042e67e0ebfcf3871d203a7fa930492eae0cd0ae92c40b98c752f3053                                                                 
 1625              utils.js                                057c2a73b990b4e42772c16e9a128baf56010acc020cbffc26f0ee42226317b1                                                                 
 1642              x_platform_hash.js                      c3c19255024d6f1ca2b7e4551d44979546df4bf380a25112c19a146542ccab3b                                                                 
                 node_modules/                                                                                                                                                              
@@ -557,12 +557,13 @@ size    exec  file                                        contents
 4362                package.json                          3fba24b4e578cd8ae4aa754c9bea3c76d9cd16a0d6e527934181528d8fa01cae                                                                 
                     src/                                                                                                                                                                   
 5242                  tablify.coffee                      0afc21a66c1b9807817fa84e4ae408af15a4da9a2cdc13dedacf44bdcd484a34                                                                 
-735             package.json                              dea60f1df472c7211e3b72a097ec8632b5497de38a3c957672eb1a22b827876f                                                                 
+733             package.json                              acc7b5370501614e2bdb48161aac57d43608a9ea48d20318a3d368c2de3d5296                                                                 
                 src/                                                                                                                                                                       
+6460              codesign.iced                           082a1fd7cceab8a89f173f0238ec57f26b6335b44bde70de293654d288b64aef                                                                 
 1245              constants.iced                          fb311209fb13dda6dd93f10ca4b58a56b2502286228007766fdaa121449b7e53                                                                 
 6188              file_info_cache.iced                    05e89cc329a7f7b0cca2e668ec669c0d2b819837a6577925bd1eeab72bc90ab7                                                                 
-7811              main.iced                               b8d0a9e247e188c64c85c9b7e7f15453ccb9446207190f20bea3f93247df9103                                                                 
-4903              markdown.iced                           49d84a2be62e7181aadff63b3e8333289dfefcafbffd83a69385ba399ca79a8d                                                                 
+7801              main.iced                               d6f9e7c1b19b38145b180514fcac57ad331c4eaf38177a2622a53adb6d028c65                                                                 
+4901              markdown.iced                           ec62f9f8b0e1fca435d6b4454a040be001a2b555cb217e70f33f34d5679c045c                                                                 
 558               package.iced                            630c83cc199d990e46e47039d0824ca37e222611bc25a1747662f596f735a69a                                                                 
                   preset/                                                                                                                                                                  
 1307                dropbox.iced                          f38a9d7cbe11283c44fad87f9ea9692d7f9802f3727996fc0a1f89bb051bc030                                                                 
@@ -570,9 +571,8 @@ size    exec  file                                        contents
 4074                globber.iced                          836266db99ac20b1d1ac24f17f47d84be1a9b32288e84622c7d34c836ec64dfe                                                                 
 1217                kb.iced                               b3dd12e37625499851de23bfb1e5503c556c6a9f335fe45ca891d053aaf9f9de                                                                 
 2119                preset_base.iced                      27a324f0946a93010bbb499f83df53e36b280ff4774bf56156d0fd7ac52e6318                                                                 
-3694              summarized_item.iced                    2cb481dad415b81fde8c60b24783a00debaa094f0c4c1828d11e808ba62575b8                                                                 
-6316              summarizer.iced                         6906448b5c0dddea4b317e8c2f02d941f4116a1912861ac13c8ceb43ba8dcfdf                                                                 
-138               top.iced                                7474b7811f47aa4a27bd6043c2eb1e5c8bb26d19662c19dfb23b70c9deb3a48d                                                                 
+3680              summarized_item.iced                    5e6ee1232b65213745e8d21a61d42995646cd16210dc3dec1940c794cec2218c                                                                 
+130               top.iced                                8a74ee1f4907508330684f55dbc612a14bc4166c2c4fa3482f1f1f74c1f154f9                                                                 
 920               utils.iced                              729eec0fab11b2fccfa0d9fba3c651b7852f51b65073ecf61474a99c74cac3b0                                                                 
 1489              x_platform_hash.iced                    228e27fee04ce6ffe4215cad24068ebf982b952973aa076d0cbdc73eef550134                                                                 
                 tests/                                                                                                                                                                     

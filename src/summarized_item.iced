@@ -10,10 +10,10 @@ finfo_cache       = require './file_info_cache'
 
 exports.SummarizedItem = class SummarizedItem
 
-  constructor: ({parent_path, fname, summarizer, depth})  ->
+  constructor: ({parent_path, fname, codesign, depth})  ->
     @parent_path      = parent_path
     @fname            = fname
-    @summarizer       = summarizer
+    @codesign       = codesign
     @depth            = depth or 0
     @item_type        = null
     @realpath         = null
@@ -28,7 +28,7 @@ exports.SummarizedItem = class SummarizedItem
 
   load_traverse: (cb) ->
     esc         = make_esc cb, "SummarizedItem::load"
-    p           = path.join @summarizer.root_dir(), @parent_path, @fname
+    p           = path.join @codesign.root_dir(), @parent_path, @fname
     @realpath   = path.resolve p
     await  finfo_cache @realpath, esc defer @finfo
 
@@ -43,7 +43,7 @@ exports.SummarizedItem = class SummarizedItem
       await @finfo.dir_contents esc defer fnames
       for f in fnames
         subpath = path.join @realpath, f
-        await @summarizer.should_ignore subpath, esc defer ignore
+        await @codesign.should_ignore subpath, esc defer ignore
         if not ignore
           si = @subitem f
           await si.load_traverse esc defer()
@@ -61,7 +61,7 @@ exports.SummarizedItem = class SummarizedItem
     new SummarizedItem {
       fname:        f, 
       parent_path:  if @parent_path.length then "#{@parent_path}/#{@fname}" else @fname 
-      summarizer:   @summarizer
+      codesign:   @codesign
       depth:        @depth + 1
     }
 

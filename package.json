@@ -1,7 +1,7 @@
 {
   "name": "codesign",
   "version": "0.0.1",
-  "description": "Directory content summarizer and comparer",
+  "description": "Directory content codesign and comparer",
   "scripts": {
     "test": "make test"
   },
