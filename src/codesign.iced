@@ -18,9 +18,9 @@ vc                = constants.verify_codes
 #     2. cs.walk(cb) # calls back with errors on walking
 #     ...
 #     from there, you may:
-#        - compare to payload_obj
-#        - convert to payload_str
-#        - convert to json_obj
+#        - compare to a payload obj
+#        - convert to a payload str
+#        - convert to a json obj
 #        - add a signature
 #        - check a signature
 #        - etc.
@@ -50,7 +50,11 @@ class CodeSign
     }
     await @root_item.load_traverse esc defer()
     @_init_done = true
-    cb()
+    cb null
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  @is_valid_preset: (p) -> constants.presets[p.toLowerCase()]?
 
   # -------------------------------------------------------------------------------------------------------------------
   # semi-private items, used by summarized_item objects
@@ -72,12 +76,15 @@ class CodeSign
     cb null, res
 
   # -------------------------------------------------------------------------------------------------------------------
+  # private members
+  # -------------------------------------------------------------------------------------------------------------------
 
-  hash_match: (h1, h2) -> (not (h1? or h2?)) or (h1?.hash is h2?.hash)
+
+  _hash_match: (h1, h2) -> (not (h1? or h2?)) or (h1?.hash is h2?.hash)
 
   # -------------------------------------------------------------------------------------------------------------------
 
-  hash_alt_match: (h1, h2) -> (not (h1? or h2?)) or (h1?.hash is h2?.hash) or (h1?.alt_hash is h2?.hash) or (h1?.hash is h2?.alt_hash)
+  _hash_alt_match: (h1, h2) -> (not (h1? or h2?)) or (h1?.hash is h2?.hash) or (h1?.alt_hash is h2?.hash) or (h1?.hash is h2?.alt_hash)
 
   # -------------------------------------------------------------------------------------------------------------------
 
@@ -103,7 +110,7 @@ class CodeSign
           status = vc.MISSING_FILE
       else if (expected.item_type is item_types.SYMLINK) and (got.item_type is item_types.FILE) and (expected.link is got.possible_win_link)
         status = vc.ALT_SYMLINK_MATCH
-      else if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK) and @hash_alt_match(expected.hash, got.link_hash)
+      else if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK) and @_hash_alt_match(expected.hash, got.link_hash)
         status = vc.ALT_SYMLINK_MATCH
       else if expected.item_type isnt got.item_type
         if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK)
@@ -113,9 +120,9 @@ class CodeSign
         status = vc.WRONG_EXEC_PRIVS
       else if (expected.link isnt got.link)
         status = vc.WRONG_SYMLINK
-      else if not @hash_alt_match got.hash, expected.hash
+      else if not @_hash_alt_match got.hash, expected.hash
         status = vc.HASH_MISMATCH
-      else if not @hash_match     got.hash, expected.hash
+      else if not @_hash_match     got.hash, expected.hash
         status = vc.ALT_HASH_MATCH
       if status isnt vc.OK
         probs.push [status, {got: (got or null), expected: (expected or null)}]

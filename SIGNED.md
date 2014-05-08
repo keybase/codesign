@@ -11,8 +11,8 @@ size    exec  file                                        contents
                 docs/                                                                                                                                                                      
 3173              sample_output.md                        4c105947626a0291f413d64663cc7beed8ceda6c4afea76d57a3e5e74dc7ea17                                                                 
                 lib/                                                                                                                                                                       
-10133             codesign.js                             5410eb81ec352046e554aa94628c9555d25124ad2930ffcdf6a74c98e06e290a                                                                 
-1128              constants.js                            45ccfe3f3fd285df9250f920c59ae379249f05d8c718739412089f2a992dcbc8                                                                 
+10252             codesign.js                             a0196b464c8db5261edaebca92b849ee4a86c731d6a939368a2087bccdcb4387                                                                 
+1128              constants.js                            dd4e39bb4b5280794387e45a9ebaef7512b86d8900d24fbab2c2a3aa376b7a53                                                                 
 19855             file_info_cache.js                      4826dc57bfa4ac5088d9226638386a9dd7c4b2dcde272192e1687d309e1ee4f8                                                                 
 15038             main.js                                 7e0a0116844028217d990f28dbb61bb65d2077ed0fb4446522d18c3e874c00d5                                                                 
 6938              markdown.js                             44fa22732d0eeb7febc93ef361d2f0c1e6e05c7e9fda4e55252b942732c2150f                                                                 
@@ -559,8 +559,8 @@ size    exec  file                                        contents
 5242                  tablify.coffee                      0afc21a66c1b9807817fa84e4ae408af15a4da9a2cdc13dedacf44bdcd484a34                                                                 
 733             package.json                              acc7b5370501614e2bdb48161aac57d43608a9ea48d20318a3d368c2de3d5296                                                                 
                 src/                                                                                                                                                                       
-6459              codesign.iced                           5bbefbb3452f4afc231d0b9b13e5a717fe14cc8febeab8b0c666c138778ff8db                                                                 
-1245              constants.iced                          fb311209fb13dda6dd93f10ca4b58a56b2502286228007766fdaa121449b7e53                                                                 
+6799              codesign.iced                           3827d386ca92c8b4629df2b7546aa27bf1b8a86191345f529ea6ea82d032b125                                                                 
+1245              constants.iced                          d13944065bd62844a05aa5eab1291f247f413e828c53c41f866258b130247d08                                                                 
 6188              file_info_cache.iced                    05e89cc329a7f7b0cca2e668ec669c0d2b819837a6577925bd1eeab72bc90ab7                                                                 
 7821              main.iced                               4ed447aa52951b777200648ddff98c187f0f30810c1a66f5b621738fb7dd310a                                                                 
 4901              markdown.iced                           ec62f9f8b0e1fca435d6b4454a040be001a2b555cb217e70f33f34d5679c045c                                                                 
@@ -609,9 +609,9 @@ size    exec  file                                        contents
 #### Presets
 
 ```
-git      # ignore anything as described by .gitignore files     
-dropbox  # ignore .dropbox-cache and other Dropbox-related files
-kb       # ignore anything as described by .kbignore files      
+git      # undefined
+dropbox  # undefined
+kb       # undefined
 ```
 
 #### Ignore
