@@ -124,36 +124,28 @@ footer = (o) ->
     msg = "#{ns} signatures attached are valid"
     poss = "signers'"
   else
-    msg = "signature attached is valud"
+    msg = "signature attached is valid"
     poss = "signer's"
   return """
 <hr>
 
 #### Using this file
 
-You may:
+Keybase code-signing allows you to sign any directory's contents, whether it's a git repository,
+distributable zip file, or a personal documents folder. It aims to replace the drudgery of:
 
-  1. verify that the current directory matches the manifest above
-  2. verify with GPG that the #{msg}
-  3. verify with GPG the #{poss} twitter, github, etc., accounts, so you know exactly who signed this document
+  1. comparing a zipped file to a detached statement
+  2. downloading a public key
+  3. confirming it is in fact the author's by reviewing public statements they've made, using it
 
-All this can happen without trusting webs of trust, public key servers, or even the Keybase server itself.
-
-Here's the command to do it:
+All in one simple command:
 
 ```bash
 keybase code-sign verify
 ```
+There are lots of options, including assertions (for automating your checks).
 
-If you are expecting a certain author to have signed this folder, much can be asserted and automated, with no server-side trust or human review.
-
-You can add your own signature to any directory (or even append to this file) with:
-
-```bash
-keybase code-sign sign
-```
-
-For more info, check out https://keybase.io/_/code-signing to see what we're trying to achieve.
+For more info, check out https://keybase.io/_/code-signing .
 
 """
 
