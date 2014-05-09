@@ -6,7 +6,9 @@ utils        = require './utils'
 
 ###
 
-  A serializer/deserialized for Markdown from codesign objects
+  A serializer/deserialized for Markdown from codesign objects.
+
+  We can switch to jison if basic regexp-style parsing gets out of hand
 
 ###
 
@@ -94,6 +96,32 @@ files_from_pretty_format = (str_arr) ->
     res.push info
   res
 
+format_signature = (s) ->
+  """
+  #### Signed by #{s.signer}
+  ```
+  #{s.signature}
+  ```
+  """
+
+parse_signatures = (sig_region) ->
+  res = []
+  rxx = ///
+    \#\#\#\#\sSigned\sby\s([^\n\r\s]*)
+    \s*
+    ```([^`]*)```
+    \s*
+  ///g
+  while (match = rxx.exec sig_region)
+    console.log "****"
+    console.log match
+    res.push {
+      signer: match[1].replace /(^[\s]*)|([\s]*$)/g, ''
+      signature: match[2].replace /(^[\s]*)|([\s]*$)/g, ''
+    }
+  console.log res
+  return res
+
 # ======================================================================================================================
 
 exports.to_md = (o) ->
@@ -101,6 +129,7 @@ exports.to_md = (o) ->
   ignore_list = (utils.escape s for s in o.ignore).join '\n'
   file_list   = pretty_format_files o.found
   preset_list = tablify ([p, "# #{constants.presets[p.toUpperCase()]}"] for p in o.presets), TABLIFY_OPTS
+  signatures  = (format_signature s for s in o.signatures).join '\n\n'
 
   res = 
   """
@@ -123,7 +152,12 @@ exports.to_md = (o) ->
 ```
 
 <!-- summarize version = #{o.meta.version} -->
-"""
+
+<!-- BEGIN SIGNATURES -->
+#{signatures}
+<!-- END SIGNATURES -->
+
+  """
 
   return res
 
@@ -147,6 +181,14 @@ exports.from_md = (str) ->
   \s* 
   \<\!--[\s]*summarize[\s]*version[\s]*=[\s]*([0-9a-z\.]*)[\s]*-->
   \s*
+  \<\!--\sBEGIN\sSIGNATURES\s--\>
+  \s*
+  ([^\<]*)
+  \s*
+  \<\!--\sEND\sSIGNATURES\s--\>
+  \s*
+  .* # notes
+  \s*
   $
   ///
   match  = rxx.exec str
@@ -155,6 +197,7 @@ exports.from_md = (str) ->
     preset_rows = match[2].split('\n')[1...-1] # formatting correction
     ignore_rows = match[3].split('\n')[1...-1] # formatting correction
     version     = match[4]
+    signatures  = match[5]
     preset_rows = (f.replace /\s*(\#.*)?\s*$/g , '' for f in preset_rows)
     return {
       found:   files_from_pretty_format file_rows
@@ -162,6 +205,7 @@ exports.from_md = (str) ->
       presets: preset_rows
       meta:
         version: version
+      signatures: parse_signatures signatures
     }
   else
     return null

@@ -90,6 +90,8 @@ class Main
     summ = new CodeSign @args.dir, {ignore, presets: @get_preset_list()}
     await summ.walk defer err
     if err? then @exit_err err
+    summ.attach_sig "https://keybase.io/chris", "cbleahbleahbleah\nfooobar"
+    summ.attach_sig "https://keybase.io/max",   "mbleahbleahbleah\nbarrrrr"
     o = summ.to_json_obj()
     await fs.writeFile output, to_md(o) + "\n", {encoding: 'utf8'}, defer err    
     if err? then @exit_err err
@@ -168,6 +170,8 @@ class Main
     else
       if not @args.quiet
         log.info  "Success! #{json_obj.found.length} items checked#{if warn_table.length then ' with ' + warn_table.length + ' warning(s); pass --strict to prevent success on warnings; --quiet to hide warnings' else ''}"
+        log.info json_obj.signatures.length + " signatures found:"
+        log.info JSON.stringify json_obj.signatures
 
   # -------------------------------------------------------------------------------------------------------------------
 

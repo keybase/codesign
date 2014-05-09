@@ -1,14 +1,15 @@
-path              = require 'path'
-{make_esc}        = require 'iced-error'
-{PackageJson}     = require './package'
-constants         = require './constants'
-{item_types}      = require './constants'
-{SummarizedItem}  = require './summarized_item'
-GitPreset         = require './preset/git'
-KbPreset          = require './preset/kb'
-DropboxPreset     = require './preset/dropbox'
-GlobberPreset     = require './preset/globber'
-vc                = constants.verify_codes
+path                    = require 'path'
+{make_esc}              = require 'iced-error'
+{PackageJson}           = require './package'
+constants               = require './constants'
+{item_types}            = require './constants'
+{SummarizedItem}        = require './summarized_item'
+GitPreset               = require './preset/git'
+KbPreset                = require './preset/kb'
+DropboxPreset           = require './preset/dropbox'
+GlobberPreset           = require './preset/globber'
+{json_stringify_sorted} = require('iced-utils').util
+vc                      = constants.verify_codes
 
 # =====================================================================================================================
 #
@@ -36,6 +37,7 @@ class CodeSign
     @opts           =    opts or {}
     @opts.ignore    or=  [] # specific files to ignore (such as '/SIGNED.md')
     @opts.presets   or=  [] # the preset names
+    @signatures     =    []
     @_init_done     =    false
     @_create_presets()
 
@@ -55,6 +57,36 @@ class CodeSign
   # -------------------------------------------------------------------------------------------------------------------
 
   @is_valid_preset: (p) -> constants.presets[p.toLowerCase()]?
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  attach_sig: (signer, signature) -> @signatures.push {signer, signature}
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  to_json_obj: ->
+    ###
+    a deterministic representation of the summary
+    ###
+    return {
+      meta:
+        version: new PackageJson().version()
+      ignore:     @opts.ignore
+      presets:    @opts.presets
+      found:      @root_item.walk_to_array()
+      signatures: @signatures
+    }
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  signable_payload: -> CodeSign.json_obj_to_signable_payload @to_json_obj()
+
+  # -------------------------------------------------------------------------------------------------------------------
+
+  @json_obj_to_signable_payload: (o) ->
+    so = {}
+    so[k] = o[k] for k in ['meta', 'ignore', 'presets', 'found']
+    return json_stringify_sorted so
 
   # -------------------------------------------------------------------------------------------------------------------
   # semi-private items, used by summarized_item objects
@@ -113,8 +145,6 @@ class CodeSign
       else if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK) and @_hash_alt_match(expected.hash, got.link_hash)
         status = vc.ALT_SYMLINK_MATCH
       else if expected.item_type isnt got.item_type
-        if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK)
-          console.log "expected hash: #{expected.hash.hash} (or #{expected.hash.alt_hash}); got link_hash: #{got.link_hash.hash}"
         status = vc.WRONG_ITEM_TYPE        
       else if (expected.item_type is item_types.FILE) and (expected.exec isnt got.exec)      
         status = vc.WRONG_EXEC_PRIVS
@@ -135,20 +165,6 @@ class CodeSign
 
     probs.sort (a,b) -> a[0] - b[0]
     cb probs
-
-  # -------------------------------------------------------------------------------------------------------------------
-
-  to_json_obj: ->
-    ###
-    a deterministic representation of the summary
-    ###
-    return {
-      meta:
-        version: new PackageJson().version()
-      ignore:  @opts.ignore
-      presets: @opts.presets
-      found:   @root_item.walk_to_array()
-    }
 
   # -------------------------------------------------------------------------------------------------------------------
 
