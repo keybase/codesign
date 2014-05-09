@@ -19,11 +19,10 @@ vc                      = constants.verify_codes
 #     2. cs.walk(cb) # calls back with errors on walking
 #     ...
 #     from there, you may:
-#        - compare to a payload obj
+#        - compare to a json obj
 #        - convert to a payload str
 #        - convert to a json obj
 #        - add a signature
-#        - check a signature
 #        - etc.
 #
 # =====================================================================================================================

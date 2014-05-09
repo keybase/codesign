@@ -100,8 +100,7 @@ format_signature = (s) ->
   """
   #### Signed by #{s.signer}
   ```
-  #{s.signature}
-  ```
+  #{s.signature}```
   """
 
 parse_signatures = (sig_region) ->
@@ -113,13 +112,10 @@ parse_signatures = (sig_region) ->
     \s*
   ///g
   while (match = rxx.exec sig_region)
-    console.log "****"
-    console.log match
     res.push {
       signer: match[1].replace /(^[\s]*)|([\s]*$)/g, ''
       signature: match[2].replace /(^[\s]*)|([\s]*$)/g, ''
     }
-  console.log res
   return res
 
 # ======================================================================================================================
@@ -128,7 +124,7 @@ exports.to_md = (o) ->
 
   ignore_list = (utils.escape s for s in o.ignore).join '\n'
   file_list   = pretty_format_files o.found
-  preset_list = tablify ([p, "# #{constants.presets[p.toUpperCase()]}"] for p in o.presets), TABLIFY_OPTS
+  preset_list = tablify ([p, "# #{constants.presets[p]}"] for p in o.presets), TABLIFY_OPTS
   signatures  = (format_signature s for s in o.signatures).join '\n\n'
 
   res = 

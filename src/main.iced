@@ -172,6 +172,7 @@ class Main
         log.info  "Success! #{json_obj.found.length} items checked#{if warn_table.length then ' with ' + warn_table.length + ' warning(s); pass --strict to prevent success on warnings; --quiet to hide warnings' else ''}"
         log.info json_obj.signatures.length + " signatures found:"
         log.info JSON.stringify json_obj.signatures
+        console.log CodeSign.json_obj_to_signable_payload json_obj
 
   # -------------------------------------------------------------------------------------------------------------------
 
