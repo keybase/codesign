@@ -113,10 +113,49 @@ parse_signatures = (sig_region) ->
   ///g
   while (match = rxx.exec sig_region)
     res.push {
-      signer: match[1].replace /(^[\s]*)|([\s]*$)/g, ''
+      signer:    match[1].replace /(^[\s]*)|([\s]*$)/g, ''
       signature: match[2].replace /(^[\s]*)|([\s]*$)/g, ''
     }
   return res
+
+footer = (o) -> 
+  ns = o.signatures.length
+  if ns isnt 1
+    msg = "#{ns} signatures attached are valid"
+    poss = "signers'"
+  else
+    msg = "signature attached is valud"
+    poss = "signer's"
+  return """
+<hr>
+
+#### Using this file
+
+You may:
+
+  1. verify that the current directory matches the manifest above
+  2. verify with GPG that the #{msg}
+  3. verify with GPG the #{poss} twitter, github, etc., accounts, so you know exactly who signed this document
+
+All this can happen without trusting webs of trust, public key servers, or even the Keybase server itself.
+
+Here's the command to do it:
+
+```bash
+keybase code-sign verify
+```
+
+If you are expecting a certain author to have signed this folder, much can be asserted and automated, with no server-side trust or human review.
+
+You can add your own signature to any directory (or even append to this file) with:
+
+```bash
+keybase code-sign sign
+```
+
+For more info, check out https://keybase.io/_/code-signing to see what we're trying to achieve.
+
+"""
 
 # ======================================================================================================================
 
@@ -153,6 +192,7 @@ exports.to_md = (o) ->
 #{signatures}
 <!-- END SIGNATURES -->
 
+#{footer o}
   """
 
   return res
@@ -183,7 +223,7 @@ exports.from_md = (str) ->
   \s*
   \<\!--\sEND\sSIGNATURES\s--\>
   \s*
-  .* # notes
+  [\s\S]* # notes
   \s*
   $
   ///
