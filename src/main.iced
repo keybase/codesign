@@ -46,11 +46,12 @@ class Main
 
     sign.addArgument      ['-o', '--output'],  {action: 'store', type:'string', help: 'output to a specific file'}    
     sign.addArgument      ['-p', '--presets'], {action: 'store', type:'string', help: 'specify ignore presets, comma-separated',  defaultValue: 'git,dropbox,kb'}
-    sign.addArgument      ['-d', '--dir'],     {action: 'store', type:'string', help: 'the directory to sign', defaultValue: '.'}
+    sign.addArgument      ['dir'],             {nargs:  '?', action: 'store', type:'string', help: 'the directory to sign', defaultValue: '.'}
     sign.addArgument      ['-q', '--quiet'],   {action: 'storeTrue', help: 'withhold output unless an error'}
 
     verify.addArgument    ['-i', '--input'],   {action: 'store', type:'string', help: 'load a specific signature file'}
-    verify.addArgument    ['-d', '--dir'],     {action: 'store', type:'string', help: 'the directory to verify', defaultValue: '.'}
+    verify.addArgument    ['dir'],             {nargs:  '?', action: 'store', type:'string', help: 'the directory to verify', defaultValue: '.'}
+
     verify.addArgument    ['-q', '--quiet'],   {action: 'storeTrue', help: 'withhold output unless an error'}
     verify.addArgument    ['-s', '--strict'],  {action: 'storeTrue', help: 'fail on warnings (typically cross-platform problems)'}
 
@@ -85,7 +86,7 @@ class Main
   # -------------------------------------------------------------------------------------------------------------------
 
   sign: ->
-    output  = @args.output or constants.defaults.FILENAME
+    output  = @args.output or path.join(@args.dir, constants.defaults.FILENAME)
     await @get_ignore_list output, defer ignore
     summ = new CodeSign @args.dir, {ignore, presets: @get_preset_list()}
     await summ.walk defer err
@@ -124,7 +125,7 @@ class Main
   # -------------------------------------------------------------------------------------------------------------------
 
   verify: ->
-    input = @args.input or constants.defaults.FILENAME
+    input = @args.input or path.join(@args.dir, constants.defaults.FILENAME)
 
     # load the file
     await fs.readFile input, 'utf8', defer err, body
