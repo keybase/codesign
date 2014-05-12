@@ -33,7 +33,7 @@ hash_from_str = (s) ->
 
 max_depth = (found_files) ->
   max_depth = 0
-  max_depth = Math.max(f.depth, max_depth) for f in found_files
+  max_depth = Math.max(f._depth, max_depth) for f in found_files
   max_depth
 
 pretty_format_files = (found_files) ->
@@ -41,7 +41,7 @@ pretty_format_files = (found_files) ->
   for f in found_files
     c0 = if (f.item_type is item_types.FILE) then f.size else ''
     c1 = if f.exec then 'x' else ''
-    c2 = ("  " for i in [0...f.depth]).join('') + utils.escape f.fname # "#{f.path}"
+    c2 = ("  " for i in [0...f._depth]).join('') + utils.escape f.fname # "#{f.path}"
     if f.item_type is item_types.DIR then c2 += "/"
     c3 = switch f.item_type
       when item_types.SYMLINK then "-> #{utils.escape(f.link)}"
@@ -77,10 +77,10 @@ files_from_pretty_format = (str_arr) ->
     last_indent_level = indent_level
     parent_path       = dir_queue.join '/'
     info =
-      fname:         fname
-      parent_path:   parent_path
-      path:          if parent_path.length then "#{parent_path}/#{fname}" else fname
-      exec:          false
+      fname:          fname
+      parent_path:    parent_path
+      path:           if parent_path.length then "#{parent_path}/#{fname}" else fname
+      exec:           false
     if c3 is ''
       info.item_type = item_types.DIR
       dir_queue.push fname

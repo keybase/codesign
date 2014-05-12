@@ -67,24 +67,27 @@ exports.SummarizedItem = class SummarizedItem
 
   # -------------------------------------------------------------------------------------------------------------------
 
-  signable_info: ->
+  obj_info: ->
+    ###
+    anything NOT preceeded with an underscore is expected to survive a serialization/deserialization
+    for signing and loading.
+    ###
     info =
-      depth:          @depth
       parent_path:    @parent_path
       item_type:      @item_type
       fname:          @fname
       path:           if @parent_path.length then "#{@parent_path}/#{@fname}" else @fname
       exec:           @finfo.is_user_executable_file()
-      binary:         @binary
+      _depth:         @depth
 
     switch @item_type
       when item_types.FILE
-        info.hash               = @hash
-        info.size               = @finfo.lstat.size
-        info.possible_win_link  = @finfo.possible_win_link
+        info.hash                = @hash
+        info.size                = @finfo.lstat.size
+        info._possible_win_link  = @finfo.possible_win_link
       when item_types.SYMLINK
-        info.link               = @link
-        info.link_hash          = @link_hash
+        info.link                = @link
+        info.link_hash           = @link_hash
 
     return info
 
@@ -97,8 +100,8 @@ exports.SummarizedItem = class SummarizedItem
     ###
     _res or= []
     if @item_type is item_types.DIR
-      _res.push @signable_info()
+      _res.push @obj_info()
       c.walk_to_array(_res) for c in @contents
     else
-      _res.push @signable_info()
+      _res.push @obj_info()
     return _res

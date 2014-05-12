@@ -85,6 +85,9 @@ class CodeSign
   @json_obj_to_signable_payload: (o) ->
     so = {}
     so[k] = o[k] for k in ['meta', 'ignore', 'presets', 'found']
+    for f in so.found
+      for k,v of f when k[0] is '_'
+        delete f[k]
     return json_stringify_sorted so
 
   # -------------------------------------------------------------------------------------------------------------------
@@ -141,7 +144,7 @@ class CodeSign
       else if not got?
         status = vc.MISSING_FILE
         msg    = 'file is missing'
-      else if (expected.item_type is item_types.SYMLINK) and (got.item_type is item_types.FILE) and (expected.link is got.possible_win_link)
+      else if (expected.item_type is item_types.SYMLINK) and (got.item_type is item_types.FILE) and (expected.link is got._possible_win_link)
         status = vc.ALT_SYMLINK_MATCH
         msg    = 'symlink matches file contents'
       else if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK) and @_hash_alt_match(expected.hash, got.link_hash)
