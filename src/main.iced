@@ -141,30 +141,14 @@ class Main
 
     # see if they match
     await summ.compare_to_json_obj json_obj, defer probs
-    err_table  = []
-    warn_table = []
-    for [code, {got, expected}] in probs
-      label     = if code < 100 then 'warning' else 'ERROR'
-      fname     = got?.path or expected?.path
-      msg       = switch code
-        when vc.ALT_HASH_MATCH then     'hash matches when disregarding CRLF\'s'
-        when vc.ALT_SYMLINK_MATCH then  'symlink matches file contents'
-        when vc.MISSING_DIR then        'directory is missing'
-        when vc.ORPHAN_DIR then         'unknown directory found'
-        when vc.MISSING_FILE then       'file is missing'
-        when vc.ORPHAN_FILE then        'unknown file found'
-        when vc.HASH_MISMATCH then      "contents mismatch (expected #{expected.hash.hash[0...8]}, got #{got.hash.hash[0...8]}...)"
-        when vc.WRONG_ITEM_TYPE then    "expected a #{utils.item_type_name expected.item_type}, got a #{utils.item_type_name got.item_type}"
-        when vc.WRONG_EXEC_PRIVS then   "execution privileges (got exec=#{got.exec})"
-        when vc.WRONG_SYMLINK then      "expected symlink to `#{expected.link}` but got `#{got.link}`"
-      if (code < 100) and (not @args.strict)
-        warn_table.push [msg, fname]
-      else
-        err_table.push [msg, fname]
-    if warn_table.length and not @args.quiet
-      log.warn "#{r[0]}\t#{r[1]}" for r in warn_table
+
+    err_table  = (p for p in probs when (p[0] >= 100) or @args.strict)
+    warn_table = (p for p in probs when (p[0] <  100) and (not @args.strict) and (not @args.quiet))
+
+    if warn_table.length
+      log.warn "#{p[0]}\t#{p[1].expected?.fname or p[1].got.fname}\t#{p[1].msg}" for p in warn_table
     if err_table.length
-      log.error "#{r[0]}\t#{r[1]}" for r in err_table
+      log.error "#{p[0]}\t#{p[1].expected?.fname or p[1].got.fname}\t#{p[1].msg}" for p in err_table
       log.error "Exited after #{err_table.length} error(s)"
       process.exit 1
     else
