@@ -147,7 +147,7 @@ class CodeSign
       else if (expected.item_type is item_types.SYMLINK) and (got.item_type is item_types.FILE) and (expected.link is got._possible_win_link)
         status = vc.ALT_SYMLINK_MATCH
         msg    = 'symlink matches file contents'
-      else if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK) and @_hash_alt_match(expected.hash, got.link_hash)
+      else if (expected.item_type is item_types.FILE) and (got.item_type is item_types.SYMLINK) and @_hash_alt_match(expected.hash, got._link_hash)
         status = vc.ALT_SYMLINK_MATCH
         msg    = 'symlink matches file contents'
       else if expected.item_type isnt got.item_type

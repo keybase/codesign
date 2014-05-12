@@ -87,7 +87,7 @@ exports.SummarizedItem = class SummarizedItem
         info._possible_win_link  = @finfo.possible_win_link
       when item_types.SYMLINK
         info.link                = @link
-        info.link_hash           = @link_hash
+        info._link_hash          = @link_hash
 
     return info
 
