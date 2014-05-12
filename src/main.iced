@@ -146,9 +146,9 @@ class Main
     warn_table = (p for p in probs when (p[0] <  100) and (not @args.strict) and (not @args.quiet))
 
     if warn_table.length
-      log.warn "#{p[0]}\t#{p[1].expected?.fname or p[1].got.fname}\t#{p[1].msg}" for p in warn_table
+      log.warn "#{p[0]}\t#{p[1].expected?.path or p[1].got.path}:  #{p[1].msg}" for p in warn_table
     if err_table.length
-      log.error "#{p[0]}\t#{p[1].expected?.fname or p[1].got.fname}\t#{p[1].msg}" for p in err_table
+      log.error "#{p[0]}\t#{p[1].expected?.path or p[1].got.path}:  #{p[1].msg}" for p in err_table
       log.error "Exited after #{err_table.length} error(s)"
       process.exit 1
     else
