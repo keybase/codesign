@@ -130,7 +130,7 @@ footer = (o) ->
   return """
 <hr>
 
-#### Notes, version #{o.meta.version}
+#### Notes
 
 With keybase you can sign any directory's contents, whether it's a git repo,
 source code distribution, or a personal documents folder. It aims to replace the drudgery of:
