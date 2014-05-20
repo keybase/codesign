@@ -165,7 +165,7 @@ exports.to_md = (o) ->
 
 <!-- END SIGNATURES -->
 
-### Begin signed portion 
+### Begin signed statement 
 
 #### Expect
 
@@ -187,7 +187,7 @@ exports.to_md = (o) ->
 
 <!-- summarize version = #{o.meta.version} -->
 
-### End signed portion
+### End signed statement
 
 #{footer o}
   """
@@ -204,7 +204,7 @@ exports.from_md = (str) ->
   \s*
   \<\!--\sEND\sSIGNATURES\s--\>
   \s*
-  \#\#\# \s Begin\ssigned\sportion
+  \#\#\# \s Begin\ssigned\sstatement
   \s*
   \#\#\#\# \s Expect
   \s*
@@ -220,7 +220,7 @@ exports.from_md = (str) ->
   \s*
   \<\!--[\s]*summarize[\s]*version[\s]*=[\s]*([0-9a-z\.]*)[\s]*-->
   \s*
-  \#\#\# \s End\ssigned\sportion
+  \#\#\# \s End\ssigned\sstatement
   \s*
   [\s\S]*
   \s*
