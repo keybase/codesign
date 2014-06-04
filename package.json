@@ -1,6 +1,6 @@
 {
   "name": "codesign",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Directory content codesign and comparer",
   "scripts": {
     "test": "make test"
