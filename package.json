@@ -16,7 +16,8 @@
     "iced-error": "~0.0.8",
     "iced-logger": ">=0.0.3",
     "glob-to-regexp": ">=0.0.1",
-    "tablify": ">=0.1.5"
+    "tablify": ">=0.1.5",
+    "iced-runtime": "^1.0.1"
   },
   "devDependencies": {
     "iced-coffee-script": "~1.7.1-c",
