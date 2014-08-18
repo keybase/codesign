@@ -1,16 +1,22 @@
-##### Signed by https://keybase.io/max
+##### Signed by https://keybase.io/chris
 ```
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG/MacGPG2 v2.0.22 (Darwin)
 Comment: GPGTools - https://gpgtools.org
 
-iQEbBAABCgAGBQJTjzA2AAoJEJgKPw0B/gTfC0wH+N4kLEIK3KYoaRlwI7G9CQL6
-n3sM9EHCMlbtYkxwVUc0zGoMaAH29qZ4opAo0u4Kqrhi7nx62O4Rv9l2MtDj8/T7
-WdjMTumS5a7rSCjsfvHrRxaESluVZ13/kXpLvSQlZLfI6GZKiAu0+PrUPk1UfJTF
-wRAvarTKxR7R0u35R5FvIx1M9smkluAp4IdboUgoX7uta+oyN8sEWQEI2Tl5mYWP
-eJU3awgmeL4y1ygAYS/bHP8rCFn1P0wWUNTlVyb2FyM0ii06kDS98kbbJOEIaxY5
-XkiQQ2KHF2QM1/DWMZ3qIKdcXZwW08whY3FTxoA8GbBDhTywQaHmEo6HXI4sPA==
-=LwQx
+iQIcBAABCgAGBQJT8gxJAAoJENIkQTsc+mSQsv0P/0UYUj52Tv/2h6vA6ylj2mAx
+Nq6qyetYhO5y6O0U7gtxKa/T5EQwygMjdIAnpVWegbWTPuoyqVB3fn3vlpmE/btY
+2bhbiHztFZPgwh9torz+8hlyEPgJEaiV+D+CJPQ1Im2SXSD3duuEjS3gZG4n4j2x
+luhYPIOu51nqDVei1FjQa3/u8DIndjGQp/y9yjRIBNPlvAl7Fpp1tLLPiJibpEKP
+enm4cP/oMdSh2ZyiMr9N3IhAEqECm+xBU2otZlgOfjdL6FGZlMa69diVvlwUECWn
++uSJj2x0O4+vhC1vz1aEDUEYmfy52ML3GHTSil4yFv441cotdIdRpzIynOaldpTT
+A3RdICDaWmGOtgsNsBWf0idHvJpTsj8GBENyBSIBy08HEebdulwvDoeGxCFWZG0S
+rwihPPU1FKkN4M28BWHuM1qaZX5cfFMxh+jQ0nsOft1qwou/mW4q5gBDDnYfgs6H
+HV6FtQ2xlYk/fIu3ehr36MJtIkrtT9CshRLK4tK2TdSgpnXf6Z1uN8BGzlzRgU/F
+ZY5j6k/fuqXTLqeFjyA06MgVoUk440DqMopa6iM7haW7oemKV/WOu03aX+MRhOEN
+8Q0ZRHCQRR+lONaiQxnPdGBFH8xBIeeV+k5qIWVuIIg248L2PPJptVCpBQqXceWA
+A5YOIp4SK8vbtPlH17FB
+=upKC
 -----END PGP SIGNATURE-----
 
 ```
@@ -48,7 +54,7 @@ size   exec  file                                        contents
 422              top.js                                  6008f01e0a2f9b504287695d0cf004c1d2230ce6e64af58946423f926d8e8d0f
 1625             utils.js                                5195643cde9960b8d70fb8f1dfd4b2e25705c29513b5d9f986242ce0f143d606
 1642             x_platform_hash.js                      d4e837813ddce3ad9eaa85386773bfa3ab939944ed7ab50a964b4c2a594ec6b4
-684            package.json                              f95cd8a23e5b08febe1232e4edf0b5e20983b8600a8ec38f13c876ef496ce77c
+715            package.json                              b8ac2646e151ecb95a10969cb223dbc988590b1f23e8357a127c881ba88f08d8
                src/                                                                                                      
 8188             codesign.iced                           0265d273389867d5404fc2fe48d1bb0e2de571d3c7cf07dcf3c614eb14eb51e5
 1254             constants.iced                          f2bc2706b294563f3adc7462125a13def1e39060183d1027c73aca6f2c885002
@@ -110,7 +116,7 @@ dropbox  # ignore .dropbox-cache and other Dropbox-related files
 kb       # ignore anything as described by .kbignore files          
 ```
 
-<!-- summarize version = 0.0.8 -->
+<!-- summarize version = 0.0.9 -->
 
 ### End signed statement
 
